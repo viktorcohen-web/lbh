@@ -1,0 +1,851 @@
+<!doctype html>
+<html lang="fr">
+<!-- Les bonnes histoires : export autonome. Styles, code et 500 questions intégrés. -->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f5ef">
+  <meta name="description" content="20 questions pour commencer, 10 thèmes à explorer. Gardez les questions qui vous parlent, puis copiez votre sélection pour votre prochain entretien.">
+  <title>Les bonnes histoires — Trouver ses questions</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%3E%3Crect%20width%3D%2264%22%20height%3D%2264%22%20rx%3D%2214%22%20fill%3D%22%23284a3e%22%2F%3E%3Cg%20fill%3D%22%23f5f1e5%22%3E%3Crect%20x%3D%2215%22%20y%3D%2215%22%20width%3D%2215%22%20height%3D%2215%22%20rx%3D%222%22%2F%3E%3Crect%20x%3D%2234%22%20y%3D%2215%22%20width%3D%2215%22%20height%3D%2215%22%20rx%3D%222%22%2F%3E%3Crect%20x%3D%2215%22%20y%3D%2234%22%20width%3D%2215%22%20height%3D%2215%22%20rx%3D%222%22%2F%3E%3Cpath%20d%3D%22M34%2034h15v9a6%206%200%200%201-6%206h-9Z%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E%0A" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700&family=Libre+Caslon+Display&display=swap" rel="stylesheet">
+  <style>
+:root{--paper:#f6f5ef;--surface:#fffef9;--ink:#262e29;--muted:#71776d;--green:#284a3e;--green-dark:#1e3c32;--soft:#e9eee6;--line:#dedfd5;--orange:#ac593b;--serif:"Libre Caslon Display","Iowan Old Style",Palatino,Georgia,serif;--sans:"DM Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color-scheme:light;font-family:var(--sans);color:var(--ink);background:var(--paper);font-synthesis:none}
+*{box-sizing:border-box}body{margin:0}button,input,select{font:inherit;color:inherit}button,a,input{-webkit-tap-highlight-color:transparent}button{cursor:pointer}button:disabled{opacity:.45;cursor:default}button{touch-action:manipulation}a{color:inherit}svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}[hidden]{display:none!important}::selection{background:#d9e4cc}button:focus-visible,a:focus-visible,input:focus-visible{outline:2px solid var(--green);outline-offset:4px}h1,h2,h3,p{margin-top:0}h1,h2,h3{font-family:var(--serif);font-weight:400}button{border-radius:0}input[type=search]::-webkit-search-cancel-button{display:none}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}.skip-link{position:fixed;left:12px;top:-80px;z-index:20;background:var(--green);color:white;padding:14px}.skip-link:focus{top:12px}
+.sidebar{position:fixed;inset:0 auto 0 0;width:264px;display:flex;flex-direction:column;padding:37px 22px 23px;background:#efefe6;border-right:1px solid var(--line);overflow-y:auto;z-index:12}.sidebar-top{display:flex;align-items:center;justify-content:space-between}.brand{display:flex;gap:13px;align-items:center;text-decoration:none;line-height:.98;font-family:var(--serif);font-size:30px;letter-spacing:-.6px}.brand-dot{color:var(--orange)}.brand-symbol{display:grid;grid-template-columns:repeat(2,12px);gap:4px;transform:rotate(-4deg);flex-shrink:0}.brand-symbol i{display:block;width:12px;height:12px;background:var(--green);border-radius:1px}.brand-symbol i:last-child{border-bottom-right-radius:7px}.sidebar-caption{font-size:9px;font-weight:600;letter-spacing:1.65px;color:var(--muted);margin:22px 0 27px 1px;white-space:nowrap}#theme-nav{display:flex;flex-direction:column;gap:3px}.nav-item{border:0;background:none;display:flex;gap:11px;align-items:flex-start;text-decoration:none;text-align:left;padding:12px 10px;border-radius:4px;width:100%;font-size:12.5px;line-height:1.45;font-weight:500;transition:background .15s}.nav-item:hover{background:#e4e7db}.nav-item[aria-current=page]{background:var(--green);color:var(--surface)}.nav-number{font-size:10px;font-variant-numeric:tabular-nums;color:#888f80;line-height:1.8;min-width:18px}.nav-item[aria-current=page] .nav-number{color:#ccd5c4}.nav-home{padding-block:13px;margin-bottom:17px;font-size:12px;align-items:center}.nav-home svg{width:16px;height:16px;margin-right:2px}.nav-section{font-size:9px;letter-spacing:1.5px;color:var(--muted);padding:0 10px;margin-bottom:8px}.sidebar-footer{margin-top:auto;padding:38px 10px 0}.footer-rule{display:block;width:24px;height:1px;background:#a6ac9b;margin-bottom:18px}.sidebar-footer p{font-family:var(--serif);font-size:21px;line-height:1.25;margin-bottom:24px}.sidebar-footer em{color:var(--green)}.micro{font-size:8px;letter-spacing:1.4px;font-weight:500;color:var(--muted)}.loading-nav{font-size:12px;color:var(--muted)}
+.workspace{margin-left:264px;min-height:100vh;display:flex;flex-direction:column}.topbar{height:88px;border-bottom:1px solid var(--line);padding:0 48px;display:flex;align-items:center;gap:24px;background:var(--paper);position:relative;z-index:3}.search-box{display:flex;align-items:center;gap:12px;flex:1;min-width:0;max-width:740px}.search-box>svg{width:18px;height:18px;color:#858c80}.search-box:focus-within>svg{color:var(--green)}.search-box input{border:0;outline:none;background:transparent;font-size:13px;padding:13px 0;width:100%;min-width:0}.search-box input::placeholder{color:#8a8e82}.search-box input:focus-visible{outline:0}.search-box:focus-within{box-shadow:0 1px 0 var(--green)}.search-shortcut{font-family:var(--sans);border:1px solid var(--line);width:22px;height:24px;border-radius:4px;display:grid;place-items:center;color:#8a8e82;font-size:12px}.clear-search{border:0;background:none;font-size:24px;color:var(--muted);padding:0 5px}.button{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:12px 17px;border:1px solid var(--line);border-radius:4px;background:transparent;font-size:12px;font-weight:550;text-decoration:none;min-height:43px;transition:background .15s,border-color .15s}.button:hover{background:var(--soft);border-color:#b8c0af}.button svg{width:16px;height:16px}.random-top{margin-left:auto;white-space:nowrap;background:var(--surface);color:var(--green)}.primary{background:var(--green);color:var(--surface);border-color:var(--green)}.primary:hover{background:var(--green-dark);border-color:var(--green-dark)}.icon-button{width:40px;height:40px;display:inline-flex;align-items:center;justify-content:center;border:1px solid var(--line);border-radius:4px;background:transparent;font-size:25px}.icon-button:hover{background:var(--soft)}.menu-button,.close-menu{display:none}main{width:100%;max-width:1304px;margin:0 auto;padding:43px 48px 68px;flex:1;outline:none}.eyebrow{font-size:10px;letter-spacing:1.7px;font-weight:600;line-height:1.5;color:var(--muted)}.eyebrow .small-line{display:inline-block;width:24px;height:1px;background:#a6ad9c;vertical-align:middle;margin:0 12px}.breadcrumb{display:flex;gap:12px;align-items:center;margin-bottom:31px}.breadcrumb button{background:transparent;padding:0;border:0;font-size:10px;letter-spacing:1.4px;color:var(--muted)}.breadcrumb button:hover{color:var(--green);text-decoration:underline;text-underline-offset:4px}.breadcrumb svg{width:12px;height:12px;color:#a3a99a}.breadcrumb>span{color:var(--green);font-size:10px;letter-spacing:1.4px}
+.home-hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(250px,.72fr);gap:45px;align-items:center;margin:15px 0 52px}.hero-copy h1{font-size:clamp(46px,4.8vw,72px);line-height:1.01;letter-spacing:-1.7px;max-width:600px;margin-bottom:24px;text-wrap:balance}.hero-copy h1 em{font-weight:400;color:var(--green)}.hero-copy>p{font-size:13px;line-height:1.9;color:var(--muted);max-width:405px;margin-bottom:0}.feature-wrap{padding:13px 0 9px 8px;position:relative}.feature-wrap:before,.feature-wrap:after{content:"";position:absolute;inset:14px 0 6px 8px;border:1px solid #cdd4c2;background:#e7ebdf;border-radius:5px;transform:rotate(3deg);z-index:0}.feature-wrap:after{transform:rotate(-2deg);background:#f0f1e7;inset:17px 2px 5px 3px}.feature-card{position:relative;z-index:1;padding:25px 26px 23px;background:#e5ebdc;border:1px solid #cdd7bf;border-radius:4px;transform:rotate(1deg);color:var(--green)}.feature-label{display:flex;justify-content:space-between;gap:12px;font-size:8px;letter-spacing:1.3px;font-weight:600;line-height:1.6}.feature-label svg{width:18px;height:18px}.feature-quote{font-family:var(--serif);font-size:31px;line-height:1.14;letter-spacing:-.3px;margin:27px 0 26px}.feature-card button{padding:14px 0 0;width:100%;border:0;border-top:1px solid #c3cfb7;background:none;display:flex;align-items:center;justify-content:space-between;gap:12px;font-size:11px;font-weight:500;text-align:left;color:var(--green)}.feature-card button svg{width:16px;height:16px;transition:transform .2s}.feature-card button:hover svg{transform:translateX(3px)}
+.section-heading{display:flex;align-items:baseline;justify-content:space-between;gap:20px;padding-bottom:18px;border-bottom:1px solid var(--line);margin-bottom:23px}.section-heading h2{font-size:30px;letter-spacing:-.3px;margin-bottom:0}.section-heading>span{color:var(--muted);font-size:10px;letter-spacing:.4px}.theme-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.theme-card{position:relative;display:flex;flex-direction:column;text-align:left;min-height:230px;padding:24px 26px 20px;background:var(--surface);border:1px solid var(--line);border-radius:5px;transition:border-color .2s,transform .2s,box-shadow .2s;overflow:hidden}.theme-card:hover{border-color:#9dae96;transform:translateY(-3px);box-shadow:0 8px 18px #263b2a06}.theme-card:before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--green);transform:scaleY(0);transform-origin:bottom;transition:transform .2s}.theme-card:hover:before{transform:scaleY(1)}.theme-card-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px}.theme-number{font-family:var(--serif);font-size:24px;color:#8e9985;line-height:1}.theme-card-top .micro{font-size:8px;letter-spacing:1.1px}.theme-card h3{font-size:29px;line-height:1.08;letter-spacing:-.4px;margin-bottom:11px;color:var(--ink);max-width:90%;text-wrap:balance}.theme-card p{font-size:11.5px;color:var(--muted);line-height:1.75;margin-bottom:20px;max-width:96%}.theme-card-bottom{display:flex;align-items:center;justify-content:space-between;margin-top:auto;font-size:10px;color:var(--green)}.theme-card-bottom svg{width:19px;height:19px;transition:transform .2s}.theme-card:hover .theme-card-bottom svg{transform:translateX(4px)}.home-note{margin:32px 0 0;padding:19px 0;border-top:1px solid var(--line);display:flex;gap:15px;color:var(--muted);font-size:11px;line-height:1.8}.home-note svg{width:17px;height:17px;margin-top:2px;color:var(--green)}.home-note p{margin-bottom:0}.home-note b{font-weight:550;color:var(--green)}
+.theme-header{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:25px;margin-bottom:29px}.theme-header h1{font-size:clamp(42px,4.5vw,64px);line-height:1.04;letter-spacing:-1px;margin:0 0 16px;max-width:830px;text-wrap:balance}.theme-header p{font-size:13px;line-height:1.85;color:var(--muted);max-width:650px;margin-bottom:0}.theme-heading-meta{display:flex;flex-direction:column;align-items:center;padding-top:3px;color:#b5bfaa}.large-number{font-family:var(--serif);font-size:77px;line-height:.9}.theme-heading-meta .micro{font-size:8px;letter-spacing:1px;margin-top:9px;color:#8b9680}.axis-filters{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:26px}.axis-filter{font-size:10px;line-height:1.5;font-weight:450;padding:8px 11px;border:1px solid var(--line);border-radius:4px;background:transparent;transition:background .15s,border-color .15s;text-align:left;max-width:100%}.axis-filter:hover{border-color:#a3b397;background:#eef0e6}.axis-filter[aria-pressed=true]{background:var(--green);border-color:var(--green);color:var(--surface)}.result-toolbar{display:flex;align-items:center;justify-content:space-between;gap:15px;padding:15px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-bottom:6px}.result-count{font-size:11px;color:var(--muted);line-height:1.6}.result-count b{font-weight:600;color:var(--ink)}.view-switch{display:flex;gap:2px;align-items:center;padding:3px;background:#ebede3;border-radius:4px}.view-switch button{display:flex;gap:6px;align-items:center;border:0;padding:7px 10px;font-size:10px;background:none;border-radius:3px;color:var(--muted)}.view-switch button[aria-pressed=true]{background:var(--surface);box-shadow:0 1px 3px #263b2a0e;color:var(--ink)}.view-switch svg{width:13px;height:13px}.question-group{padding-top:27px}.group-heading{display:flex;align-items:baseline;justify-content:space-between;gap:18px;padding:0 0 12px;margin-bottom:0;border-bottom:1px solid var(--line)}.group-heading h2{font-family:var(--sans);font-size:10px;font-weight:600;letter-spacing:.5px;line-height:1.7;margin-bottom:0;color:var(--green)}.group-heading h2 span{font-size:9px;font-weight:400;margin-right:10px;color:#87927c}.group-heading>span{font-size:9px;color:var(--muted);white-space:nowrap}.question-list{list-style:none;margin:0;padding:12px 0 0;display:grid;gap:10px}.question-row{display:flex;align-items:center;padding:0 16px;background:#fffefb;border:1px solid var(--line);border-radius:7px;box-shadow:0 1px 3px #263b2a04;transition:background .15s,border-color .15s,box-shadow .15s}.question-row:hover{background:#fff;border-color:#b8c3ad;box-shadow:0 3px 10px #263b2a08}.question-row:focus-within{border-color:#9aaf8b}.question-open{display:flex;align-items:baseline;gap:20px;flex:1;min-width:0;padding:18px 8px 18px 0;text-align:left;border:0;background:none}.question-number{font-size:10px;color:#909986;font-variant-numeric:tabular-nums;min-width:21px;line-height:2}.question-text{font-family:var(--serif);font-size:25px;line-height:1.28;letter-spacing:-.1px;text-wrap:pretty}.row-actions{display:flex;align-items:center;padding-left:9px}.copy-button{display:flex;align-items:center;justify-content:center;width:37px;height:39px;background:transparent;border:0;border-radius:4px;color:#9aa38f;opacity:0;transition:opacity .15s,color .15s}.copy-button svg{width:15px;height:15px}.copy-button:hover{background:#dfe6d6;color:var(--green)}.question-row:hover .copy-button,.question-row:focus-within .copy-button{opacity:1}.row-arrow{display:flex;align-items:center;color:#929d85;width:26px;justify-content:flex-end;padding-right:2px}.row-arrow svg{width:16px;height:16px}.group-heading-link{border:0;background:none;padding:0;color:var(--green);font-size:inherit;font-weight:inherit;text-align:left}.group-heading-link:hover{text-decoration:underline;text-underline-offset:4px}mark{background:#e3e8ce;color:inherit;border-radius:2px;padding:0 1px}.empty-state{padding:70px 24px;text-align:center}.empty-state svg{width:30px;height:30px;color:#94a087;margin-bottom:20px}.empty-state h2{font-size:36px;line-height:1.05;margin-bottom:14px}.empty-state p{font-size:12px;line-height:1.8;color:var(--muted);max-width:380px;margin:0 auto 22px}.empty-actions{display:flex;justify-content:center;gap:10px;flex-wrap:wrap}.scope-link{padding:0;border:0;background:none;font-size:11px;color:var(--green);text-decoration:underline;text-underline-offset:3px;margin-top:13px}.search-label{font-size:10px;color:var(--orange);letter-spacing:1.5px;font-weight:550;margin-bottom:15px}
+.focus-card{margin-top:27px;position:relative;background:var(--surface);border:1px solid var(--line);border-radius:5px;overflow:hidden;min-height:412px;display:flex;flex-direction:column}.focus-card:before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--green)}.focus-top{display:flex;align-items:flex-start;justify-content:space-between;gap:20px;padding:26px 30px;font-size:10px;line-height:1.7;color:var(--muted)}.focus-context{display:flex;flex-direction:column;gap:4px}.focus-context .eyebrow{color:var(--green);font-size:9px;letter-spacing:1.2px}.focus-top>.micro{white-space:nowrap;letter-spacing:1px;font-size:9px}.focus-question{font-family:var(--serif);font-size:clamp(32px,3.7vw,50px);line-height:1.13;letter-spacing:-.7px;text-align:center;max-width:800px;padding:23px 50px 35px;margin:auto}.focus-bottom{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:22px 30px;border-top:1px solid var(--line)}.focus-navigation{display:flex;align-items:center;gap:10px}.focus-navigation .icon-button{width:38px;height:38px}.focus-navigation>span{font-size:10px;color:var(--muted);padding:0 4px;font-variant-numeric:tabular-nums;min-width:57px;text-align:center}.focus-actions{display:flex;gap:8px;align-items:center}.focus-actions .button{min-height:38px;font-size:10px;padding:10px 12px}.card-progress{height:3px;background:#e8ebdf}.card-progress>span{display:block;height:100%;background:#97ab83;transition:width .2s}.keyboard-note{text-align:center;color:#8a9180;font-size:9px;letter-spacing:.15px;margin:18px 0 0;line-height:1.8}.keyboard-note kbd{font-family:var(--sans);border:1px solid var(--line);border-radius:3px;padding:0 4px;margin:0 1px;font-size:10px}.page-footer{display:flex;justify-content:space-between;gap:20px;padding:23px 48px;border-top:1px solid var(--line);font-size:9px;color:#8a9081;line-height:1.7}.page-footer>span:first-child{color:var(--green);white-space:nowrap}.loading-state{padding:70px 0}.loading-state h1{font-size:64px;line-height:1;letter-spacing:-1px;margin:25px 0}.loading-state p{font-size:13px;color:var(--muted)}
+dialog{width:min(800px,calc(100% - 40px));max-height:calc(100dvh - 40px);border:1px solid #ccd3c2;border-radius:6px;background:var(--paper);color:var(--ink);padding:0;overflow:auto;box-shadow:0 30px 100px #14261d30}dialog::backdrop{background:#1d2b2366;backdrop-filter:blur(4px)}.dialog-header{padding:25px 30px 0;display:flex;align-items:center;justify-content:space-between;gap:20px}.dialog-header>.eyebrow{font-size:9px}.dialog-header .icon-button{border:0;font-size:26px;color:var(--muted)}.dialog-body{padding:16px 36px 0}.dialog-body .focus-card{margin-top:0;min-height:350px}.dialog-body .focus-top{padding:23px 26px}.dialog-body .focus-question{font-size:clamp(31px,4.2vw,47px);padding:20px 32px 35px}.dialog-body .focus-bottom{padding:20px 24px}.dialog-footer{padding:21px 36px 29px;display:flex;align-items:center;justify-content:space-between;gap:20px}.dialog-footer>button{border:0;background:transparent;color:var(--green);padding:0;display:flex;align-items:center;gap:8px;font-size:11px;text-align:left}.dialog-footer>button svg{width:14px;height:14px}.dialog-footer .keyboard-note{margin:0;text-align:right}.toast{position:fixed;left:calc(50% + 132px);bottom:28px;z-index:30;transform:translateX(-50%);padding:13px 23px;background:var(--green);color:var(--surface);box-shadow:0 4px 20px #213b2620;border-radius:4px;font-size:12px;text-align:center;max-width:calc(100% - 32px);line-height:1.6}.drawer-backdrop{position:fixed;inset:0;z-index:11;border:0;background:#1d2b2366;backdrop-filter:blur(2px)}.noscript{position:fixed;bottom:0;left:0;right:0;padding:20px;background:#fff1db;color:#5b3f27;z-index:20;margin:0}
+.dialog-feedback{font-size:11px;color:var(--green);text-align:center;margin:-15px 25px 16px;min-height:17px;line-height:1.6}.theme-header p{overflow-wrap:anywhere}
+@media(min-width:1600px){main{padding-top:53px}.home-hero{gap:70px}.theme-card{min-height:248px;padding:27px 30px}.theme-card h3{font-size:33px}.theme-card p{font-size:12px}.hero-copy h1{font-size:76px}.sidebar{width:280px;padding-inline:27px}.workspace{margin-left:280px}.topbar{padding-inline:60px}.toast{left:calc(50% + 140px)}}
+@media(max-width:1180px){.sidebar{width:235px;padding-inline:15px}.workspace{margin-left:235px}.sidebar-caption{font-size:8px;letter-spacing:1.5px}.brand{font-size:29px}main{padding-inline:32px}.topbar{padding-inline:32px;gap:17px}.home-hero{gap:26px;grid-template-columns:minmax(0,1fr) minmax(230px,.8fr)}.hero-copy h1{font-size:54px}.feature-quote{font-size:28px}.feature-card{padding:23px}.theme-card{padding:22px;min-height:242px}.theme-card h3{font-size:27px}.theme-card p{font-size:11px}.theme-card-top{margin-bottom:18px}.page-footer{padding-inline:32px}.toast{left:calc(50% + 117px)}}
+@media(max-width:960px){.sidebar{transform:translateX(-100%);width:280px;padding:30px 23px 24px;transition:transform .22s ease;visibility:hidden}.sidebar.is-open{transform:translateX(0);visibility:visible}.workspace{margin-left:0}.menu-button,.close-menu{display:inline-flex}.menu-button{border:0;width:24px;padding:0;flex-shrink:0}.close-menu{border:0;width:30px;height:30px}.topbar{height:76px;gap:23px;padding-inline:28px}.search-box input{font-size:12px}main{padding:32px 32px 50px;max-width:940px}.home-hero{grid-template-columns:minmax(0,1fr) minmax(240px,.7fr);gap:35px;margin-bottom:40px}.hero-copy h1{font-size:57px}.feature-quote{font-size:30px}.theme-card{min-height:230px}.theme-card h3{font-size:29px}.theme-card p{font-size:11.5px}.nav-item{font-size:13px;padding-block:12px}.sidebar-caption{font-size:9px;letter-spacing:1.5px}.toast{left:50%}.nav-open{overflow:hidden}.theme-header h1{font-size:55px}.focus-question{font-size:45px}.copy-button{opacity:1}}
+@media(max-width:660px){.topbar{height:71px;padding-inline:19px;gap:15px}.search-box{gap:8px}.search-box>svg{display:none}.search-box input{font-size:11.5px;padding-block:14px}.random-top{font-size:0;width:39px;min-height:39px;padding:0;flex-shrink:0}.random-top svg{width:17px;height:17px}.random-top>span{display:none}.search-shortcut{display:none}main{padding:29px 22px 38px}.breadcrumb{margin-bottom:24px;gap:10px}.breadcrumb button,.breadcrumb>span{font-size:9px;letter-spacing:1.2px}.home-hero{display:block;margin:0 0 37px}.hero-copy h1{font-size:52px;letter-spacing:-1.1px;max-width:450px;margin-bottom:19px}.hero-copy>p{font-size:12px;line-height:1.85;max-width:380px}.feature-wrap{margin-top:28px;padding:5px 7px 5px 2px}.feature-wrap:before{inset:8px 7px 4px 3px;transform:rotate(2deg)}.feature-wrap:after{inset:8px 7px 4px 3px;transform:rotate(-1deg)}.feature-card{padding:20px 23px;transform:rotate(.4deg)}.feature-label{font-size:8px}.feature-quote{font-size:28px;line-height:1.12;margin:17px 0 20px;max-width:380px}.feature-card button{font-size:10px;padding-top:12px}.section-heading{gap:12px;padding-bottom:15px;margin-bottom:16px}.section-heading h2{font-size:28px}.section-heading>span{font-size:9px;text-align:right}.theme-grid{grid-template-columns:1fr;gap:12px}.theme-card{padding:21px 23px;min-height:208px}.theme-card h3{font-size:29px;max-width:93%;margin-bottom:10px}.theme-card-top{margin-bottom:16px}.theme-card p{font-size:11.5px;max-width:100%;margin-bottom:17px}.theme-card-bottom{font-size:10px}.theme-number{font-size:22px}.theme-card:hover{transform:none}.home-note{font-size:10.5px;margin-top:25px}.theme-header{gap:14px;margin-bottom:24px}.theme-header h1{font-size:44px;letter-spacing:-.7px;margin-bottom:15px}.theme-header p{font-size:12px;line-height:1.8}.large-number{font-size:57px}.theme-heading-meta .micro{font-size:7px;letter-spacing:.5px}.axis-filters{gap:6px;margin-bottom:21px}.axis-filter{font-size:9px;padding:7px 9px}.result-toolbar{padding:12px 0;gap:10px}.result-count{font-size:10px}.view-switch button{padding:7px 9px;font-size:9px;gap:5px}.question-group{padding-top:25px}.group-heading{gap:10px}.group-heading h2{font-size:9px;letter-spacing:.2px}.group-heading>span{font-size:8px}.question-list{gap:9px}.question-row{padding-inline:14px}.question-open{padding:16px 5px 16px 0;gap:12px}.question-text{font-size:23px;line-height:1.22}.question-number{font-size:9px;min-width:17px}.row-actions{padding-left:3px}.copy-button{width:29px}.copy-button svg{width:14px;height:14px}.row-arrow{display:none}.page-footer{padding:20px 22px;font-size:8px;gap:15px}.page-footer>span:last-child{max-width:190px;text-align:right}.focus-card{min-height:375px;margin-top:20px}.focus-top{padding:22px 22px 16px;font-size:9px;gap:15px}.focus-top>.micro{font-size:8px;letter-spacing:.5px}.focus-context .eyebrow{font-size:8px;letter-spacing:.7px}.focus-question{font-size:35px;line-height:1.13;padding:25px 25px 33px;letter-spacing:-.3px}.focus-bottom{padding:16px;gap:10px;flex-wrap:wrap}.focus-actions{margin-left:auto;gap:4px}.focus-actions .button{padding:9px 10px}.focus-navigation{gap:5px}.focus-navigation>span{font-size:9px;min-width:46px;padding:0}.focus-navigation .icon-button{width:33px;height:35px}.focus-actions .shuffle-label{display:none}.focus-actions .shuffle-button{padding:9px}.keyboard-note{display:none}dialog{width:calc(100% - 24px);max-height:calc(100dvh - 28px)}.dialog-header{padding:16px 16px 0}.dialog-header>.eyebrow{font-size:8px;letter-spacing:1px}.dialog-body{padding:12px 14px 0}.dialog-body .focus-card{min-height:360px}.dialog-body .focus-top{padding:22px 20px 14px}.dialog-body .focus-question{font-size:35px;padding:20px 22px 28px}.dialog-body .focus-bottom{padding:14px}.dialog-footer{padding:20px 18px 23px}.dialog-footer>button{font-size:10px}.toast{font-size:11px;padding:12px 18px;bottom:18px}.empty-state{padding:55px 7px}.empty-state h2{font-size:32px}.empty-state p{font-size:11px}.loading-state{padding:45px 0}.loading-state h1{font-size:54px}.search-label{font-size:9px}}
+@media(max-width:360px){main{padding-inline:17px}.hero-copy h1{font-size:46px}.theme-header h1{font-size:39px}.theme-heading-meta{display:none}.focus-bottom{justify-content:center}.focus-actions{margin-left:0}.focus-question,.dialog-body .focus-question{font-size:32px}.search-box input{font-size:10.5px}}
+@media(hover:none){.copy-button{opacity:1}.theme-card:hover{transform:none;box-shadow:none}.theme-card:before{display:none}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{transition:none!important;scroll-behavior:auto!important}.theme-card:hover{transform:none}}
+
+</style>
+  <style>
+.nav-discovery{align-items:center;margin-bottom:5px;gap:10px;padding-block:13px}
+.nav-discovery>svg{width:16px;height:16px}
+.nav-discovery>span:first-of-type{flex:1}
+.nav-discovery small{display:block;font-size:9px;font-weight:400;opacity:.65;margin-top:3px}
+.selection-badge{display:grid;place-items:center;min-width:22px;height:22px;border:1px solid currentColor;border-radius:50%;font-size:9px;opacity:.8}
+.discovery-topline{display:flex;flex-direction:column;gap:5px;min-width:0}
+.discovery-topline>span{font-size:8px;font-weight:550;letter-spacing:1.5px;color:var(--muted)}
+.discovery-topline>strong{font-size:12px;font-weight:450;color:var(--green)}
+.directory-top{margin-left:auto;white-space:nowrap;background:var(--surface);color:var(--green);font-size:11px}
+.discovery-content{padding-top:31px;padding-bottom:42px}
+.discovery{width:100%;max-width:720px;margin:0 auto}
+.discovery-header{margin-bottom:25px}
+.discovery-header>.eyebrow{font-size:9px;letter-spacing:1.6px;color:var(--orange)}
+.discovery-header h1{font-size:clamp(40px,4.3vw,58px);line-height:1.04;letter-spacing:-1px;margin:12px 0 13px;text-wrap:balance;outline:none}
+.discovery-header>p{font-size:12px;color:var(--muted);line-height:1.85;max-width:520px;margin-bottom:0}
+.discovery-header>p b{color:var(--green);font-weight:600}
+.discovery-progress{margin-bottom:14px}
+.discovery-progress-label{display:flex;align-items:center;justify-content:space-between;gap:18px;font-size:10px;color:var(--muted);margin-bottom:11px}
+.discovery-progress-label b{font-weight:600;color:var(--green);font-variant-numeric:tabular-nums}
+.discovery-progress-label>span:last-child{display:flex;align-items:center;gap:5px}
+.discovery-progress-label svg{width:13px;height:13px;color:var(--green)}
+.discovery-progress-track{display:grid;grid-template-columns:repeat(20,minmax(0,1fr));gap:4px;height:4px}
+.discovery-progress-track>span{background:#e0e4d7;border-radius:2px}
+.discovery-progress-track>.is-kept{background:var(--green)}
+.discovery-progress-track>.is-passed{background:#abb4a1}
+.discovery-progress-track>.is-current{background:#a8b98d}
+.swipe-stage{overflow:hidden;padding:5px 5px 15px;margin:0 -5px;isolation:isolate}
+.swipe-card{position:relative;display:flex;flex-direction:column;min-height:300px;padding:25px 30px 22px;background:#fffefb;border:1px solid #d9e0cf;border-radius:9px;box-shadow:0 5px 14px #2a403207;touch-action:pan-y;user-select:none;transition:transform .16s ease-out,opacity .16s ease-out;transform-origin:50% 85%;will-change:transform;outline:none}
+.swipe-card:focus-visible{outline:2px solid var(--green);outline-offset:2px}
+.swipe-card-header{display:flex;align-items:center;gap:11px;font-size:11px;color:var(--green);line-height:1.5;padding-right:5px}
+.swipe-theme-number{display:grid;place-items:center;border:1px solid #dfe5d5;border-radius:4px;font-size:10px;width:29px;height:29px;flex-shrink:0;font-variant-numeric:tabular-nums;color:#738566}
+.swipe-card h2{font-size:clamp(32px,3.8vw,46px);letter-spacing:-.5px;line-height:1.14;text-align:center;padding:25px 12px;margin:auto 0;text-wrap:pretty}
+.swipe-axis{font-size:10px;color:#7b8573;text-align:center;line-height:1.5;margin:5px 0 0}
+.swipe-stamp{position:absolute;top:74px;z-index:1;pointer-events:none;font-family:var(--sans);font-size:17px;letter-spacing:2px;font-weight:650;border:2px solid currentColor;border-radius:4px;padding:8px 13px;opacity:0;background:#fffefbf2;transition:opacity .1s}
+.swipe-stamp-keep{left:24px;color:var(--green);transform:rotate(-12deg)}
+.swipe-stamp-pass{right:24px;color:var(--orange);transform:rotate(12deg)}
+.swipe-card.is-keeping .swipe-stamp-keep,.swipe-card.is-passing .swipe-stamp-pass{opacity:var(--drag-strength,0)}
+.swipe-card.is-dragging{transition:none;cursor:grabbing}
+.swipe-card.leaving-right{transform:translateX(110%) rotate(9deg)!important;opacity:0}
+.swipe-card.leaving-left{transform:translateX(-110%) rotate(-9deg)!important;opacity:0}
+.swipe-controls{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}
+.swipe-choice{display:flex;align-items:center;justify-content:center;gap:10px;min-height:49px;border:1px solid var(--line);border-radius:5px;font-size:13px;font-weight:550;background:var(--surface);transition:background .15s,border-color .15s}
+.swipe-choice>svg{width:18px;height:18px}
+.swipe-choice kbd{font-family:var(--sans);font-size:12px;opacity:.5;margin-left:4px;font-weight:400}
+.choice-pass{color:#716f61}
+.choice-pass:hover{background:#fff;border-color:#babcae}
+.choice-keep{background:var(--green);color:var(--surface);border-color:var(--green)}
+.choice-keep:hover{background:var(--green-dark);border-color:var(--green-dark)}
+.swipe-foot{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-top:17px;color:var(--muted);font-size:9px}
+.undo-choice{display:flex;align-items:center;gap:6px;background:none;border:0;padding:5px 0;color:var(--muted);font-size:10px;text-align:left;line-height:1.6}
+.undo-choice svg{width:14px;height:14px}
+.undo-choice:hover:not(:disabled){color:var(--green);text-decoration:underline;text-underline-offset:3px}
+.undo-choice:disabled{opacity:.4}
+.discovery-endnote{font-size:10px;text-align:center;color:#7f8876;margin:18px 0 0;line-height:1.8}
+.selection{max-width:760px}
+.selection .discovery-header{margin-bottom:24px}
+.selection .discovery-header h1{max-width:640px}
+.selection-toolbar{display:flex;align-items:center;gap:10px;flex-wrap:wrap;padding-bottom:26px;border-bottom:1px solid var(--line)}
+.selection-toolbar .button{font-size:11px;min-height:44px}
+.selection-group{margin-top:27px}
+.selection-questions{list-style:none;margin:12px 0 0;padding:0;display:grid;gap:9px}
+.selection-questions li{display:flex;gap:17px;align-items:baseline;background:#fffefb;border:1px solid var(--line);border-radius:7px;padding:18px 16px 18px 19px}
+.selection-index{font-size:10px;line-height:1.9;min-width:17px;color:#8b987d;font-variant-numeric:tabular-nums}
+.selection-questions p{font-family:var(--serif);font-size:25px;line-height:1.25;margin:0;flex:1;min-width:0}
+.selection-questions .copy-button{opacity:.7;width:27px;height:28px;align-self:center;flex-shrink:0}
+.selection-questions .copy-button:hover{opacity:1}
+.selection-bottom{display:flex;align-items:center;justify-content:space-between;gap:20px;margin-top:27px;padding-top:17px;border-top:1px solid var(--line)}
+.selection-bottom .scope-link{margin:0;font-size:10px;line-height:1.7;text-align:right}
+.selection-empty{display:flex;align-items:center;justify-content:center;gap:12px;min-height:160px;color:var(--muted);font-size:12px;text-align:center}
+.selection-empty svg{width:22px;height:22px;color:#8fa177}
+.selection-empty p{margin:0;line-height:1.8}
+.selection-plain-label{display:block;font-size:11px;color:var(--green);margin-top:24px;line-height:1.8}
+.selection-plain{display:block;width:100%;resize:vertical;margin-top:8px;border:1px solid var(--line);border-radius:5px;background:var(--surface);padding:15px;font-family:var(--sans);font-size:12px;line-height:1.8;color:var(--ink)}
+@media(max-width:960px){
+  .discovery-content{padding-top:29px}
+  .discovery-header h1{font-size:52px}
+  .swipe-card h2{font-size:43px}
+}
+@media(max-width:660px){
+  .discovery-content{padding-top:23px;padding-bottom:30px}
+  .discovery-topline{gap:4px}
+  .discovery-topline>span{font-size:7px;letter-spacing:1px}
+  .discovery-topline>strong{font-size:10px}
+  .directory-top{font-size:9px;min-height:36px;padding:8px 10px;gap:6px}
+  .directory-top svg{width:13px;height:13px}
+  .discovery-header{margin-bottom:22px}
+  .discovery-header>.eyebrow{font-size:8px;letter-spacing:1.2px}
+  .discovery-header h1{font-size:42px;line-height:1.03;letter-spacing:-.6px;margin:10px 0 12px}
+  .discovery-header>p{font-size:11px;line-height:1.75}
+  .discovery-progress-label{font-size:9px;margin-bottom:9px}
+  .discovery-progress-track{gap:3px}
+  .discovery-progress{margin-bottom:11px}
+  .swipe-card{padding:20px 22px 19px;min-height:275px;border-radius:8px}
+  .swipe-card-header{font-size:10px;gap:9px}
+  .swipe-theme-number{width:26px;height:26px;font-size:9px}
+  .swipe-card h2{font-size:35px;line-height:1.12;padding:23px 0;letter-spacing:-.3px}
+  .swipe-axis{font-size:9px}
+  .swipe-stamp{font-size:14px;padding:7px 11px}
+  .swipe-controls{gap:10px}
+  .swipe-choice{font-size:12px;min-height:47px;gap:8px}
+  .swipe-choice kbd{display:none}
+  .swipe-foot{margin-top:13px;gap:10px;font-size:8px}
+  .undo-choice{font-size:9px;gap:5px}
+  .discovery-endnote{font-size:9px;margin-top:13px}
+  .selection-toolbar{gap:8px;padding-bottom:22px}
+  .selection-toolbar .button{font-size:10px;padding:12px 13px}
+  .selection-group{margin-top:24px}
+  .selection-questions li{gap:12px;padding:16px 12px 16px 14px}
+  .selection-questions p{font-size:23px}
+  .selection-index{font-size:9px;min-width:15px}
+  .selection-questions .copy-button{width:22px}
+  .selection-bottom{gap:14px;align-items:flex-start;margin-top:24px}
+  .selection-bottom .scope-link{font-size:9px;max-width:122px}
+}
+@media(max-width:390px){
+  .discovery-topline>strong{font-size:9px;max-width:160px}
+  .directory-top{font-size:8px;padding-inline:9px}
+  .directory-top svg{display:none}
+  .discovery-topline>span{font-size:6.5px;letter-spacing:.7px}
+  .discovery-header h1{font-size:38px}
+  .swipe-card{padding-inline:18px}
+  .swipe-card h2{font-size:32px}
+  .swipe-foot{flex-wrap:wrap;justify-content:center;gap:4px 14px}
+}
+
+</style>
+</head>
+<body>
+  <a href="#content" class="skip-link">Aller aux questions</a>
+  <button type="button" id="drawer-backdrop" class="drawer-backdrop" aria-label="Fermer le sommaire" hidden></button>
+  <aside class="sidebar" id="sidebar" aria-label="Sommaire des thèmes">
+    <div class="sidebar-top">
+      <a href="#" class="brand" id="brand" aria-label="Les bonnes histoires, accueil">
+        <span class="brand-symbol" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+        <span>Les bonnes<br>histoires<span class="brand-dot">.</span></span>
+      </a>
+      <button type="button" id="close-menu" class="icon-button close-menu" aria-label="Fermer le sommaire">×</button>
+    </div>
+    <p class="sidebar-caption">LE RÉPERTOIRE D’ENTRETIEN</p>
+    <nav id="theme-nav" aria-label="Thèmes"><span class="loading-nav">Chargement des thèmes…</span></nav>
+    <div class="sidebar-footer">
+      <span class="footer-rule"></span>
+      <p>Une question.<br>Un souvenir.<br><em>Une bonne histoire.</em></p>
+      <span class="micro">10 THÈMES · 500 QUESTIONS</span>
+    </div>
+  </aside>
+
+  <div class="workspace">
+    <header class="topbar">
+      <button type="button" id="open-menu" class="icon-button menu-button" aria-label="Ouvrir le sommaire" aria-expanded="false" aria-controls="sidebar">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+      <div class="discovery-topline" id="discovery-topline" hidden><span>POUR VOTRE PROCHAIN ENTRETIEN</span><strong>Une sélection qui vous ressemble.</strong></div>
+      <button type="button" id="top-directory" class="button directory-top" data-theme="all" hidden>Le répertoire <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></button>
+      <div class="search-box">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 4.5 4.5"/></svg>
+        <label class="sr-only" for="search">Rechercher une question</label>
+        <input id="search" type="search" placeholder="Chercher un mot, une idée, un souvenir…" autocomplete="off" spellcheck="false" disabled>
+        <button type="button" id="clear-search" class="clear-search" aria-label="Effacer la recherche" hidden>×</button>
+        <kbd class="search-shortcut" aria-hidden="true">/</kbd>
+      </div>
+      <button type="button" id="random-question" class="button random-top" disabled>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h3c5 0 7 12 12 12h3M17 14l4 4-4 4M3 18h3c2 0 3.5-2 5-5M13 8c1.5-2 3-2 5-2h3M17 2l4 4-4 4"/></svg>
+        <span>Au hasard</span>
+      </button>
+    </header>
+
+    <main id="content" tabindex="-1">
+      <div class="loading-state"><span class="eyebrow">LES BONNES HISTOIRES</span><h1>La conversation<br>va commencer.</h1><p>Ouverture du répertoire…</p></div>
+    </main>
+    <footer class="page-footer"><span>Les bonnes histoires</span><span>La bonne question est celle qui réveille un souvenir.</span></footer>
+  </div>
+
+  <dialog id="question-dialog" aria-labelledby="dialog-question">
+    <div id="dialog-content"></div>
+  </dialog>
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+  <p class="sr-only" id="announcement" role="status" aria-live="polite" aria-atomic="true"></p>
+  <noscript><p class="noscript">Activez JavaScript pour parcourir les 500 questions de ce répertoire.</p></noscript>
+<script id="questions-data" type="application/json">{"schema_version":1,"titre":"Les bonnes histoires","sous_titre":"Une banque de 500 questions pour faire émerger des récits personnels et professionnels","langue":"fr","version_editoriale":"Première proposition — 17 octobre 2026","usage":"Choisir un thème et parcourir librement les questions. Les questions sont des déclencheurs de conversation ; elles peuvent être passées ou reformulées selon la personne.","themes":[{"id":"T01","nom":"D’où je viens","intention":"Retrouver les lieux, les personnes et les expériences qui ont façonné le regard du dirigeant avant sa carrière.","axes":[{"id":"T01-A01","nom":"Les lieux et le milieu"},{"id":"T01-A02","nom":"Les modèles et les contre-exemples"},{"id":"T01-A03","nom":"Les premiers rapports au travail et à l’argent"},{"id":"T01-A04","nom":"La place que j’occupais"},{"id":"T01-A05","nom":"Les départs et les déclics"}],"questions":[{"id":"T01-Q01","axe_id":"T01-A01","texte":"Quel lieu de votre enfance permettrait de comprendre quelque chose de votre manière de travailler aujourd’hui ?"},{"id":"T01-Q02","axe_id":"T01-A01","texte":"Quelle scène de la vie familiale vous a donné une première idée de ce que voulait dire réussir ?"},{"id":"T01-Q03","axe_id":"T01-A01","texte":"Quel objet de votre enfance raconte le mieux le milieu dans lequel vous avez grandi ?"},{"id":"T01-Q04","axe_id":"T01-A01","texte":"À quelle occasion avez-vous découvert que d’autres familles vivaient très différemment de la vôtre ?"},{"id":"T01-Q05","axe_id":"T01-A01","texte":"Quel trajet que vous faisiez régulièrement enfant vous revient encore avec précision ?"},{"id":"T01-Q06","axe_id":"T01-A01","texte":"Quel sujet revenait à table et a fini par compter dans votre vie professionnelle ?"},{"id":"T01-Q07","axe_id":"T01-A01","texte":"Quand avez-vous ressenti pour la première fois de la fierté pour vos origines ?"},{"id":"T01-Q08","axe_id":"T01-A01","texte":"Quelle situation vous a donné envie de vous éloigner du monde dans lequel vous aviez grandi ?"},{"id":"T01-Q09","axe_id":"T01-A01","texte":"Quel détail de votre ancien quartier reconnaissez-vous encore dans vos goûts ou vos habitudes ?"},{"id":"T01-Q10","axe_id":"T01-A01","texte":"Quel retour dans un lieu de votre enfance vous a fait mesurer le chemin parcouru ?"},{"id":"T01-Q11","axe_id":"T01-A02","texte":"Quelle personne de votre entourage vous impressionnait avant que vous sachiez quel métier vous vouliez faire ?"},{"id":"T01-Q12","axe_id":"T01-A02","texte":"Quelle scène vous a fait comprendre ce que vous ne vouliez surtout pas devenir ?"},{"id":"T01-Q13","axe_id":"T01-A02","texte":"Quelle parole d’un adulte vous accompagnait encore lors de vos premiers choix professionnels ?"},{"id":"T01-Q14","axe_id":"T01-A02","texte":"Qui vous a confié une tâche importante alors que vous étiez encore très jeune ?"},{"id":"T01-Q15","axe_id":"T01-A02","texte":"Quel geste d’un proche vous a appris quelque chose sur la dignité au travail ?"},{"id":"T01-Q16","axe_id":"T01-A02","texte":"Quel adulte avez-vous d’abord admiré avant de porter sur lui un regard plus nuancé ?"},{"id":"T01-Q17","axe_id":"T01-A02","texte":"Qui vous a montré qu’une autre vie que celle prévue pour vous était possible ?"},{"id":"T01-Q18","axe_id":"T01-A02","texte":"Quelle injustice observée jeune vous a laissé une mémoire très précise ?"},{"id":"T01-Q19","axe_id":"T01-A02","texte":"Quel personnage de livre, de film ou de fiction vous donnait envie de lui ressembler ?"},{"id":"T01-Q20","axe_id":"T01-A02","texte":"Quelle personne discrète de votre jeunesse mérite davantage de place dans le récit de votre parcours ?"},{"id":"T01-Q21","axe_id":"T01-A03","texte":"Comment avez-vous gagné votre premier argent dont vous pouviez décider librement ?"},{"id":"T01-Q22","axe_id":"T01-A03","texte":"Quel souvenir gardez-vous du travail de vos parents ou des adultes qui vous élevaient ?"},{"id":"T01-Q23","axe_id":"T01-A03","texte":"Quelle première dépense importante vous a donné le sentiment de devenir autonome ?"},{"id":"T01-Q24","axe_id":"T01-A03","texte":"À quel moment avez-vous compris que le travail pouvait être pénible pour quelqu’un que vous aimiez ?"},{"id":"T01-Q25","axe_id":"T01-A03","texte":"Quel petit service rendu jeune vous a appris à tenir un engagement ?"},{"id":"T01-Q26","axe_id":"T01-A03","texte":"Quelle remarque sur l’argent entendue dans votre enfance vous a marqué ?"},{"id":"T01-Q27","axe_id":"T01-A03","texte":"Quel premier emploi vous a fait découvrir une réalité que vous ignoriez ?"},{"id":"T01-Q28","axe_id":"T01-A03","texte":"Quel achat avez-vous longtemps attendu avant de pouvoir vous l’offrir ?"},{"id":"T01-Q29","axe_id":"T01-A03","texte":"Quand avez-vous pour la première fois négocié ce que valait votre travail ?"},{"id":"T01-Q30","axe_id":"T01-A03","texte":"Quelle différence entre le métier rêvé enfant et votre activité actuelle vous fait sourire ?"},{"id":"T01-Q31","axe_id":"T01-A04","texte":"Dans quel groupe de votre jeunesse avez-vous trouvé une place qui vous convenait vraiment ?"},{"id":"T01-Q32","axe_id":"T01-A04","texte":"Quand vous êtes-vous retrouvé responsable des autres pour la première fois ?"},{"id":"T01-Q33","axe_id":"T01-A04","texte":"Quelle fois vous a-t-on sous-estimé parce que vous étiez trop jeune ou trop discret ?"},{"id":"T01-Q34","axe_id":"T01-A04","texte":"Quel souvenir illustre le rôle que vous preniez spontanément dans une bande ?"},{"id":"T01-Q35","axe_id":"T01-A04","texte":"Quelle activité vous permettait de vous sentir compétent quand le reste vous paraissait difficile ?"},{"id":"T01-Q36","axe_id":"T01-A04","texte":"Quel épisode scolaire vous a donné confiance en votre capacité à faire quelque chose de difficile ?"},{"id":"T01-Q37","axe_id":"T01-A04","texte":"Quand avez-vous découvert qu’il vous faudrait parfois contester une règle ?"},{"id":"T01-Q38","axe_id":"T01-A04","texte":"Quelle humiliation de jeunesse vous a rendu plus attentif à la façon de traiter les autres ?"},{"id":"T01-Q39","axe_id":"T01-A04","texte":"Quel premier succès collectif vous reste en mémoire ?"},{"id":"T01-Q40","axe_id":"T01-A04","texte":"Quel regard posé sur vous à cette époque aimeriez-vous aujourd’hui corriger ?"},{"id":"T01-Q41","axe_id":"T01-A05","texte":"Quel départ a vraiment séparé votre vie d’avant de votre vie d’après ?"},{"id":"T01-Q42","axe_id":"T01-A05","texte":"Quel déplacement vous a fait découvrir un monde auquel vous n’aviez pas accès jusque-là ?"},{"id":"T01-Q43","axe_id":"T01-A05","texte":"À quelle occasion avez-vous osé demander quelque chose qui vous paraissait hors de portée ?"},{"id":"T01-Q44","axe_id":"T01-A05","texte":"Quel événement vous a donné envie de prendre votre vie en main plus tôt que prévu ?"},{"id":"T01-Q45","axe_id":"T01-A05","texte":"Quelle rencontre fortuite a modifié une décision importante de votre jeunesse ?"},{"id":"T01-Q46","axe_id":"T01-A05","texte":"Quel choix d’orientation avez-vous fait sans réussir à l’expliquer à votre entourage ?"},{"id":"T01-Q47","axe_id":"T01-A05","texte":"Quelle occasion manquée jeune a finalement ouvert une autre voie ?"},{"id":"T01-Q48","axe_id":"T01-A05","texte":"Quand avez-vous compris que vous pouviez vivre autrement que selon les attentes placées en vous ?"},{"id":"T01-Q49","axe_id":"T01-A05","texte":"Quelle première arrivée dans un nouvel environnement vous a donné le sentiment de ne pas connaître les codes ?"},{"id":"T01-Q50","axe_id":"T01-A05","texte":"Quel souvenir d’avant votre carrière éclaire une conviction que l’on vous connaît aujourd’hui ?"}]},{"id":"T02","nom":"Apprendre et trouver sa voie","intention":"Faire émerger les apprentissages, les influences intellectuelles et les changements de trajectoire.","axes":[{"id":"T02-A01","nom":"Apprendre quelque chose de difficile"},{"id":"T02-A02","nom":"Les personnes et les œuvres qui enseignent"},{"id":"T02-A03","nom":"Se tromper et changer d’avis"},{"id":"T02-A04","nom":"Chercher sa manière de faire"},{"id":"T02-A05","nom":"Trouver ou déplacer sa voie"}],"questions":[{"id":"T02-Q01","axe_id":"T02-A01","texte":"Quelle compétence avez-vous acquise beaucoup plus laborieusement que les autres ne l’imaginent ?"},{"id":"T02-Q02","axe_id":"T02-A01","texte":"Quel premier essai raté vous a donné envie d’insister plutôt que d’abandonner ?"},{"id":"T02-Q03","axe_id":"T02-A01","texte":"Quelle situation vous a obligé à apprendre dans l’urgence ?"},{"id":"T02-Q04","axe_id":"T02-A01","texte":"Quand avez-vous découvert que votre méthode d’apprentissage habituelle ne suffisait plus ?"},{"id":"T02-Q05","axe_id":"T02-A01","texte":"Quel exercice répétitif a fini par changer votre niveau dans un domaine ?"},{"id":"T02-Q06","axe_id":"T02-A01","texte":"Quelle compétence apprise hors du travail vous a ensuite servi professionnellement de façon inattendue ?"},{"id":"T02-Q07","axe_id":"T02-A01","texte":"Quel apprentissage avez-vous repris après avoir longtemps pensé que vous n’étiez pas fait pour cela ?"},{"id":"T02-Q08","axe_id":"T02-A01","texte":"Quel moment précis vous a fait sentir que vous commenciez à maîtriser votre métier ?"},{"id":"T02-Q09","axe_id":"T02-A01","texte":"Quelle erreur de débutant savez-vous encore reproduire parce qu’elle vous a beaucoup appris ?"},{"id":"T02-Q10","axe_id":"T02-A01","texte":"Quelle chose difficile avez-vous finalement apprise en regardant quelqu’un faire ?"},{"id":"T02-Q11","axe_id":"T02-A02","texte":"Quelle explication reçue un jour vous a débloqué durablement ?"},{"id":"T02-Q12","axe_id":"T02-A02","texte":"Quel livre vous a conduit à modifier une pratique concrète ?"},{"id":"T02-Q13","axe_id":"T02-A02","texte":"Quelle remarque d’un collègue plus expérimenté n’avez-vous comprise que des années après ?"},{"id":"T02-Q14","axe_id":"T02-A02","texte":"Quel professeur ou formateur a changé votre rapport à une matière que vous rejetiez ?"},{"id":"T02-Q15","axe_id":"T02-A02","texte":"Quelle personne vous a appris à poser de meilleures questions ?"},{"id":"T02-Q16","axe_id":"T02-A02","texte":"Quel conseil avez-vous suivi trop littéralement avant de trouver votre propre manière ?"},{"id":"T02-Q17","axe_id":"T02-A02","texte":"Quelle conversation a révélé une lacune importante dans votre compréhension d’un sujet ?"},{"id":"T02-Q18","axe_id":"T02-A02","texte":"Quel texte, film ou récit vous a fait découvrir une situation professionnelle sous un autre angle ?"},{"id":"T02-Q19","axe_id":"T02-A02","texte":"Qui vous a montré une manière de faire que vous avez d’abord trouvée étrange puis adoptée ?"},{"id":"T02-Q20","axe_id":"T02-A02","texte":"Quel enseignement utile vous est venu d’une personne qui connaissait moins bien le sujet que vous ?"},{"id":"T02-Q21","axe_id":"T02-A03","texte":"Sur quel sujet avez-vous dû reconnaître publiquement que vous aviez tort ?"},{"id":"T02-Q22","axe_id":"T02-A03","texte":"Quelle expérience a contredit une idée que vous teniez pour évidente ?"},{"id":"T02-Q23","axe_id":"T02-A03","texte":"Quel chiffre vous a forcé à revoir votre lecture d’une situation ?"},{"id":"T02-Q24","axe_id":"T02-A03","texte":"Quand avez-vous compris que vous confondiez votre préférence avec une vérité générale ?"},{"id":"T02-Q25","axe_id":"T02-A03","texte":"Quelle objection que vous aviez écartée vous paraît aujourd’hui décisive ?"},{"id":"T02-Q26","axe_id":"T02-A03","texte":"Quel changement d’avis a été le plus difficile à expliquer à ceux qui vous avaient suivi ?"},{"id":"T02-Q27","axe_id":"T02-A03","texte":"Quel cas particulier vous a fait abandonner une règle que vous appliquiez systématiquement ?"},{"id":"T02-Q28","axe_id":"T02-A03","texte":"Quelle discussion avez-vous quittée avec une opinion différente de celle que vous aviez en arrivant ?"},{"id":"T02-Q29","axe_id":"T02-A03","texte":"Quand avez-vous cessé d’utiliser une formule qui vous paraissait auparavant très juste ?"},{"id":"T02-Q30","axe_id":"T02-A03","texte":"Quelle personne avez-vous appris à écouter après l’avoir mal jugée ?"},{"id":"T02-Q31","axe_id":"T02-A04","texte":"Quel outil vous a fait gagner du temps après une longue période de résistance ?"},{"id":"T02-Q32","axe_id":"T02-A04","texte":"Quand avez-vous décidé de revenir aux fondamentaux d’un sujet que vous pensiez maîtriser ?"},{"id":"T02-Q33","axe_id":"T02-A04","texte":"Quelle expérience avez-vous menée pour départager deux méthodes qui semblaient aussi convaincantes ?"},{"id":"T02-Q34","axe_id":"T02-A04","texte":"Quel carnet, tableau ou document vous a aidé à comprendre quelque chose de confus ?"},{"id":"T02-Q35","axe_id":"T02-A04","texte":"Quelle habitude de veille avez-vous abandonnée parce qu’elle vous occupait sans vous apprendre grand-chose ?"},{"id":"T02-Q36","axe_id":"T02-A04","texte":"Quel sujet avez-vous étudié par curiosité avant qu’il devienne important dans votre travail ?"},{"id":"T02-Q37","axe_id":"T02-A04","texte":"Quelle visite sur le terrain vous a appris davantage que vos documents préparatoires ?"},{"id":"T02-Q38","axe_id":"T02-A04","texte":"Quand avez-vous décidé de demander une explication simple plutôt que de faire semblant de comprendre ?"},{"id":"T02-Q39","axe_id":"T02-A04","texte":"Quelle connaissance ancienne avez-vous réutilisée dans un contexte complètement différent ?"},{"id":"T02-Q40","axe_id":"T02-A04","texte":"Quelle compétence que vous croyiez secondaire est devenue essentielle à votre rôle ?"},{"id":"T02-Q41","axe_id":"T02-A05","texte":"Quel premier indice vous a fait penser que votre métier d’alors n’était plus le bon ?"},{"id":"T02-Q42","axe_id":"T02-A05","texte":"Quelle mission vous a donné envie de changer de spécialité ?"},{"id":"T02-Q43","axe_id":"T02-A05","texte":"Quand avez-vous accepté de redevenir débutant pour avancer ?"},{"id":"T02-Q44","axe_id":"T02-A05","texte":"Quel détour dans votre parcours s’est révélé plus utile que la voie prévue ?"},{"id":"T02-Q45","axe_id":"T02-A05","texte":"Quelle proposition avez-vous acceptée en vous disant que vous ne saviez pas encore la faire ?"},{"id":"T02-Q46","axe_id":"T02-A05","texte":"Quel changement professionnel avez-vous préparé longtemps avant d’en parler ?"},{"id":"T02-Q47","axe_id":"T02-A05","texte":"Quand avez-vous découvert que vous aimiez davantage une partie du métier que le métier lui-même ?"},{"id":"T02-Q48","axe_id":"T02-A05","texte":"Quelle expérience vous a permis de distinguer ce qui vous intéressait de ce pour quoi vous étiez reconnu ?"},{"id":"T02-Q49","axe_id":"T02-A05","texte":"Quel retour reçu sur votre travail vous a révélé une aptitude que vous n’aviez pas identifiée ?"},{"id":"T02-Q50","axe_id":"T02-A05","texte":"Quelle décision de carrière comprend-on mieux quand on connaît ce que vous cherchiez à apprendre ?"}]},{"id":"T03","nom":"Se lancer et construire","intention":"Raconter la naissance d’un projet, d’une entreprise ou d’une équipe et les étapes qui lui ont donné une existence concrète.","axes":[{"id":"T03-A01","nom":"Le premier mouvement"},{"id":"T03-A02","nom":"Faire avec peu"},{"id":"T03-A03","nom":"Donner une forme à l’idée"},{"id":"T03-A04","nom":"Trouver ses premiers appuis"},{"id":"T03-A05","nom":"Faire tenir et passer un palier"}],"questions":[{"id":"T03-Q01","axe_id":"T03-A01","texte":"Quel problème concret vous a donné envie de créer quelque chose ?"},{"id":"T03-Q02","axe_id":"T03-A01","texte":"À qui avez-vous parlé de votre projet avant qu’il ait un nom ?"},{"id":"T03-Q03","axe_id":"T03-A01","texte":"Quel a été le tout premier geste qui a transformé votre idée en engagement réel ?"},{"id":"T03-Q04","axe_id":"T03-A01","texte":"Quel document de vos débuts vous semblerait aujourd’hui presque attendrissant ?"},{"id":"T03-Q05","axe_id":"T03-A01","texte":"Qu’est-ce qui vous a décidé à vous lancer à ce moment précis ?"},{"id":"T03-Q06","axe_id":"T03-A01","texte":"Quelle première réaction à votre idée vous a surpris ?"},{"id":"T03-Q07","axe_id":"T03-A01","texte":"Quel engagement personnel vous a fait comprendre que le projet devenait sérieux ?"},{"id":"T03-Q08","axe_id":"T03-A01","texte":"Quelle chose avez-vous annoncée trop tôt parce que vous aviez besoin de vous obliger à avancer ?"},{"id":"T03-Q09","axe_id":"T03-A01","texte":"Quel premier rendez-vous aviez-vous préparé comme s’il allait tout décider ?"},{"id":"T03-Q10","axe_id":"T03-A01","texte":"Quelle tâche minuscule des débuts symbolise pour vous le fait de se lancer ?"},{"id":"T03-Q11","axe_id":"T03-A02","texte":"Quelle solution improvisée vous a permis de faire tenir les premières semaines ?"},{"id":"T03-Q12","axe_id":"T03-A02","texte":"Quel moyen vous manquait et vous a obligé à inventer une autre façon de faire ?"},{"id":"T03-Q13","axe_id":"T03-A02","texte":"Quelle dépense avez-vous longtemps repoussée avant de comprendre qu’elle était nécessaire ?"},{"id":"T03-Q14","axe_id":"T03-A02","texte":"Quel objet bricolé ou détourné utilisiez-vous au début de votre projet ?"},{"id":"T03-Q15","axe_id":"T03-A02","texte":"Quelle aide gratuite ou presque a compté de manière disproportionnée dans les débuts ?"},{"id":"T03-Q16","axe_id":"T03-A02","texte":"Quel moment vous a fait réaliser que vous ne pourriez pas tout faire vous-même ?"},{"id":"T03-Q17","axe_id":"T03-A02","texte":"Quelle tâche assumiez-vous au commencement alors que personne ne vous imaginerait la faire aujourd’hui ?"},{"id":"T03-Q18","axe_id":"T03-A02","texte":"Quel engagement avez-vous tenu avec des moyens que vous jugez maintenant dérisoires ?"},{"id":"T03-Q19","axe_id":"T03-A02","texte":"Quelle contrainte de départ est devenue une caractéristique durable de votre organisation ?"},{"id":"T03-Q20","axe_id":"T03-A02","texte":"Quel luxe apparemment banal avez-vous pu vous offrir quand la situation s’est stabilisée ?"},{"id":"T03-Q21","axe_id":"T03-A03","texte":"Quel premier prototype ou premier essai avez-vous osé montrer alors qu’il était imparfait ?"},{"id":"T03-Q22","axe_id":"T03-A03","texte":"Quelle partie de votre idée initiale a disparu dès qu’elle a rencontré la réalité ?"},{"id":"T03-Q23","axe_id":"T03-A03","texte":"Quel détail de la première version vous teniez à soigner malgré le manque de temps ?"},{"id":"T03-Q24","axe_id":"T03-A03","texte":"Quand avez-vous compris que vous construisiez quelque chose de trop compliqué ?"},{"id":"T03-Q25","axe_id":"T03-A03","texte":"Quelle simplification a rendu votre offre ou votre projet compréhensible ?"},{"id":"T03-Q26","axe_id":"T03-A03","texte":"Quel usage inattendu de ce que vous aviez créé vous a donné une nouvelle direction ?"},{"id":"T03-Q27","axe_id":"T03-A03","texte":"Quelle décision sur le nom, la présentation ou les mots employés a réellement compté ?"},{"id":"T03-Q28","axe_id":"T03-A03","texte":"Quel premier retour vous a fait reprendre presque tout depuis le début ?"},{"id":"T03-Q29","axe_id":"T03-A03","texte":"Quelle fonctionnalité, prestation ou promesse avez-vous retirée pour mieux faire le reste ?"},{"id":"T03-Q30","axe_id":"T03-A03","texte":"Quel moment vous a donné le sentiment que le projet avait enfin trouvé sa forme ?"},{"id":"T03-Q31","axe_id":"T03-A04","texte":"Qui vous a ouvert une porte alors que vous aviez encore peu de choses à montrer ?"},{"id":"T03-Q32","axe_id":"T03-A04","texte":"Quelle présentation de votre projet a obtenu une réaction que vous n’attendiez pas ?"},{"id":"T03-Q33","axe_id":"T03-A04","texte":"Quel premier refus vous a aidé à mieux expliquer ce que vous proposiez ?"},{"id":"T03-Q34","axe_id":"T03-A04","texte":"Quelle personne a cru au projet avant que vous soyez vous-même complètement convaincu ?"},{"id":"T03-Q35","axe_id":"T03-A04","texte":"Quel engagement extérieur vous a donné le sentiment que le projet existait pour de bon ?"},{"id":"T03-Q36","axe_id":"T03-A04","texte":"Quelle recommandation inattendue a débloqué une situation au début ?"},{"id":"T03-Q37","axe_id":"T03-A04","texte":"Comment avez-vous obtenu une première occasion de prouver ce que vous saviez faire ?"},{"id":"T03-Q38","axe_id":"T03-A04","texte":"Quel interlocuteur vous a fait découvrir que vous vous adressiez au mauvais public ?"},{"id":"T03-Q39","axe_id":"T03-A04","texte":"Quel soutien moral vous a permis de continuer quand les signes concrets tardaient ?"},{"id":"T03-Q40","axe_id":"T03-A04","texte":"Quelle personne de ces débuts aimeriez-vous remercier plus précisément ?"},{"id":"T03-Q41","axe_id":"T03-A05","texte":"Quel moment vous a fait comprendre que le projet pouvait fonctionner sans votre présence constante ?"},{"id":"T03-Q42","axe_id":"T03-A05","texte":"Quelle première organisation a cessé de convenir quand l’activité a pris de l’ampleur ?"},{"id":"T03-Q43","axe_id":"T03-A05","texte":"Quel passage de relais a permis de franchir une étape ?"},{"id":"T03-Q44","axe_id":"T03-A05","texte":"Quel rituel des débuts avez-vous tenu à conserver quand l’équipe s’est agrandie ?"},{"id":"T03-Q45","axe_id":"T03-A05","texte":"Quelle décision vous a aidé à transformer une réussite ponctuelle en fonctionnement régulier ?"},{"id":"T03-Q46","axe_id":"T03-A05","texte":"Quelle ancienne manière de faire avez-vous eu le plus de mal à abandonner ?"},{"id":"T03-Q47","axe_id":"T03-A05","texte":"Quel premier changement d’échelle vous a obligé à revoir vos ambitions ?"},{"id":"T03-Q48","axe_id":"T03-A05","texte":"Quand avez-vous senti que le projet avait commencé à appartenir aussi aux autres ?"},{"id":"T03-Q49","axe_id":"T03-A05","texte":"Quelle étape apparemment modeste vous semble rétrospectivement fondatrice ?"},{"id":"T03-Q50","axe_id":"T03-A05","texte":"Que retrouve-t-on encore aujourd’hui du projet des tout premiers jours ?"}]},{"id":"T04","nom":"Décider et renoncer","intention":"Faire apparaître les arbitrages, les paris, les refus et le prix concret des choix.","axes":[{"id":"T04-A01","nom":"Décider dans l’incertitude"},{"id":"T04-A02","nom":"Arbitrer entre plusieurs biens"},{"id":"T04-A03","nom":"Dire non"},{"id":"T04-A04","nom":"S’arrêter et abandonner"},{"id":"T04-A05","nom":"Assumer et réviser"}],"questions":[{"id":"T04-Q01","axe_id":"T04-A01","texte":"Quelle décision avez-vous prise avec beaucoup moins d’informations que vous ne l’auriez souhaité ?"},{"id":"T04-Q02","axe_id":"T04-A01","texte":"Quel moment vous a fait comprendre qu’attendre était déjà une décision ?"},{"id":"T04-Q03","axe_id":"T04-A01","texte":"Quand avez-vous dû choisir entre deux options qui vous semblaient également défendables ?"},{"id":"T04-Q04","axe_id":"T04-A01","texte":"Quel signal très faible a pesé lourd dans une décision importante ?"},{"id":"T04-Q05","axe_id":"T04-A01","texte":"Quelle décision avez-vous prise en vous donnant explicitement le droit de revenir en arrière ?"},{"id":"T04-Q06","axe_id":"T04-A01","texte":"Quand avez-vous arrêté de chercher un avis supplémentaire pour enfin trancher ?"},{"id":"T04-Q07","axe_id":"T04-A01","texte":"Quelle décision a été rendue possible par une question simple posée au bon moment ?"},{"id":"T04-Q08","axe_id":"T04-A01","texte":"Quel choix avez-vous fait sans pouvoir démontrer immédiatement que vous aviez raison ?"},{"id":"T04-Q09","axe_id":"T04-A01","texte":"Quand avez-vous préféré une option moins ambitieuse parce qu’elle vous semblait plus solide ?"},{"id":"T04-Q10","axe_id":"T04-A01","texte":"Quelle décision serait incompréhensible si l’on ignorait les informations dont vous disposiez alors ?"},{"id":"T04-Q11","axe_id":"T04-A02","texte":"Quel arbitrage vous a obligé à décevoir des personnes dont vous compreniez pourtant les attentes ?"},{"id":"T04-Q12","axe_id":"T04-A02","texte":"Quand avez-vous dû choisir entre aller vite et faire les choses à votre niveau d’exigence ?"},{"id":"T04-Q13","axe_id":"T04-A02","texte":"Quelle décision a opposé ce qui était bon à court terme et ce qui vous semblait juste à long terme ?"},{"id":"T04-Q14","axe_id":"T04-A02","texte":"Quel jour avez-vous privilégié la solidité d’une équipe plutôt que la performance immédiate ?"},{"id":"T04-Q15","axe_id":"T04-A02","texte":"Quand avez-vous choisi de préserver une relation au prix d’un avantage concret ?"},{"id":"T04-Q16","axe_id":"T04-A02","texte":"Quel compromis avez-vous accepté après avoir longtemps pensé qu’il serait impossible ?"},{"id":"T04-Q17","axe_id":"T04-A02","texte":"Quelle promesse ancienne a compliqué un choix qui paraissait simple aux autres ?"},{"id":"T04-Q18","axe_id":"T04-A02","texte":"Quand avez-vous laissé passer un gain pour garder votre liberté de décision ?"},{"id":"T04-Q19","axe_id":"T04-A02","texte":"Quel arbitrage vous a appris que deux priorités ne pouvaient plus rester au même niveau ?"},{"id":"T04-Q20","axe_id":"T04-A02","texte":"Quelle décision vous a fait comprendre qu’il n’existait pas de solution sans coût ?"},{"id":"T04-Q21","axe_id":"T04-A03","texte":"Quelle occasion très séduisante avez-vous refusée ?"},{"id":"T04-Q22","axe_id":"T04-A03","texte":"Quand avez-vous dit non à quelqu’un que vous admiriez ou souhaitiez impressionner ?"},{"id":"T04-Q23","axe_id":"T04-A03","texte":"Quel refus avez-vous dû répéter plusieurs fois avant qu’il soit entendu ?"},{"id":"T04-Q24","axe_id":"T04-A03","texte":"Quelle fois avez-vous accepté quelque chose alors que vous auriez dû refuser ?"},{"id":"T04-Q25","axe_id":"T04-A03","texte":"Quel non vous a finalement valu davantage de confiance ?"},{"id":"T04-Q26","axe_id":"T04-A03","texte":"Quand avez-vous renoncé à vous justifier longuement pour exprimer un refus ?"},{"id":"T04-Q27","axe_id":"T04-A03","texte":"Quelle demande vous a fait préciser une limite que vous n’aviez jamais formulée ?"},{"id":"T04-Q28","axe_id":"T04-A03","texte":"Quel refus a changé la manière dont les autres vous percevaient ?"},{"id":"T04-Q29","axe_id":"T04-A03","texte":"Quand quelqu’un vous a-t-il aidé à dire non à une situation dans laquelle vous restiez par habitude ?"},{"id":"T04-Q30","axe_id":"T04-A03","texte":"Quel refus vous a coûté immédiatement mais vous a soulagé durablement ?"},{"id":"T04-Q31","axe_id":"T04-A04","texte":"Quel projet avez-vous arrêté alors qu’une grande partie du travail était déjà faite ?"},{"id":"T04-Q32","axe_id":"T04-A04","texte":"Quand avez-vous compris que les efforts déjà investis ne justifiaient pas de continuer ?"},{"id":"T04-Q33","axe_id":"T04-A04","texte":"Quel abandon avez-vous eu le plus de mal à annoncer ?"},{"id":"T04-Q34","axe_id":"T04-A04","texte":"Quelle activité avez-vous cessé de faire alors que vous saviez très bien la faire ?"},{"id":"T04-Q35","axe_id":"T04-A04","texte":"Quel objectif avez-vous retiré plutôt que de continuer à demander des efforts aux autres ?"},{"id":"T04-Q36","axe_id":"T04-A04","texte":"Quand avez-vous décidé de ne pas transformer une idée prometteuse en projet réel ?"},{"id":"T04-Q37","axe_id":"T04-A04","texte":"Quelle fermeture de porte vous a permis de retrouver de la disponibilité ?"},{"id":"T04-Q38","axe_id":"T04-A04","texte":"Quel renoncement vous a fait revoir votre définition du courage ?"},{"id":"T04-Q39","axe_id":"T04-A04","texte":"Quand avez-vous aidé quelqu’un à sortir dignement d’un projet devenu impossible ?"},{"id":"T04-Q40","axe_id":"T04-A04","texte":"Quel arrêt vous semble aujourd’hui avoir été une décision de construction ?"},{"id":"T04-Q41","axe_id":"T04-A05","texte":"Quelle décision avez-vous défendue devant des personnes qui la vivaient mal ?"},{"id":"T04-Q42","axe_id":"T04-A05","texte":"Quand avez-vous changé une décision sans vouloir faire porter la faute à ceux qui l’avaient exécutée ?"},{"id":"T04-Q43","axe_id":"T04-A05","texte":"Quel choix juste avez-vous mal expliqué ?"},{"id":"T04-Q44","axe_id":"T04-A05","texte":"Quelle décision avez-vous assumée alors que ses bénéfices étaient invisibles pour votre entourage ?"},{"id":"T04-Q45","axe_id":"T04-A05","texte":"Quand avez-vous donné raison à quelqu’un qui contestait votre arbitrage ?"},{"id":"T04-Q46","axe_id":"T04-A05","texte":"Quel choix avez-vous regretté pour la manière dont vous l’aviez pris plutôt que pour son résultat ?"},{"id":"T04-Q47","axe_id":"T04-A05","texte":"Quelle fois avez-vous dû rappeler pourquoi une décision avait été prise plusieurs mois plus tôt ?"},{"id":"T04-Q48","axe_id":"T04-A05","texte":"Quand avez-vous découvert un effet secondaire que personne n’avait anticipé au moment de choisir ?"},{"id":"T04-Q49","axe_id":"T04-A05","texte":"Quelle décision referiez-vous tout en la préparant autrement ?"},{"id":"T04-Q50","axe_id":"T04-A05","texte":"Quel arbitrage récent permettrait de comprendre vos priorités actuelles ?"}]},{"id":"T05","nom":"Échecs, crises et rebonds","intention":"Retrouver les erreurs, les moments de rupture, les réparations et les façons de repartir.","axes":[{"id":"T05-A01","nom":"Se tromper et le découvrir"},{"id":"T05-A02","nom":"Réagir dans l’urgence"},{"id":"T05-A03","nom":"Les ruptures et les pertes"},{"id":"T05-A04","nom":"Réparer"},{"id":"T05-A05","nom":"Repartir autrement"}],"questions":[{"id":"T05-Q01","axe_id":"T05-A01","texte":"Quel échec avez-vous mis le plus longtemps à nommer comme tel ?"},{"id":"T05-Q02","axe_id":"T05-A01","texte":"Quel signe annonciateur aviez-vous vu sans vouloir lui donner trop d’importance ?"},{"id":"T05-Q03","axe_id":"T05-A01","texte":"Quand avez-vous compris que vous aviez répondu au mauvais problème ?"},{"id":"T05-Q04","axe_id":"T05-A01","texte":"Quelle erreur est née d’une qualité que vous aviez poussée trop loin ?"},{"id":"T05-Q05","axe_id":"T05-A01","texte":"Quel résultat vous a montré que votre équipe et vous n’aviez pas la même compréhension de l’objectif ?"},{"id":"T05-Q06","axe_id":"T05-A01","texte":"Quand avez-vous découvert qu’un problème que vous pensiez exceptionnel se répétait ?"},{"id":"T05-Q07","axe_id":"T05-A01","texte":"Quelle mauvaise nouvelle avez-vous apprise d’une manière qui vous reste en mémoire ?"},{"id":"T05-Q08","axe_id":"T05-A01","texte":"Quel échec a mis fin à un sentiment de facilité dans votre parcours ?"},{"id":"T05-Q09","axe_id":"T05-A01","texte":"Quelle explication rassurante avez-vous dû abandonner pour regarder un problème en face ?"},{"id":"T05-Q10","axe_id":"T05-A01","texte":"Quel détail rend votre souvenir d’un échec particulièrement vivant ?"},{"id":"T05-Q11","axe_id":"T05-A02","texte":"Quelle situation vous a obligé à changer toutes vos priorités en une matinée ?"},{"id":"T05-Q12","axe_id":"T05-A02","texte":"Quel premier geste avez-vous fait lors d’une crise dont vous vous souvenez précisément ?"},{"id":"T05-Q13","axe_id":"T05-A02","texte":"Quand avez-vous dû décider avant même d’avoir fini de comprendre ce qui se passait ?"},{"id":"T05-Q14","axe_id":"T05-A02","texte":"Quelle information avez-vous cherché à vérifier en premier dans une situation critique ?"},{"id":"T05-Q15","axe_id":"T05-A02","texte":"Qui avez-vous appelé lors d’un moment où vous ne pouviez plus gérer seul ?"},{"id":"T05-Q16","axe_id":"T05-A02","texte":"Quelle tâche apparemment secondaire s’est révélée essentielle dans l’urgence ?"},{"id":"T05-Q17","axe_id":"T05-A02","texte":"Quel moment de crise vous a fait découvrir une personne sous un jour nouveau ?"},{"id":"T05-Q18","axe_id":"T05-A02","texte":"Quand avez-vous dû protéger votre équipe d’une agitation qui empêchait de travailler ?"},{"id":"T05-Q19","axe_id":"T05-A02","texte":"Quelle annonce avez-vous dû faire alors que vous n’aviez pas encore de solution ?"},{"id":"T05-Q20","axe_id":"T05-A02","texte":"Quelle journée de crise pourriez-vous raconter presque heure par heure ?"},{"id":"T05-Q21","axe_id":"T05-A03","texte":"Quel départ dans votre organisation a révélé une fragilité que vous ne voyiez pas ?"},{"id":"T05-Q22","axe_id":"T05-A03","texte":"Quelle relation professionnelle s’est interrompue plus brutalement que vous ne l’imaginiez ?"},{"id":"T05-Q23","axe_id":"T05-A03","texte":"Quand avez-vous perdu quelque chose que vous pensiez acquis ?"},{"id":"T05-Q24","axe_id":"T05-A03","texte":"Quel revers vous a obligé à revoir le récit que vous faisiez de vous-même ?"},{"id":"T05-Q25","axe_id":"T05-A03","texte":"Quelle rupture avez-vous continué à comprendre longtemps après qu’elle avait eu lieu ?"},{"id":"T05-Q26","axe_id":"T05-A03","texte":"Quand avez-vous dû annoncer la fin d’une aventure à ceux qui y croyaient encore ?"},{"id":"T05-Q27","axe_id":"T05-A03","texte":"Quel échec vous a fait découvrir qui restait présent quand les choses allaient mal ?"},{"id":"T05-Q28","axe_id":"T05-A03","texte":"Quelle perte de confiance a été plus difficile à réparer qu’une perte d’argent ?"},{"id":"T05-Q29","axe_id":"T05-A03","texte":"Quand avez-vous accepté de laisser partir quelqu’un dont vous aviez encore besoin ?"},{"id":"T05-Q30","axe_id":"T05-A03","texte":"Quelle fin de projet vous a laissé un souvenir plus fort que certains de vos succès ?"},{"id":"T05-Q31","axe_id":"T05-A04","texte":"À qui avez-vous dû présenter des excuses précises dans votre vie professionnelle ?"},{"id":"T05-Q32","axe_id":"T05-A04","texte":"Quelle erreur avez-vous cherché à réparer alors que personne ne vous y obligeait ?"},{"id":"T05-Q33","axe_id":"T05-A04","texte":"Quand avez-vous choisi de reconnaître votre responsabilité avant de chercher une explication ?"},{"id":"T05-Q34","axe_id":"T05-A04","texte":"Quel premier geste a aidé à rétablir une relation abîmée ?"},{"id":"T05-Q35","axe_id":"T05-A04","texte":"Quelle promesse de réparation avez-vous pu tenir avec le temps ?"},{"id":"T05-Q36","axe_id":"T05-A04","texte":"Quand avez-vous compris qu’une excuse ne suffisait pas ?"},{"id":"T05-Q37","axe_id":"T05-A04","texte":"Quelle situation vous a demandé de réparer un dommage dont vous n’étiez pas personnellement à l’origine ?"},{"id":"T05-Q38","axe_id":"T05-A04","texte":"Quel changement concret avez-vous fait pour qu’une erreur ne se reproduise pas ?"},{"id":"T05-Q39","axe_id":"T05-A04","texte":"Quelle personne vous a accordé une seconde chance et dans quelles circonstances ?"},{"id":"T05-Q40","axe_id":"T05-A04","texte":"Quand avez-vous admis qu’une réparation complète n’était plus possible ?"},{"id":"T05-Q41","axe_id":"T05-A05","texte":"Quel petit événement vous a fait sentir que vous recommenciez à avancer ?"},{"id":"T05-Q42","axe_id":"T05-A05","texte":"Quelle tâche simple avez-vous reprise après une période de découragement professionnel ?"},{"id":"T05-Q43","axe_id":"T05-A05","texte":"Quand avez-vous accepté de repartir sur une base plus modeste ?"},{"id":"T05-Q44","axe_id":"T05-A05","texte":"Quelle expérience difficile vous a rendu plus précis dans votre manière de préparer un projet ?"},{"id":"T05-Q45","axe_id":"T05-A05","texte":"Quel soutien vous a aidé à retrouver l’envie d’agir ?"},{"id":"T05-Q46","axe_id":"T05-A05","texte":"Quelle pratique avez-vous laissée derrière vous après un échec ?"},{"id":"T05-Q47","axe_id":"T05-A05","texte":"Quand avez-vous raconté une difficulté ancienne sans ressentir le besoin de vous défendre ?"},{"id":"T05-Q48","axe_id":"T05-A05","texte":"Quel obstacle traversé vous permet aujourd’hui de rassurer quelqu’un avec des faits ?"},{"id":"T05-Q49","axe_id":"T05-A05","texte":"Quelle réussite ultérieure porte encore la marque d’un échec antérieur ?"},{"id":"T05-Q50","axe_id":"T05-A05","texte":"Quel conseil tiré d’un revers n’auriez-vous jamais pu comprendre avant de l’avoir vécu ?"}]},{"id":"T06","nom":"Le métier et le travail réel","intention":"Montrer le métier tel qu’il se pratique : gestes, exigences, outils, organisation et détails invisibles.","axes":[{"id":"T06-A01","nom":"Les gestes du métier"},{"id":"T06-A02","nom":"L’exigence et la qualité"},{"id":"T06-A03","nom":"Le temps et l’attention"},{"id":"T06-A04","nom":"Les méthodes et les outils"},{"id":"T06-A05","nom":"Le travail invisible"}],"questions":[{"id":"T06-Q01","axe_id":"T06-A01","texte":"Quelle tâche de votre métier pourriez-vous montrer à quelqu’un pour lui faire comprendre ce que vous faites vraiment ?"},{"id":"T06-Q02","axe_id":"T06-A01","texte":"Quel geste avez-vous appris à faire avec assurance alors qu’il vous intimidait au début ?"},{"id":"T06-Q03","axe_id":"T06-A01","texte":"Quel détail remarquez-vous immédiatement dans votre domaine et que les autres ne voient presque jamais ?"},{"id":"T06-Q04","axe_id":"T06-A01","texte":"Quelle visite de votre lieu de travail a changé le regard d’un proche sur votre activité ?"},{"id":"T06-Q05","axe_id":"T06-A01","texte":"Quel travail manuel ou très concret continuez-vous à aimer dans votre rôle actuel ?"},{"id":"T06-Q06","axe_id":"T06-A01","texte":"Quand avez-vous repris vous-même une tâche de terrain que vous n’aviez plus faite depuis longtemps ?"},{"id":"T06-Q07","axe_id":"T06-A01","texte":"Quelle situation vous a rappelé qu’il fallait parfois commencer par observer avant d’agir ?"},{"id":"T06-Q08","axe_id":"T06-A01","texte":"Quel problème avez-vous résolu grâce à votre connaissance des détails du métier ?"},{"id":"T06-Q09","axe_id":"T06-A01","texte":"Quelle partie de votre travail est la plus difficile à expliquer en dehors de votre secteur ?"},{"id":"T06-Q10","axe_id":"T06-A01","texte":"Quel objet professionnel usé raconte le mieux votre manière de travailler ?"},{"id":"T06-Q11","axe_id":"T06-A02","texte":"Quel travail avez-vous repris alors que les autres le jugeaient suffisamment bon ?"},{"id":"T06-Q12","axe_id":"T06-A02","texte":"Quand avez-vous décidé qu’un détail ne méritait plus le temps qu’il vous coûtait ?"},{"id":"T06-Q13","axe_id":"T06-A02","texte":"Quelle critique sur la qualité de votre travail vous a réellement fait progresser ?"},{"id":"T06-Q14","axe_id":"T06-A02","texte":"Quel livrable avez-vous eu du mal à laisser partir parce que vous voyiez encore ses imperfections ?"},{"id":"T06-Q15","axe_id":"T06-A02","texte":"Quand avez-vous été fier d’une amélioration que presque personne n’a remarquée ?"},{"id":"T06-Q16","axe_id":"T06-A02","texte":"Quelle différence entre un travail correct et un travail excellent savez-vous illustrer par un exemple ?"},{"id":"T06-Q17","axe_id":"T06-A02","texte":"Quel standard avez-vous maintenu alors qu’il aurait été facile de le baisser ?"},{"id":"T06-Q18","axe_id":"T06-A02","texte":"Quand avez-vous compris que votre exigence était devenue difficile à vivre pour les autres ?"},{"id":"T06-Q19","axe_id":"T06-A02","texte":"Quelle erreur vous a appris à vérifier un point que vous contrôlez désormais toujours ?"},{"id":"T06-Q20","axe_id":"T06-A02","texte":"Quel travail réalisé par quelqu’un d’autre vous a donné envie de relever votre propre niveau ?"},{"id":"T06-Q21","axe_id":"T06-A03","texte":"Quelle journée de travail vous a donné le sentiment rare d’avoir fait exactement ce qu’il fallait ?"},{"id":"T06-Q22","axe_id":"T06-A03","texte":"Quand avez-vous protégé un créneau de travail malgré des sollicitations importantes ?"},{"id":"T06-Q23","axe_id":"T06-A03","texte":"Quelle habitude de votre agenda avez-vous changée après avoir regardé où passait réellement votre temps ?"},{"id":"T06-Q24","axe_id":"T06-A03","texte":"Quel sujet avez-vous laissé mûrir avant de trouver une bonne réponse ?"},{"id":"T06-Q25","axe_id":"T06-A03","texte":"Quelle interruption a eu une conséquence disproportionnée sur votre travail ?"},{"id":"T06-Q26","axe_id":"T06-A03","texte":"Quand avez-vous compris que vous confondiez urgence et importance sur un dossier précis ?"},{"id":"T06-Q27","axe_id":"T06-A03","texte":"Quel rendez-vous supprimé vous a permis de mieux faire votre travail ?"},{"id":"T06-Q28","axe_id":"T06-A03","texte":"Quelle période de concentration intense vous revient encore avec précision ?"},{"id":"T06-Q29","axe_id":"T06-A03","texte":"Quand avez-vous préféré rendre quelque chose de simple à temps plutôt que quelque chose de plus complet trop tard ?"},{"id":"T06-Q30","axe_id":"T06-A03","texte":"Quel rituel vous aide à entrer dans une tâche difficile et comment l’avez-vous trouvé ?"},{"id":"T06-Q31","axe_id":"T06-A04","texte":"Quel processus avez-vous changé après avoir suivi concrètement le parcours d’un dossier ?"},{"id":"T06-Q32","axe_id":"T06-A04","texte":"Quelle automatisation ou quel outil a modifié votre quotidien de façon tangible ?"},{"id":"T06-Q33","axe_id":"T06-A04","texte":"Quand avez-vous abandonné une méthode à la mode parce qu’elle ne convenait pas à votre activité ?"},{"id":"T06-Q34","axe_id":"T06-A04","texte":"Quel tableau ou indicateur avez-vous cessé de regarder parce qu’il vous donnait une fausse impression de contrôle ?"},{"id":"T06-Q35","axe_id":"T06-A04","texte":"Quelle petite amélioration proposée sur le terrain a facilité le travail de beaucoup de personnes ?"},{"id":"T06-Q36","axe_id":"T06-A04","texte":"Quand une procédure conçue pour aider a-t-elle commencé à créer un problème ?"},{"id":"T06-Q37","axe_id":"T06-A04","texte":"Quel document avez-vous simplifié pour que les gens s’en servent vraiment ?"},{"id":"T06-Q38","axe_id":"T06-A04","texte":"Quelle expérience avez-vous faite en travaillant avec une équipe organisée très différemment de la vôtre ?"},{"id":"T06-Q39","axe_id":"T06-A04","texte":"Quand avez-vous remis une étape humaine dans un processus devenu trop automatique ?"},{"id":"T06-Q40","axe_id":"T06-A04","texte":"Quel outil ancien continuez-vous à utiliser parce qu’il remplit exactement son rôle ?"},{"id":"T06-Q41","axe_id":"T06-A05","texte":"Quelle tâche importante de votre activité ne laisse presque aucune trace visible ?"},{"id":"T06-Q42","axe_id":"T06-A05","texte":"Quel problème n’a jamais eu lieu grâce à une préparation dont personne n’a parlé ?"},{"id":"T06-Q43","axe_id":"T06-A05","texte":"Quand avez-vous découvert tout le travail qui se cachait derrière une réussite apparemment simple ?"},{"id":"T06-Q44","axe_id":"T06-A05","texte":"Quelle contribution discrète avez-vous tenu à rendre visible ?"},{"id":"T06-Q45","axe_id":"T06-A05","texte":"Quel effort professionnel vous a pris beaucoup de temps sans produire de résultat montrable immédiatement ?"},{"id":"T06-Q46","axe_id":"T06-A05","texte":"Quand avez-vous dû expliquer qu’une tâche pouvait sembler facile parce qu’elle était bien maîtrisée ?"},{"id":"T06-Q47","axe_id":"T06-A05","texte":"Quelle préparation faites-vous avant une intervention qui paraît ensuite spontanée ?"},{"id":"T06-Q48","axe_id":"T06-A05","texte":"Quel suivi effectué après la livraison a finalement fait la différence ?"},{"id":"T06-Q49","axe_id":"T06-A05","texte":"Quelle compétence peu spectaculaire vous semble essentielle dans votre équipe ?"},{"id":"T06-Q50","axe_id":"T06-A05","texte":"Quel épisode permettrait de raconter votre métier sans reprendre votre intitulé de poste ?"}]},{"id":"T07","nom":"S’entourer, diriger et transmettre","intention":"Explorer les relations professionnelles à travers le recrutement, la confiance, les désaccords et les passages de relais.","axes":[{"id":"T07-A01","nom":"Choisir les personnes"},{"id":"T07-A02","nom":"Faire confiance et déléguer"},{"id":"T07-A03","nom":"Le désaccord et l’autorité"},{"id":"T07-A04","nom":"Prendre soin du collectif"},{"id":"T07-A05","nom":"Transmettre et laisser la place"}],"questions":[{"id":"T07-Q01","axe_id":"T07-A01","texte":"Quel recrutement avez-vous décidé après un détail de conversation qui vous avait frappé ?"},{"id":"T07-Q02","axe_id":"T07-A01","texte":"Quand avez-vous donné sa chance à quelqu’un dont le parcours ne ressemblait pas aux autres ?"},{"id":"T07-Q03","axe_id":"T07-A01","texte":"Quelle rencontre professionnelle a débouché sur une collaboration que vous n’aviez pas prévue ?"},{"id":"T07-Q04","axe_id":"T07-A01","texte":"Quel mauvais recrutement vous a appris à poser une question différente en entretien ?"},{"id":"T07-Q05","axe_id":"T07-A01","texte":"Quand avez-vous compris qu’une personne brillante n’était pas la bonne pour votre équipe ?"},{"id":"T07-Q06","axe_id":"T07-A01","texte":"Quelle association de personnes semblait improbable et a pourtant bien fonctionné ?"},{"id":"T07-Q07","axe_id":"T07-A01","texte":"Quel candidat vous a fait changer d’avis sur le profil que vous cherchiez ?"},{"id":"T07-Q08","axe_id":"T07-A01","texte":"Quand avez-vous refusé de travailler avec quelqu’un malgré une forte compétence reconnue ?"},{"id":"T07-Q09","axe_id":"T07-A01","texte":"Quelle première impression sur un futur collaborateur s’est révélée complètement fausse ?"},{"id":"T07-Q10","axe_id":"T07-A01","texte":"Quel engagement réciproque a marqué le début d’une collaboration importante pour vous ?"},{"id":"T07-Q11","axe_id":"T07-A02","texte":"Quelle première vraie délégation vous a demandé un effort personnel ?"},{"id":"T07-Q12","axe_id":"T07-A02","texte":"Quand avez-vous laissé quelqu’un faire autrement que vous avec un bon résultat ?"},{"id":"T07-Q13","axe_id":"T07-A02","texte":"Quel moment vous a montré que vous repreniez trop vite la main ?"},{"id":"T07-Q14","axe_id":"T07-A02","texte":"Quelle responsabilité importante avez-vous confiée à quelqu’un qui ne se sentait pas encore prêt ?"},{"id":"T07-Q15","axe_id":"T07-A02","texte":"Quand avez-vous découvert qu’un problème venait d’une délégation mal expliquée ?"},{"id":"T07-Q16","axe_id":"T07-A02","texte":"Quel signe concret vous a permis d’accorder davantage d’autonomie à une personne ?"},{"id":"T07-Q17","axe_id":"T07-A02","texte":"Quelle erreur avez-vous laissé quelqu’un corriger sans intervenir à sa place ?"},{"id":"T07-Q18","axe_id":"T07-A02","texte":"Quand avez-vous accepté de ne pas tout savoir de ce qui se passait dans votre organisation ?"},{"id":"T07-Q19","axe_id":"T07-A02","texte":"Quelle confiance reçue d’un autre dirigeant a changé votre manière de déléguer à votre tour ?"},{"id":"T07-Q20","axe_id":"T07-A02","texte":"Quel résultat obtenu sans vous a été particulièrement agréable à découvrir ?"},{"id":"T07-Q21","axe_id":"T07-A03","texte":"Quel désaccord avec un collaborateur vous a finalement rendu service ?"},{"id":"T07-Q22","axe_id":"T07-A03","texte":"Quand avez-vous dû recadrer quelqu’un que vous appréciez personnellement ?"},{"id":"T07-Q23","axe_id":"T07-A03","texte":"Quelle réunion a changé votre façon d’exercer l’autorité ?"},{"id":"T07-Q24","axe_id":"T07-A03","texte":"Quand avez-vous laissé une objection être formulée jusqu’au bout alors qu’elle vous mettait mal à l’aise ?"},{"id":"T07-Q25","axe_id":"T07-A03","texte":"Quel conflit avez-vous aggravé en voulant le régler trop rapidement ?"},{"id":"T07-Q26","axe_id":"T07-A03","texte":"Quelle conversation difficile avez-vous trop longtemps repoussée ?"},{"id":"T07-Q27","axe_id":"T07-A03","texte":"Quand avez-vous défendu votre équipe face à une personne plus haut placée que vous ?"},{"id":"T07-Q28","axe_id":"T07-A03","texte":"Quel arbitrage avez-vous confié au groupe alors que vous auriez pu l’imposer ?"},{"id":"T07-Q29","axe_id":"T07-A03","texte":"Quelle fois avez-vous dû rappeler une règle sans transformer l’échange en rapport de force ?"},{"id":"T07-Q30","axe_id":"T07-A03","texte":"Quand avez-vous compris qu’un silence dans une réunion ne signifiait pas un accord ?"},{"id":"T07-Q31","axe_id":"T07-A04","texte":"Quel changement dans le comportement d’une personne vous a conduit à aller lui parler ?"},{"id":"T07-Q32","axe_id":"T07-A04","texte":"Quand avez-vous adapté l’organisation à une difficulté personnelle vécue par un collaborateur ?"},{"id":"T07-Q33","axe_id":"T07-A04","texte":"Quel moment de convivialité a réellement changé quelque chose dans une équipe ?"},{"id":"T07-Q34","axe_id":"T07-A04","texte":"Quelle contribution avez-vous célébrée alors qu’elle risquait de passer inaperçue ?"},{"id":"T07-Q35","axe_id":"T07-A04","texte":"Quand avez-vous découvert qu’une décision ressentie comme équitable par certains ne l’était pas par les autres ?"},{"id":"T07-Q36","axe_id":"T07-A04","texte":"Quel problème collectif est apparu à travers une remarque apparemment anodine ?"},{"id":"T07-Q37","axe_id":"T07-A04","texte":"Quelle période vous a obligé à demander davantage d’efforts à votre équipe et à expliquer pourquoi ?"},{"id":"T07-Q38","axe_id":"T07-A04","texte":"Quand avez-vous décidé de ralentir pour préserver la capacité de travail du groupe ?"},{"id":"T07-Q39","axe_id":"T07-A04","texte":"Quel geste d’un collaborateur envers un autre vous a rendu fier de votre organisation ?"},{"id":"T07-Q40","axe_id":"T07-A04","texte":"Quelle situation vous a appris à distinguer aider une personne et décider à sa place ?"},{"id":"T07-Q41","axe_id":"T07-A05","texte":"À qui avez-vous appris quelque chose que vous avez ensuite vu pratiquer avec une autre personne ?"},{"id":"T07-Q42","axe_id":"T07-A05","texte":"Quand avez-vous compris qu’un collaborateur était prêt à vous dépasser dans un domaine ?"},{"id":"T07-Q43","axe_id":"T07-A05","texte":"Quel départ d’un membre de votre équipe avez-vous vécu comme une réussite de son parcours ?"},{"id":"T07-Q44","axe_id":"T07-A05","texte":"Quelle explication avez-vous dû reformuler plusieurs fois avant de réussir à transmettre votre expérience ?"},{"id":"T07-Q45","axe_id":"T07-A05","texte":"Quand avez-vous organisé un passage de relais en prenant le temps de raconter ce qui n’était écrit nulle part ?"},{"id":"T07-Q46","axe_id":"T07-A05","texte":"Quel ancien collaborateur vous a appris ce qu’il avait réellement retenu de vous ?"},{"id":"T07-Q47","axe_id":"T07-A05","texte":"Quelle responsabilité avez-vous été heureux de ne plus porter vous-même ?"},{"id":"T07-Q48","axe_id":"T07-A05","texte":"Quand avez-vous aidé quelqu’un à préparer une prise de poste qui l’intimidait ?"},{"id":"T07-Q49","axe_id":"T07-A05","texte":"Quelle manière de faire avez-vous transmise sans vous rendre compte qu’elle serait imitée ?"},{"id":"T07-Q50","axe_id":"T07-A05","texte":"Quel moment vous a montré que l’équipe savait continuer sans vous ?"}]},{"id":"T08","nom":"Clients, argent et croissance","intention":"Retrouver les scènes économiques concrètes : valeur créée, prix, négociations, ressources et choix de développement.","axes":[{"id":"T08-A01","nom":"Comprendre les clients"},{"id":"T08-A02","nom":"Négocier et fixer un prix"},{"id":"T08-A03","nom":"L’argent et les contraintes"},{"id":"T08-A04","nom":"Grandir et choisir son rythme"},{"id":"T08-A05","nom":"La réussite et ses signes"}],"questions":[{"id":"T08-Q01","axe_id":"T08-A01","texte":"Quel échange avec un client vous a appris pourquoi on achetait vraiment votre produit ou votre service ?"},{"id":"T08-Q02","axe_id":"T08-A01","texte":"Quand avez-vous découvert que ce que vous considériez comme un détail était essentiel pour un client ?"},{"id":"T08-Q03","axe_id":"T08-A01","texte":"Quelle réclamation vous a finalement aidé à améliorer votre offre ?"},{"id":"T08-Q04","axe_id":"T08-A01","texte":"Quel client vous a appris à mieux exercer votre métier ?"},{"id":"T08-Q05","axe_id":"T08-A01","texte":"Quand un usage réel de votre produit a-t-il contredit la manière dont vous le présentiez ?"},{"id":"T08-Q06","axe_id":"T08-A01","texte":"Quelle demande avez-vous commencé par trouver absurde avant d’en comprendre la logique ?"},{"id":"T08-Q07","axe_id":"T08-A01","texte":"Quel client perdu vous a donné une information que les clients satisfaits ne vous donnaient pas ?"},{"id":"T08-Q08","axe_id":"T08-A01","texte":"Quelle observation sur le terrain vous a permis de mieux comprendre une décision d’achat ?"},{"id":"T08-Q09","axe_id":"T08-A01","texte":"Quand avez-vous dû reconnaître que votre offre n’était pas adaptée à un client ?"},{"id":"T08-Q10","axe_id":"T08-A01","texte":"Quel témoignage vous a fait mesurer un effet de votre travail que vous ne voyiez pas ?"},{"id":"T08-Q11","axe_id":"T08-A02","texte":"Quelle négociation vous a obligé à expliquer précisément la valeur de ce que vous faisiez ?"},{"id":"T08-Q12","axe_id":"T08-A02","texte":"Quand avez-vous augmenté un prix avec plus d’appréhension que vos clients n’ont montré de résistance ?"},{"id":"T08-Q13","axe_id":"T08-A02","texte":"Quel devis refusé vous a appris quelque chose sur votre positionnement ?"},{"id":"T08-Q14","axe_id":"T08-A02","texte":"Quand avez-vous accepté un prix trop bas et découvert ensuite ce qu’il vous coûtait ?"},{"id":"T08-Q15","axe_id":"T08-A02","texte":"Quelle discussion commerciale a basculé lorsque vous avez cessé de parler uniquement du prix ?"},{"id":"T08-Q16","axe_id":"T08-A02","texte":"Quel geste commercial avez-vous accordé parce qu’il avait un sens particulier dans la relation ?"},{"id":"T08-Q17","axe_id":"T08-A02","texte":"Quand avez-vous renoncé à une vente parce que les conditions rendaient le travail impossible ?"},{"id":"T08-Q18","axe_id":"T08-A02","texte":"Quelle proposition commerciale avez-vous simplifiée pour rendre le choix plus clair ?"},{"id":"T08-Q19","axe_id":"T08-A02","texte":"Quel moment vous a fait comprendre que vous vous excusiez presque de facturer votre travail ?"},{"id":"T08-Q20","axe_id":"T08-A02","texte":"Quelle négociation vous a permis de défendre vos intérêts tout en renforçant la relation ?"},{"id":"T08-Q21","axe_id":"T08-A03","texte":"Quel moment vous a fait découvrir la différence entre une activité rentable sur le papier et l’argent réellement disponible ?"},{"id":"T08-Q22","axe_id":"T08-A03","texte":"Quelle dépense avez-vous défendue alors que les ressources étaient limitées ?"},{"id":"T08-Q23","axe_id":"T08-A03","texte":"Quand avez-vous dû parler franchement d’une contrainte financière à votre équipe ?"},{"id":"T08-Q24","axe_id":"T08-A03","texte":"Quel chiffre avez-vous commencé à suivre après avoir été surpris par une situation ?"},{"id":"T08-Q25","axe_id":"T08-A03","texte":"Quelle économie apparente s’est révélée coûteuse avec le recul ?"},{"id":"T08-Q26","axe_id":"T08-A03","texte":"Quand avez-vous dû choisir ce que vous pouviez financer et ce qui attendrait ?"},{"id":"T08-Q27","axe_id":"T08-A03","texte":"Quel investissement a mis longtemps à produire un effet visible ?"},{"id":"T08-Q28","axe_id":"T08-A03","texte":"Quelle relation votre façon de rémunérer les personnes entretient-elle avec une expérience que vous avez vécue ?"},{"id":"T08-Q29","axe_id":"T08-A03","texte":"Quand avez-vous reçu une somme importante sans ressentir la satisfaction que vous attendiez ?"},{"id":"T08-Q30","axe_id":"T08-A03","texte":"Quel épisode vous a conduit à revoir votre rapport personnel à l’argent ?"},{"id":"T08-Q31","axe_id":"T08-A04","texte":"Quel moment vous a fait comprendre qu’une croissance rapide pouvait fragiliser ce que vous construisiez ?"},{"id":"T08-Q32","axe_id":"T08-A04","texte":"Quand avez-vous préféré mieux servir vos clients actuels plutôt que d’en chercher davantage ?"},{"id":"T08-Q33","axe_id":"T08-A04","texte":"Quelle opportunité de développement a transformé votre organisation plus que prévu ?"},{"id":"T08-Q34","axe_id":"T08-A04","texte":"Quel indicateur de croissance avez-vous cessé de considérer comme une fin en soi ?"},{"id":"T08-Q35","axe_id":"T08-A04","texte":"Quand avez-vous compris qu’un marché prometteur ne convenait pas à votre manière de travailler ?"},{"id":"T08-Q36","axe_id":"T08-A04","texte":"Quelle ouverture de marché ou nouvelle implantation vous a appris à revoir vos certitudes ?"},{"id":"T08-Q37","axe_id":"T08-A04","texte":"Quel gros contrat a changé l’équilibre de votre activité ?"},{"id":"T08-Q38","axe_id":"T08-A04","texte":"Quand avez-vous volontairement ralenti un développement qui semblait bien parti ?"},{"id":"T08-Q39","axe_id":"T08-A04","texte":"Quelle étape vous a fait comprendre que croître et gagner en solidité n’allaient pas toujours ensemble ?"},{"id":"T08-Q40","axe_id":"T08-A04","texte":"Quel développement dont vous êtes fier a demandé de rester patient plus longtemps que prévu ?"},{"id":"T08-Q41","axe_id":"T08-A05","texte":"Quel succès vous a procuré moins de joie qu’une petite victoire antérieure ?"},{"id":"T08-Q42","axe_id":"T08-A05","texte":"Quand avez-vous compris que votre définition de la réussite avait changé ?"},{"id":"T08-Q43","axe_id":"T08-A05","texte":"Quelle reconnaissance extérieure vous a touché pour une raison personnelle ?"},{"id":"T08-Q44","axe_id":"T08-A05","texte":"Quel résultat avez-vous célébré avec l’équipe d’une manière dont vous vous souvenez encore ?"},{"id":"T08-Q45","axe_id":"T08-A05","texte":"Quand la réussite d’un autre vous a-t-elle donné une idée utile plutôt qu’un sentiment de comparaison ?"},{"id":"T08-Q46","axe_id":"T08-A05","texte":"Quel objectif atteint vous a laissé avec la question de ce que vous vouliez faire ensuite ?"},{"id":"T08-Q47","axe_id":"T08-A05","texte":"Quelle réussite reste peu connue alors qu’elle a été importante pour vous ?"},{"id":"T08-Q48","axe_id":"T08-A05","texte":"Quel signe très concret vous a fait sentir que votre travail avait trouvé son public ?"},{"id":"T08-Q49","axe_id":"T08-A05","texte":"Quand avez-vous décidé de ne pas afficher un succès parce que le moment ne s’y prêtait pas ?"},{"id":"T08-Q50","axe_id":"T08-A05","texte":"Quelle réussite aimeriez-vous raconter en rendant davantage visibles ceux qui l’ont rendue possible ?"}]},{"id":"T09","nom":"Convictions, responsabilité et désaccords","intention":"Relier les prises de position à leur origine, aux actes qu’elles entraînent et aux situations qui les compliquent.","axes":[{"id":"T09-A01","nom":"D’où viennent les convictions"},{"id":"T09-A02","nom":"Mettre les principes en pratique"},{"id":"T09-A03","nom":"Voir les conséquences de ses actes"},{"id":"T09-A04","nom":"Prendre la parole et écouter le désaccord"},{"id":"T09-A05","nom":"Garder du doute et de la nuance"}],"questions":[{"id":"T09-Q01","axe_id":"T09-A01","texte":"Quelle expérience vous a donné une conviction que vous défendez encore aujourd’hui ?"},{"id":"T09-Q02","axe_id":"T09-A01","texte":"Quand avez-vous commencé à vous intéresser à un sujet qui vous semblait auparavant lointain ?"},{"id":"T09-Q03","axe_id":"T09-A01","texte":"Quelle rencontre a rendu concret un problème que vous connaissiez seulement de manière abstraite ?"},{"id":"T09-Q04","axe_id":"T09-A01","texte":"Quel désaccord ancien a contribué à former une position que vous assumez maintenant ?"},{"id":"T09-Q05","axe_id":"T09-A01","texte":"Quelle scène ordinaire vous a fait voir une question de société autrement ?"},{"id":"T09-Q06","axe_id":"T09-A01","texte":"Quand avez-vous compris qu’une règle que vous trouviez naturelle favorisait certaines personnes plus que d’autres ?"},{"id":"T09-Q07","axe_id":"T09-A01","texte":"Quelle histoire entendue de la bouche de quelqu’un vous a marqué plus qu’un raisonnement ?"},{"id":"T09-Q08","axe_id":"T09-A01","texte":"Quel sujet avez-vous d’abord défendu parce qu’une personne de votre entourage était concernée ?"},{"id":"T09-Q09","axe_id":"T09-A01","texte":"Quelle contradiction observée chez quelqu’un que vous admiriez vous a fait réfléchir à vos propres principes ?"},{"id":"T09-Q10","axe_id":"T09-A01","texte":"Quelle expérience vous a conduit à prendre au sérieux une question dont vous vous moquiez auparavant ?"},{"id":"T09-Q11","axe_id":"T09-A02","texte":"Quel principe vous a coûté quelque chose le jour où vous l’avez appliqué ?"},{"id":"T09-Q12","axe_id":"T09-A02","texte":"Quand avez-vous renoncé à une facilité parce qu’elle contredisait un engagement pris ?"},{"id":"T09-Q13","axe_id":"T09-A02","texte":"Quelle décision concrète représente le mieux une valeur affichée dans votre organisation ?"},{"id":"T09-Q14","axe_id":"T09-A02","texte":"Quand avez-vous découvert un écart entre ce que vous annonciez et ce qui se passait réellement ?"},{"id":"T09-Q15","axe_id":"T09-A02","texte":"Quel engagement avez-vous rendu plus modeste pour pouvoir le tenir sérieusement ?"},{"id":"T09-Q16","axe_id":"T09-A02","texte":"Quelle situation vous a demandé de choisir entre deux principes auxquels vous teniez ?"},{"id":"T09-Q17","axe_id":"T09-A02","texte":"Quand avez-vous décidé de rendre une pratique plus cohérente plutôt que d’en parler davantage ?"},{"id":"T09-Q18","axe_id":"T09-A02","texte":"Quel comportement avez-vous dû changer pour être crédible sur un sujet que vous défendiez ?"},{"id":"T09-Q19","axe_id":"T09-A02","texte":"Quelle personne vous a rappelé à un engagement que vous aviez vous-même formulé ?"},{"id":"T09-Q20","axe_id":"T09-A02","texte":"Quand une exigence de cohérence vous a-t-elle conduit à revoir une collaboration ?"},{"id":"T09-Q21","axe_id":"T09-A03","texte":"Quel retour vous a fait découvrir une conséquence inattendue de votre activité ?"},{"id":"T09-Q22","axe_id":"T09-A03","texte":"Quand avez-vous dû regarder ce qui se passait après la vente ou la livraison ?"},{"id":"T09-Q23","axe_id":"T09-A03","texte":"Quelle visite vous a fait comprendre l’effet d’une décision prise loin du terrain ?"},{"id":"T09-Q24","axe_id":"T09-A03","texte":"Quand avez-vous découvert que les coûts d’une décision étaient supportés par d’autres que ses bénéficiaires ?"},{"id":"T09-Q25","axe_id":"T09-A03","texte":"Quelle critique de votre secteur vous a paru fondée au vu de votre propre expérience ?"},{"id":"T09-Q26","axe_id":"T09-A03","texte":"Quel changement avez-vous engagé après avoir écouté une personne extérieure à votre organisation ?"},{"id":"T09-Q27","axe_id":"T09-A03","texte":"Quand avez-vous mesuré les limites de ce que votre entreprise pouvait réellement résoudre ?"},{"id":"T09-Q28","axe_id":"T09-A03","texte":"Quelle action modeste a eu un effet plus utile qu’une initiative beaucoup plus visible ?"},{"id":"T09-Q29","axe_id":"T09-A03","texte":"Quel engagement avez-vous choisi de poursuivre même lorsqu’il n’attirait plus l’attention ?"},{"id":"T09-Q30","axe_id":"T09-A03","texte":"Quelle situation vous a obligé à définir plus précisément de quoi vous étiez responsable ?"},{"id":"T09-Q31","axe_id":"T09-A04","texte":"Quand avez-vous pris publiquement position pour la première fois sur un sujet qui comptait pour vous ?"},{"id":"T09-Q32","axe_id":"T09-A04","texte":"Quelle réaction inattendue à une prise de parole vous a fait réfléchir ?"},{"id":"T09-Q33","axe_id":"T09-A04","texte":"Quel sujet avez-vous préféré approfondir avant de vous exprimer ?"},{"id":"T09-Q34","axe_id":"T09-A04","texte":"Quand avez-vous défendu une personne ou une position que votre entourage comprenait mal ?"},{"id":"T09-Q35","axe_id":"T09-A04","texte":"Quelle objection reçue après une intervention avez-vous gardée en tête ?"},{"id":"T09-Q36","axe_id":"T09-A04","texte":"Quand avez-vous choisi de parler malgré votre inconfort ?"},{"id":"T09-Q37","axe_id":"T09-A04","texte":"Quelle conversation avec une personne en désaccord profond a pourtant été utile ?"},{"id":"T09-Q38","axe_id":"T09-A04","texte":"Quel propos avez-vous nuancé après avoir compris comment il avait été reçu ?"},{"id":"T09-Q39","axe_id":"T09-A04","texte":"Quand avez-vous découvert qu’une formule efficace ne rendait pas justice à la complexité d’un sujet ?"},{"id":"T09-Q40","axe_id":"T09-A04","texte":"Quelle prise de parole a donné lieu à un échange réel que vous n’attendiez pas ?"},{"id":"T09-Q41","axe_id":"T09-A05","texte":"Quelle conviction avez-vous rendue moins générale après avoir rencontré une exception importante ?"},{"id":"T09-Q42","axe_id":"T09-A05","texte":"Quand avez-vous admis ne pas savoir ce qu’il fallait penser d’un sujet ?"},{"id":"T09-Q43","axe_id":"T09-A05","texte":"Quel problème vous semblait simple avant que vous ayez à prendre une décision vous-même ?"},{"id":"T09-Q44","axe_id":"T09-A05","texte":"Quelle personne vous aide à éprouver vos convictions plutôt qu’à seulement les confirmer ?"},{"id":"T09-Q45","axe_id":"T09-A05","texte":"Quand avez-vous renoncé à convaincre quelqu’un pour chercher d’abord à le comprendre ?"},{"id":"T09-Q46","axe_id":"T09-A05","texte":"Quel argument d’un adversaire vous paraît plus solide aujourd’hui qu’au moment où vous l’avez entendu ?"},{"id":"T09-Q47","axe_id":"T09-A05","texte":"Quelle expérience vous a fait distinguer être sincère et avoir raison ?"},{"id":"T09-Q48","axe_id":"T09-A05","texte":"Quand avez-vous compris que vous appliquiez différemment un principe selon les personnes concernées ?"},{"id":"T09-Q49","axe_id":"T09-A05","texte":"Quel sujet continuez-vous à travailler parce que vos réponses ne vous satisfont pas encore ?"},{"id":"T09-Q50","axe_id":"T09-A05","texte":"Quelle position actuelle serait mieux comprise si vous racontiez les hésitations qui l’ont précédée ?"}]},{"id":"T10","nom":"Une vie autour du travail","intention":"Faire apparaître les liens entre la vie professionnelle, les proches, les passions, le temps et les envies pour la suite.","axes":[{"id":"T10-A01","nom":"Les proches et la place du travail"},{"id":"T10-A02","nom":"Les frontières et les équilibres"},{"id":"T10-A03","nom":"Les passions et les autres terrains"},{"id":"T10-A04","nom":"Le temps qui passe"},{"id":"T10-A05","nom":"Les envies et la suite"}],"questions":[{"id":"T10-Q01","axe_id":"T10-A01","texte":"Quel proche vous a fait prendre conscience de la place que votre travail occupait dans votre vie ?"},{"id":"T10-Q02","axe_id":"T10-A01","texte":"Quand avez-vous dû expliquer une décision professionnelle à quelqu’un qui en subirait aussi les conséquences ?"},{"id":"T10-Q03","axe_id":"T10-A01","texte":"Quelle conversation personnelle vous a aidé à sortir d’un raisonnement purement professionnel ?"},{"id":"T10-Q04","axe_id":"T10-A01","texte":"Quel moment important avez-vous réussi à préserver malgré une période de travail très chargée ?"},{"id":"T10-Q05","axe_id":"T10-A01","texte":"Quand avez-vous compris qu’un proche attendait votre présence plutôt qu’une solution ?"},{"id":"T10-Q06","axe_id":"T10-A01","texte":"Quelle rencontre dans votre vie personnelle a changé votre rapport à l’ambition ?"},{"id":"T10-Q07","axe_id":"T10-A01","texte":"Quel souvenir partagé avec vos proches est lié à une étape de votre carrière ?"},{"id":"T10-Q08","axe_id":"T10-A01","texte":"Quand quelqu’un vous a-t-il aidé sans participer directement à votre travail ?"},{"id":"T10-Q09","axe_id":"T10-A01","texte":"Quelle habitude familiale ou amicale avez-vous retrouvée après l’avoir laissée disparaître ?"},{"id":"T10-Q10","axe_id":"T10-A01","texte":"Quel proche raconterait votre parcours d’une façon très différente de votre biographie professionnelle ?"},{"id":"T10-Q11","axe_id":"T10-A02","texte":"Quand avez-vous posé une limite précise à votre disponibilité professionnelle ?"},{"id":"T10-Q12","axe_id":"T10-A02","texte":"Quelle période vous a montré que votre rythme de travail n’était plus tenable pour vous ?"},{"id":"T10-Q13","axe_id":"T10-A02","texte":"Quel engagement personnel vous a obligé à mieux organiser vos journées ?"},{"id":"T10-Q14","axe_id":"T10-A02","texte":"Quand avez-vous réellement déconnecté d’un dossier qui vous occupait depuis longtemps ?"},{"id":"T10-Q15","axe_id":"T10-A02","texte":"Quelle règle personnelle avez-vous créée après avoir trop souvent fait une exception ?"},{"id":"T10-Q16","axe_id":"T10-A02","texte":"Quel changement d’organisation vous a rendu une liberté concrète ?"},{"id":"T10-Q17","axe_id":"T10-A02","texte":"Quand avez-vous dit à votre entourage professionnel qu’une autre partie de votre vie passait en premier ?"},{"id":"T10-Q18","axe_id":"T10-A02","texte":"Quelle journée a été réussie à vos yeux malgré une faible quantité de travail accompli ?"},{"id":"T10-Q19","axe_id":"T10-A02","texte":"Quand avez-vous découvert qu’une pause vous permettait de mieux revenir à un problème ?"},{"id":"T10-Q20","axe_id":"T10-A02","texte":"Quelle limite respectez-vous plus facilement aujourd’hui qu’au début de votre carrière ?"},{"id":"T10-Q21","axe_id":"T10-A03","texte":"Quelle activité vous absorbe au point de vous faire oublier votre rôle professionnel ?"},{"id":"T10-Q22","axe_id":"T10-A03","texte":"Quel loisir vous a fait accepter avec plaisir d’être mauvais à quelque chose ?"},{"id":"T10-Q23","axe_id":"T10-A03","texte":"Quand une pratique sportive, artistique ou ludique vous a-t-elle appris quelque chose sur vous ?"},{"id":"T10-Q24","axe_id":"T10-A03","texte":"Quelle passion ancienne avez-vous reprise après l’avoir laissée de côté ?"},{"id":"T10-Q25","axe_id":"T10-A03","texte":"Quel groupe fréquenté hors du travail vous fait du bien parce que votre fonction y compte peu ?"},{"id":"T10-Q26","axe_id":"T10-A03","texte":"Quelle expérience de jeu ou de compétition vous a donné un souvenir collectif particulièrement fort ?"},{"id":"T10-Q27","axe_id":"T10-A03","texte":"Quel livre, concert, spectacle ou voyage vous a accompagné pendant un moment important de votre parcours ?"},{"id":"T10-Q28","axe_id":"T10-A03","texte":"Quand avez-vous consacré beaucoup d’efforts à un projet qui ne vous rapporterait rien professionnellement ?"},{"id":"T10-Q29","axe_id":"T10-A03","texte":"Quelle réalisation personnelle vous rend fier sans figurer sur votre CV ?"},{"id":"T10-Q30","axe_id":"T10-A03","texte":"Quelle passion aimeriez-vous mieux faire connaître parce qu’elle éclaire votre manière d’être ?"},{"id":"T10-Q31","axe_id":"T10-A04","texte":"Quel anniversaire ou quelle date vous a conduit à regarder votre trajectoire autrement ?"},{"id":"T10-Q32","axe_id":"T10-A04","texte":"Quand avez-vous réalisé qu’un objectif poursuivi pendant des années ne vous attirait plus autant ?"},{"id":"T10-Q33","axe_id":"T10-A04","texte":"Quelle période avez-vous d’abord jugée perdue avant d’en comprendre la valeur ?"},{"id":"T10-Q34","axe_id":"T10-A04","texte":"Quel souvenir banal vous semble aujourd’hui plus précieux qu’il ne l’était sur le moment ?"},{"id":"T10-Q35","axe_id":"T10-A04","texte":"Quand avez-vous choisi de prendre votre temps alors que vous saviez aller plus vite ?"},{"id":"T10-Q36","axe_id":"T10-A04","texte":"Quelle rencontre tardive vous a donné envie de recommencer quelque chose ?"},{"id":"T10-Q37","axe_id":"T10-A04","texte":"Quel projet avez-vous cessé de repousser après avoir compris que le bon moment ne viendrait pas tout seul ?"},{"id":"T10-Q38","axe_id":"T10-A04","texte":"Quelle version plus jeune de vous-même serait surprise par votre vie actuelle ?"},{"id":"T10-Q39","axe_id":"T10-A04","texte":"Quand avez-vous compris que vous aviez encore envie de choses que vous croyiez derrière vous ?"},{"id":"T10-Q40","axe_id":"T10-A04","texte":"Quelle chose appréciez-vous davantage aujourd’hui parce que vous savez ce qu’elle vous a coûté en temps ?"},{"id":"T10-Q41","axe_id":"T10-A05","texte":"Quel désir ancien avez-vous commencé à prendre au sérieux récemment ?"},{"id":"T10-Q42","axe_id":"T10-A05","texte":"Quelle expérience encore à venir avez-vous déjà commencé à préparer concrètement ?"},{"id":"T10-Q43","axe_id":"T10-A05","texte":"Quel rôle aimeriez-vous pouvoir quitter un jour dans de bonnes conditions ?"},{"id":"T10-Q44","axe_id":"T10-A05","texte":"Quelle partie de votre activité voudriez-vous garder même si vous n’aviez plus besoin de travailler ?"},{"id":"T10-Q45","axe_id":"T10-A05","texte":"Quel projet personnel ou collectif mérite selon vous une place dans les prochaines années ?"},{"id":"T10-Q46","axe_id":"T10-A05","texte":"Quelle habitude avez-vous récemment changée pour vous rapprocher de la vie que vous souhaitez ?"},{"id":"T10-Q47","axe_id":"T10-A05","texte":"Quel message reçu d’une personne que vous avez aidée vous a donné une idée de ce que vous aimeriez laisser ?"},{"id":"T10-Q48","axe_id":"T10-A05","texte":"Quelle relation aimeriez-vous avoir davantage nourrie lorsque vous regarderez cette période plus tard ?"},{"id":"T10-Q49","axe_id":"T10-A05","texte":"Quel élément de votre vie actuelle souhaitez-vous protéger de vos prochaines ambitions ?"},{"id":"T10-Q50","axe_id":"T10-A05","texte":"Quelle histoire encore peu racontée aimeriez-vous que vos proches connaissent un jour ?"}]}]}</script>
+<script type="module">
+// The supplied editorial corpus remains the single source for all questions.
+function fold(value) {
+  return String(value).normalize('NFD').replace(/\p{M}/gu, '').toLocaleLowerCase('fr').replace(/[^\p{L}\p{N}]/gu, ' ');
+}
+
+function terms(value) {
+  return [...new Set(fold(value).trim().split(/\s+/).filter(Boolean))];
+}
+
+function createCatalog(data) {
+  const questions = [];
+  for (const [themeIndex, theme] of data.themes.entries()) {
+    const axes = new Map(theme.axes.map(axis => [axis.id, axis]));
+    for (const [questionIndex, question] of theme.questions.entries()) {
+      const axis = axes.get(question.axe_id);
+      if (!axis) throw new Error(`Angle absent pour ${question.id}`);
+      questions.push({
+        ...question, theme, axis, number: questionIndex + 1, themeNumber: themeIndex + 1,
+        searchText: fold(`${question.texte} ${theme.nom} ${axis.nom}`)
+      });
+    }
+  }
+  return questions;
+}
+
+function filterQuestions(questions, {themeId = null, axisId = null, query = ''} = {}) {
+  const tokens = terms(query);
+  return questions.filter(q => (!themeId || q.theme.id === themeId) && (!axisId || q.axis.id === axisId) && tokens.every(token => q.searchText.includes(token)));
+}
+
+function differentIndex(length, current = -1, random = Math.random) {
+  if (length < 2) return 0;
+  if (current < 0 || current >= length) return Math.floor(random() * length);
+  const n = Math.floor(random() * (length - 1));
+  return n >= current ? n + 1 : n;
+}
+
+function escapeHtml(value) {
+  return String(value).replace(/[&<>"']/g, char => ({'&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;'}[char]));
+}
+
+function highlight(text, query) {
+  const tokens = terms(query);
+  if (!tokens.length) return escapeHtml(text);
+  let normalized = '', offset = 0;
+  const positions = [];
+  for (const char of text) {
+    const part = fold(char);
+    normalized += part;
+    for (let i = 0; i < part.length; i++) positions.push([offset, offset + char.length]);
+    offset += char.length;
+  }
+  const ranges = [];
+  for (const token of tokens) {
+    let start = normalized.indexOf(token);
+    while (start !== -1) {
+      ranges.push([positions[start][0], positions[start + token.length - 1][1]]);
+      start = normalized.indexOf(token, start + token.length);
+    }
+  }
+  ranges.sort((a, b) => a[0] - b[0]);
+  const merged = [];
+  for (const range of ranges) {
+    const previous = merged.at(-1);
+    if (previous && range[0] <= previous[1]) previous[1] = Math.max(previous[1], range[1]);
+    else merged.push([...range]);
+  }
+  let result = '', cursor = 0;
+  for (const [start, end] of merged) {
+    result += escapeHtml(text.slice(cursor, start)) + '<mark>' + escapeHtml(text.slice(start, end)) + '</mark>';
+    cursor = end;
+  }
+  return result + escapeHtml(text.slice(cursor));
+}
+
+
+function shuffled(items, random) {
+  const result = [...items];
+  for (let i = result.length - 1; i > 0; i--) {
+    const j = Math.floor(random() * (i + 1));
+    [result[i], result[j]] = [result[j], result[i]];
+  }
+  return result;
+}
+
+function createDiscoverySession(questions, random = Math.random) {
+  const themes = new Map();
+  for (const question of questions) {
+    if (!themes.has(question.theme.id)) themes.set(question.theme.id, []);
+    themes.get(question.theme.id).push(question);
+  }
+  const picks = new Map();
+  for (const [themeId, candidates] of themes) {
+    if (candidates.length < 2) throw new Error('Deux questions par thème sont nécessaires.');
+    const axes = new Map();
+    for (const q of candidates) {
+      if (!axes.has(q.axis.id)) axes.set(q.axis.id, []);
+      axes.get(q.axis.id).push(q);
+    }
+    const anglePools = shuffled([...axes.values()], random);
+    const pair = anglePools.length > 1
+      ? anglePools.slice(0, 2).map(items => items[Math.floor(random() * items.length)])
+      : shuffled(candidates, random).slice(0, 2);
+    picks.set(themeId, pair);
+  }
+  const firstRound = shuffled([...themes.keys()], random);
+  const secondRound = shuffled([...themes.keys()], random);
+  if (secondRound.length > 1 && firstRound.at(-1) === secondRound[0]) {
+    [secondRound[0], secondRound[1]] = [secondRound[1], secondRound[0]];
+  }
+  return {
+    version: 1,
+    deck: [...firstRound.map(id => picks.get(id)[0].id), ...secondRound.map(id => picks.get(id)[1].id)],
+    decisions: []
+  };
+}
+
+function restoreDiscoverySession(value, byId) {
+  if (!value || value.version !== 1 || !Array.isArray(value.deck) || !Array.isArray(value.decisions)) return null;
+  const themeIds = new Set([...byId.values()].map(q => q.theme.id));
+  if (value.deck.length !== themeIds.size * 2 || new Set(value.deck).size !== value.deck.length) return null;
+  if (value.decisions.length > value.deck.length || !value.decisions.every(d => typeof d === 'boolean')) return null;
+  const counts = new Map();
+  for (const id of value.deck) {
+    const q = byId.get(id);
+    if (!q) return null;
+    counts.set(q.theme.id, (counts.get(q.theme.id) || 0) + 1);
+  }
+  if (counts.size !== themeIds.size || [...counts.values()].some(count => count !== 2)) return null;
+  return {version:1, deck:[...value.deck], decisions:[...value.decisions]};
+}
+
+function selectedQuestions(session, byId) {
+  return session.deck.filter((id, index) => session.decisions[index] === true).map(id => byId.get(id));
+}
+
+function formatSelection(questions) {
+  if (!questions.length) return '';
+  const groups = new Map();
+  for (const q of [...questions].sort((a, b) => a.themeNumber - b.themeNumber)) {
+    if (!groups.has(q.theme.id)) groups.set(q.theme.id, {name:q.theme.nom, questions:[]});
+    groups.get(q.theme.id).questions.push(q);
+  }
+  let number = 0;
+  return [...groups.values()].map(group => `${group.name}\n${group.questions.map(q => `${++number}. ${q.texte}`).join('\n')}`).join('\n\n');
+}
+
+function swipeDecision(dx, dy, width) {
+  const threshold = Math.min(110, Math.max(48, width * .22));
+  if (Math.abs(dx) < threshold || Math.abs(dx) < Math.abs(dy) * 1.2) return null;
+  return dx > 0;
+}
+
+
+const esc = escapeHtml;
+
+
+const $ = selector => document.querySelector(selector);
+const content = $('#content');
+const search = $('#search');
+const dialog = $('#question-dialog');
+const media = window.matchMedia('(max-width: 960px)');
+const icons = {
+  arrow:'<path d="M4 12h15M13 6l6 6-6 6"/>',
+  back:'<path d="M20 12H5M11 6l-6 6 6 6"/>',
+  chevron:'<path d="m9 5 7 7-7 7"/>',
+  grid:'<rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/>',
+  copy:'<rect x="8" y="8" width="12" height="13" rx="2"/><path d="M15 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h3"/>',
+  shuffle:'<path d="M3 6h3c5 0 7 12 12 12h3M17 14l4 4-4 4M3 18h3c2 0 3.5-2 5-5M13 8c1.5-2 3-2 5-2h3M17 2l4 4-4 4"/>',
+  list:'<path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/>',
+  cards:'<rect x="5" y="6" width="16" height="15" rx="2"/><path d="M17 3H5a3 3 0 0 0-3 3v11M9 11h8M9 15h6"/>',
+  spark:'<path d="m12 3 2.5 6.5L21 12l-6.5 2.5L12 21l-2.5-6.5L3 12l6.5-2.5Z"/>',
+  search:'<circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 4.5 4.5"/>',
+  note:'<path d="M9 18h6M9 21h6M8 14a7 7 0 1 1 8 0c-1 1-1 2-1 2H9s0-1-1-2Z"/>',
+  check:'<path d="m5 12 4 4L19 6"/>',
+  cross:'<path d="m6 6 12 12M6 18 18 6"/>',
+  undo:'<path d="M9 5 4 10l5 5M4 10h10a6 6 0 0 1 0 12"/>'
+};
+const icon = name => `<svg viewBox="0 0 24 24" aria-hidden="true">${icons[name]}</svg>`;
+const pad = value => String(value).padStart(2, '0');
+let data, questions = [], byId, pool = [], modalPool = [], modalCursor = 0, modalOpener = null;
+let state = {screen:'discovery', themeId:null, axisId:null, query:'', mode:'list'};
+let cardCursor = 0, menuOpen = false, toastTimer;
+const sessionKey = 'bonnes-histoires.discovery.v1';
+let discoverySession, swipeBusy = false, drag = null;
+
+function readRoute() {
+  const params = new URLSearchParams(location.hash.slice(1));
+  const theme = data.themes.find(t => t.id === params.get('theme'));
+  const axis = theme?.axes.find(a => a.id === params.get('angle'));
+  const screen = theme || params.has('q') || params.has('vue') || params.get('ecran') === 'repertoire' ? 'catalog' : 'discovery';
+  state = {screen, themeId:theme?.id || null, axisId:axis?.id || null, query:params.get('q') || '', mode:params.get('vue') === 'cartes' ? 'cards' : 'list'};
+  cardCursor = 0;
+  search.value = state.query;
+}
+
+function writeRoute(replace = false) {
+  const params = new URLSearchParams();
+  if (state.screen === 'catalog') {
+    if (state.themeId) params.set('theme', state.themeId);
+    if (state.axisId) params.set('angle', state.axisId);
+    if (state.query.trim()) params.set('q', state.query);
+    if (state.mode === 'cards') params.set('vue', 'cartes');
+    if (!params.size) params.set('ecran', 'repertoire');
+  }
+  const next = location.pathname + location.search + (params.size ? '#' + params.toString() : '');
+  if (next !== location.pathname + location.search + location.hash) history[replace ? 'replaceState' : 'pushState'](null, '', next);
+}
+
+function navigateTheme(themeId) {
+  state.screen = 'catalog';
+  state.themeId = themeId;
+  state.axisId = null;
+  state.query = '';
+  cardCursor = 0;
+  search.value = '';
+  writeRoute();
+  closeMenu(false);
+  render();
+  content.querySelector('h1')?.focus({preventScroll:true});
+  window.scrollTo({top:0, behavior:'instant'});
+}
+
+function renderNav() {
+  const count = selectedQuestions(discoverySession, byId).length;
+  $('#theme-nav').innerHTML = `<button type="button" class="nav-item nav-discovery" data-action="discovery" ${state.screen === 'discovery' ? 'aria-current="page"' : ''}>${icon('cards')}<span>Choisir mes questions<small>20 cartes pour commencer</small></span>${count ? `<span class="selection-badge">${count}</span>` : ''}</button><button type="button" class="nav-item nav-home" data-theme="all" ${state.screen === 'catalog' && !state.themeId ? 'aria-current="page"' : ''}>${icon('grid')}<span>Tout le répertoire</span></button><span class="nav-section">EXPLORER LES THÈMES</span>` + data.themes.map((theme, i) => `<button type="button" class="nav-item" data-theme="${theme.id}" ${state.themeId === theme.id ? 'aria-current="page"' : ''}><span class="nav-number">${pad(i + 1)}</span><span>${esc(theme.nom)}</span></button>`).join('');
+}
+
+function persistDiscovery() {
+  try { sessionStorage.setItem(sessionKey, JSON.stringify(discoverySession)); } catch { /* Selection still works when tab storage is unavailable. */ }
+}
+
+function navigateDiscovery() {
+  state = {...state, screen:'discovery', themeId:null, axisId:null, query:''};
+  search.value = '';
+  writeRoute();
+  closeMenu(false);
+  render();
+  content.querySelector('h1')?.focus({preventScroll:true});
+  window.scrollTo({top:0, behavior:'instant'});
+}
+
+function renderDiscovery() {
+  const {deck, decisions} = discoverySession;
+  if (decisions.length === deck.length) return renderSelection();
+  const q = byId.get(deck[decisions.length]);
+  const kept = decisions.filter(Boolean).length;
+  return `<section class="discovery" aria-labelledby="page-title"><header class="discovery-header"><span class="eyebrow">20 QUESTIONS POUR COMMENCER</span><h1 id="page-title" tabindex="-1">Qu’est-ce qui vous parle ?</h1><p>Deux questions par thème, tirées au hasard. Gardez celles qui vous donnent envie de raconter une histoire.</p></header><div class="discovery-progress"><div class="discovery-progress-label"><span>Question <b>${pad(decisions.length + 1)}</b> sur ${deck.length}</span><span>${icon('check')} <b>${kept}</b> gardée${kept === 1 ? '' : 's'}</span></div><div class="discovery-progress-track" role="progressbar" aria-label="Questions parcourues" aria-valuemin="0" aria-valuemax="${deck.length}" aria-valuenow="${decisions.length}">${deck.map((id, index) => `<span class="${index < decisions.length ? decisions[index] ? 'is-kept' : 'is-passed' : index === decisions.length ? 'is-current' : ''}" aria-hidden="true"></span>`).join('')}</div></div><div class="swipe-stage"><article class="swipe-card" id="swipe-card" tabindex="-1" aria-labelledby="swipe-question" data-question-id="${q.id}"><div class="swipe-card-header"><span class="swipe-theme-number">${pad(q.themeNumber)}</span><span>${esc(q.theme.nom)}</span></div><span class="swipe-stamp swipe-stamp-keep" aria-hidden="true">JE GARDE</span><span class="swipe-stamp swipe-stamp-pass" aria-hidden="true">JE PASSE</span><h2 id="swipe-question">${esc(q.texte)}</h2><p class="swipe-axis">${esc(q.axis.nom)}</p></article></div><div class="swipe-controls" role="group" aria-label="Votre choix pour cette question"><button type="button" class="swipe-choice choice-pass" data-discovery="pass">${icon('cross')}<span>Je passe</span><kbd aria-hidden="true">←</kbd></button><button type="button" class="swipe-choice choice-keep" data-discovery="keep">${icon('check')}<span>Je garde</span><kbd aria-hidden="true">→</kbd></button></div><div class="swipe-foot"><button type="button" class="undo-choice" data-discovery="undo" ${decisions.length ? '' : 'disabled'}>${icon('undo')}Revenir au choix précédent</button><span>Glissez à gauche ou à droite</span></div><p class="discovery-endnote">À la fin, toutes vos questions seront prêtes à copier.</p></section>`;
+}
+
+function renderSelection() {
+  const selected = selectedQuestions(discoverySession, byId);
+  const count = selected.length;
+  let ordinal = 0;
+  const groups = data.themes.map(theme => ({theme, questions:selected.filter(q => q.theme.id === theme.id)})).filter(group => group.questions.length);
+  return `<section class="discovery selection" aria-labelledby="page-title"><header class="discovery-header"><span class="eyebrow">LES 20 QUESTIONS SONT PARCOURUES</span><h1 id="page-title" tabindex="-1">${count ? 'Voilà de quoi ouvrir la conversation.' : 'Le bon souvenir se fait attendre.'}</h1><p>${count ? `Vous avez gardé <b>${count} question${count === 1 ? '' : 's'}</b>. Votre sélection est regroupée par thème, prête pour votre entretien.` : 'Aucune question gardée cette fois. Essayez une nouvelle série pour trouver celles qui vous parlent.'}</p></header><div class="selection-toolbar">${count ? `<button type="button" class="button primary" data-discovery="copy">${icon('copy')}Copier ${count === 1 ? 'la question' : 'les ' + count + ' questions'}</button>` : ''}<button type="button" class="button ${count ? '' : 'primary'}" data-discovery="restart">${icon('shuffle')}Nouvelle série de 20</button></div>${count ? `<div class="selection-list">${groups.map(({theme, questions:items}) => `<section class="selection-group" aria-labelledby="selection-${theme.id}"><header class="group-heading"><h2 id="selection-${theme.id}">${esc(theme.nom)}</h2><span>${items.length} question${items.length === 1 ? '' : 's'}</span></header><ol class="selection-questions" start="${ordinal + 1}">${items.map(q => `<li><span class="selection-index" aria-hidden="true">${pad(++ordinal)}</span><p>${esc(q.texte)}</p><button type="button" class="copy-button" data-copy="${q.id}" aria-label="Copier cette question" title="Copier cette question">${icon('copy')}</button></li>`).join('')}</ol></section>`).join('')}</div><label class="selection-plain-label" id="selection-plain-label" hidden>Votre sélection en texte<textarea id="selection-plain" class="selection-plain" readonly rows="10" aria-label="Sélection prête à copier"></textarea></label>` : `<div class="selection-empty">${icon('spark')}<p>Une autre série, vingt nouvelles portes d’entrée.</p></div>`}<div class="selection-bottom"><button type="button" class="undo-choice" data-discovery="undo">${icon('undo')}Revenir au dernier choix</button><button type="button" class="scope-link" data-theme="all">Explorer les 500 questions</button></div></section>`;
+}
+
+function chooseDiscovery(keep) {
+  if (swipeBusy || state.screen !== 'discovery' || discoverySession.decisions.length >= discoverySession.deck.length) return;
+  swipeBusy = true;
+  drag = null;
+  const focusedAction = document.activeElement?.dataset.discovery;
+  const card = $('#swipe-card');
+  card?.classList.remove('is-dragging');
+  card?.classList.add(keep ? 'leaving-right' : 'leaving-left');
+  content.querySelectorAll('[data-discovery]').forEach(button => { button.disabled = true; });
+  setTimeout(() => {
+    discoverySession.decisions.push(keep);
+    persistDiscovery();
+    swipeBusy = false;
+    if (state.screen === 'discovery') {
+      render();
+      const complete = discoverySession.decisions.length === discoverySession.deck.length;
+      const focus = complete ? '#page-title' : focusedAction === 'keep' || focusedAction === 'pass' ? `[data-discovery="${focusedAction}"]` : '#swipe-card';
+      content.querySelector(focus)?.focus({preventScroll:true});
+    } else renderNav();
+  }, 160);
+}
+
+function undoDiscovery() {
+  if (swipeBusy || !discoverySession.decisions.length) return;
+  discoverySession.decisions.pop();
+  persistDiscovery();
+  render();
+  $('#swipe-card')?.focus({preventScroll:true});
+}
+
+async function copySelection() {
+  const text = formatSelection(selectedQuestions(discoverySession, byId));
+  if (!text) return;
+  try {
+    await copyText(text);
+    toast('Votre sélection est copiée');
+  } catch {
+    const area = $('#selection-plain');
+    $('#selection-plain-label').hidden = false;
+    area.value = text;
+    area.focus();
+    area.select();
+    toast('Sélectionnez puis copiez le texte affiché.');
+  }
+}
+
+function resetDrag() {
+  const card = $('#swipe-card');
+  if (card) {
+    card.classList.remove('is-dragging', 'is-keeping', 'is-passing');
+    card.style.removeProperty('transform');
+    card.style.removeProperty('--drag-strength');
+  }
+  drag = null;
+}
+
+content.addEventListener('pointerdown', event => {
+  const card = event.target.closest('#swipe-card');
+  if (!card || swipeBusy || state.screen !== 'discovery' || event.isPrimary === false || event.button !== 0) return;
+  drag = {id:event.pointerId, x:event.clientX, y:event.clientY, card};
+  card.setPointerCapture?.(event.pointerId);
+});
+content.addEventListener('pointermove', event => {
+  if (!drag || event.pointerId !== drag.id) return;
+  const dx = event.clientX - drag.x, dy = event.clientY - drag.y;
+  if (Math.abs(dy) > 10 && Math.abs(dx) < Math.abs(dy)) { resetDrag(); return; }
+  if (Math.abs(dx) < 10) return;
+  const amount = Math.max(-180, Math.min(180, dx));
+  drag.card.classList.add('is-dragging');
+  drag.card.classList.toggle('is-keeping', dx > 0);
+  drag.card.classList.toggle('is-passing', dx < 0);
+  drag.card.style.transform = `translateX(${amount}px) rotate(${amount / 25}deg)`;
+  drag.card.style.setProperty('--drag-strength', Math.min(Math.abs(dx) / 100, 1));
+});
+content.addEventListener('pointerup', event => {
+  if (!drag || event.pointerId !== drag.id) return;
+  const {x, y, card} = drag;
+  const decision = swipeDecision(event.clientX - x, event.clientY - y, card.getBoundingClientRect().width);
+  resetDrag();
+  if (decision !== null) chooseDiscovery(decision);
+});
+content.addEventListener('pointercancel', resetDrag);
+
+function renderHome() {
+  const featured = questions.find(q => q.texte.includes('soulagé durablement')) || questions.find(q => q.theme.id === 'T04');
+  return `<div class="breadcrumb"><span>LE RÉPERTOIRE</span></div>
+    <section class="home-hero" aria-labelledby="page-title">
+      <div class="hero-copy"><h1 id="page-title" tabindex="-1">Les histoires commencent par une <em>bonne question.</em></h1><p>Un parcours est fait de choix, de rencontres et de moments qu’on n’a jamais racontés. Voici 500 portes d’entrée pour les retrouver.</p></div>
+      <div class="feature-wrap"><div class="feature-card"><div class="feature-label"><span>POUR OUVRIR LA CONVERSATION</span>${icon('spark')}</div><p class="feature-quote">${esc(featured.texte)}</p><button type="button" data-open="${featured.id}"><span>Commencer par cette question</span>${icon('arrow')}</button></div></div>
+    </section>
+    <section aria-labelledby="themes-title"><div class="section-heading"><h2 id="themes-title">Les dix thèmes</h2><span>50 angles · 500 questions</span></div><div class="theme-grid">${data.themes.map((theme, i) => `<button type="button" class="theme-card" data-theme="${theme.id}"><div class="theme-card-top"><span class="theme-number">${pad(i + 1)}</span><span class="micro">${theme.questions.length} QUESTIONS</span></div><h3>${esc(theme.nom)}</h3><p>${esc(theme.intention)}</p><div class="theme-card-bottom"><span>${theme.axes.length} angles à explorer</span>${icon('arrow')}</div></button>`).join('')}</div></section>
+    <div class="home-note">${icon('note')}<p><b>Un point de départ, pas un questionnaire.</b> Piochez, passez, reformulez. Dès qu’un souvenir apparaît, suivez le fil de la conversation.</p></div>`;
+}
+
+function renderAxes(theme) {
+  return `<div class="axis-filters" role="group" aria-label="Filtrer par angle"><button type="button" class="axis-filter" data-axis="all" aria-pressed="${!state.axisId}">Tous les angles</button>${theme.axes.map(axis => `<button type="button" class="axis-filter" data-axis="${axis.id}" aria-pressed="${state.axisId === axis.id}">${esc(axis.nom)}</button>`).join('')}</div>`;
+}
+
+function renderResults() {
+  const theme = data.themes.find(t => t.id === state.themeId);
+  const themeNumber = theme ? data.themes.indexOf(theme) + 1 : 0;
+  const breadcrumb = `<div class="breadcrumb"><button type="button" data-theme="all">LE RÉPERTOIRE</button>${icon('chevron')}<span>${theme ? 'THÈME ' + pad(themeNumber) : 'RECHERCHE'}</span></div>`;
+  const title = theme ? theme.nom : 'Trouver la bonne question.';
+  const description = state.query.trim() ? `${pool.length} question${pool.length === 1 ? '' : 's'} pour « ${esc(state.query.trim())} »${theme ? ' dans ce thème' : ' dans tout le répertoire'}.` : esc(theme.intention);
+  const titleHtml = `${breadcrumb}<header class="theme-header"><div>${!theme ? '<p class="search-label">LES MOTS QUI FONT REVENIR LES SOUVENIRS</p>' : ''}<h1 id="page-title" tabindex="-1">${esc(title)}</h1><p>${description}</p>${state.query.trim() && theme ? '<button type="button" class="scope-link" data-action="search-all">Chercher dans les 10 thèmes</button>' : ''}</div>${theme ? `<div class="theme-heading-meta" aria-hidden="true"><span class="large-number">${pad(themeNumber)}</span><span class="micro">SUR 10 THÈMES</span></div>` : ''}</header>`;
+  const toolbar = `<div class="result-toolbar"><span class="result-count"><b>${pool.length}</b> question${pool.length === 1 ? '' : 's'}${state.axisId ? ' dans cet angle' : theme ? ' à explorer' : ' dans le répertoire'}</span><div class="view-switch" role="group" aria-label="Mode d’affichage"><button type="button" data-mode="list" aria-pressed="${state.mode === 'list'}">${icon('list')}Liste</button><button type="button" data-mode="cards" aria-pressed="${state.mode === 'cards'}">${icon('cards')}Cartes</button></div></div>`;
+  return titleHtml + (theme ? renderAxes(theme) : '') + toolbar + (!pool.length ? renderEmpty() : state.mode === 'cards' ? `<div id="inline-card">${renderFocusCard(pool, cardCursor, false)}</div><p class="keyboard-note"><kbd>←</kbd> <kbd>→</kbd> pour changer de question &nbsp; · &nbsp; <kbd>R</kbd> pour laisser faire le hasard</p>` : renderList());
+}
+
+function renderList() {
+  const groups = new Map();
+  for (const question of pool) {
+    const key = state.themeId ? question.axis.id : question.theme.id;
+    if (!groups.has(key)) groups.set(key, []);
+    groups.get(key).push(question);
+  }
+  return [...groups.values()].map(group => {
+    const first = group[0];
+    const groupName = state.themeId ? first.axis.nom : first.theme.nom;
+    const number = state.themeId ? first.theme.axes.findIndex(a => a.id === first.axis.id) + 1 : first.themeNumber;
+    return `<section class="question-group" aria-labelledby="group-${state.themeId ? first.axis.id : first.theme.id}"><header class="group-heading"><h2 id="group-${state.themeId ? first.axis.id : first.theme.id}"><span>${pad(number)}</span>${state.themeId ? esc(groupName) : `<button type="button" class="group-heading-link" data-theme="${first.theme.id}">${esc(groupName)}</button>`}</h2><span>${group.length} question${group.length === 1 ? '' : 's'}</span></header><ol class="question-list">${group.map(q => `<li class="question-row"><button type="button" class="question-open" data-open="${q.id}" aria-label="Ouvrir la question ${q.number} : ${esc(q.texte)}"><span class="question-number" aria-hidden="true">${pad(q.number)}</span><span class="question-text">${highlight(q.texte, state.query)}</span></button><div class="row-actions"><button type="button" class="copy-button" data-copy="${q.id}" aria-label="Copier la question ${q.number}" title="Copier la question">${icon('copy')}</button><span class="row-arrow" aria-hidden="true">${icon('arrow')}</span></div></li>`).join('')}</ol></section>`;
+  }).join('');
+}
+
+function renderEmpty() {
+  return `<section class="empty-state">${icon('search')}<h2>Aucune question par ici.</h2><p>Essayez un mot plus simple, comme « équipe », « enfance » ou « décision », ou élargissez votre recherche.</p><div class="empty-actions">${state.query ? '<button type="button" class="button" data-action="clear-search">Effacer la recherche</button>' : ''}${state.axisId ? '<button type="button" class="button" data-axis="all">Tous les angles</button>' : ''}${state.themeId && state.query ? '<button type="button" class="button primary" data-action="search-all">Chercher dans tous les thèmes</button>' : ''}</div></section>`;
+}
+
+function renderFocusCard(items, cursor, modal) {
+  const q = items[cursor];
+  if (!q) return '';
+  const prefix = modal ? 'modal' : 'inline';
+  return `<article class="focus-card"><header class="focus-top"><div class="focus-context"><span class="eyebrow">${pad(q.themeNumber)} — ${esc(q.theme.nom)}</span><span>${esc(q.axis.nom)}</span></div><span class="micro">QUESTION ${pad(q.number)} / 50</span></header><h2 class="focus-question" ${modal ? 'id="dialog-question" tabindex="-1"' : ''}>${highlight(q.texte, state.query)}</h2><div class="focus-bottom"><div class="focus-navigation"><button type="button" class="icon-button" data-step="-1" data-target="${prefix}" aria-label="Question précédente" ${items.length < 2 ? 'disabled' : ''}>${icon('back')}</button><span aria-live="polite" aria-atomic="true">${cursor + 1} / ${items.length}</span><button type="button" class="icon-button" data-step="1" data-target="${prefix}" aria-label="Question suivante" ${items.length < 2 ? 'disabled' : ''}>${icon('arrow')}</button></div><div class="focus-actions"><button type="button" class="button shuffle-button" data-shuffle="${prefix}" aria-label="Une autre question au hasard" ${items.length < 2 ? 'disabled' : ''}>${icon('shuffle')}<span class="shuffle-label">Au hasard</span></button><button type="button" class="button" data-copy="${q.id}">${icon('copy')}Copier</button></div></div><div class="card-progress" aria-hidden="true"><span style="width:${((cursor + 1) / items.length) * 100}%"></span></div></article>`;
+}
+
+function render() {
+  if (!data) return;
+  pool = filterQuestions(questions, state);
+  cardCursor = Math.min(cardCursor, Math.max(pool.length - 1, 0));
+  renderNav();
+  const isDiscovery = state.screen === 'discovery';
+  const isHome = !state.themeId && !state.query.trim();
+  content.classList.toggle('discovery-content', isDiscovery);
+  content.innerHTML = isDiscovery ? renderDiscovery() : isHome ? renderHome() : renderResults();
+  $('.search-box').hidden = isDiscovery;
+  $('#random-question').hidden = isDiscovery;
+  $('#discovery-topline').hidden = !isDiscovery;
+  $('#top-directory').hidden = !isDiscovery;
+  search.placeholder = state.themeId ? 'Chercher une question dans ce thème…' : 'Chercher un mot, une idée, un souvenir…';
+  search.setAttribute('aria-label', state.themeId ? 'Chercher dans le thème sélectionné' : 'Chercher parmi les 500 questions');
+  $('#clear-search').hidden = !state.query;
+  $('.search-shortcut').hidden = !!state.query;
+  $('#random-question').disabled = !pool.length;
+  $('#random-question').title = `Une question au hasard parmi ${pool.length} questions`;
+  if (isDiscovery) {
+    const {decisions, deck} = discoverySession;
+    $('#announcement').textContent = decisions.length === deck.length
+      ? `${decisions.filter(Boolean).length} questions gardées. Votre sélection est prête à copier.`
+      : `Question ${decisions.length + 1} sur ${deck.length}. ${byId.get(deck[decisions.length]).texte}`;
+  } else $('#announcement').textContent = isHome ? '10 thèmes et 500 questions à explorer.' : `${pool.length} question${pool.length === 1 ? '' : 's'}${state.axisId ? ' dans cet angle' : state.themeId ? ' dans ce thème' : ' dans le répertoire'}.`;
+  const theme = data.themes.find(t => t.id === state.themeId);
+  document.title = (isDiscovery ? 'Choisir mes questions — ' : theme ? theme.nom + ' — ' : state.query.trim() ? 'Recherche — ' : '') + 'Les bonnes histoires';
+}
+
+function openQuestion(id, random = false) {
+  modalPool = [...pool];
+  if (!modalPool.length) return;
+  modalCursor = random ? differentIndex(modalPool.length) : modalPool.findIndex(q => q.id === id);
+  if (modalCursor < 0) {
+    modalPool = [...questions];
+    modalCursor = modalPool.findIndex(q => q.id === id);
+  }
+  if (modalCursor < 0) return;
+  modalOpener = document.activeElement;
+  renderDialog();
+  dialog.showModal();
+  document.body.style.overflow = 'hidden';
+  $('#dialog-question')?.focus({preventScroll:true});
+}
+
+function renderDialog() {
+  const q = modalPool[modalCursor];
+  $('#dialog-content').innerHTML = `<header class="dialog-header"><span class="eyebrow">UNE QUESTION, UNE HISTOIRE</span><button type="button" class="icon-button" data-action="close-dialog" aria-label="Fermer la carte">×</button></header><div class="dialog-body">${renderFocusCard(modalPool, modalCursor, true)}</div><footer class="dialog-footer"><button type="button" data-dialog-theme="${q.theme.id}">Explorer ce thème ${icon('arrow')}</button><p class="keyboard-note"><kbd>←</kbd> <kbd>→</kbd> naviguer &nbsp; <kbd>Échap</kbd> fermer</p></footer><p class="dialog-feedback" id="dialog-feedback" role="status" aria-live="polite"></p>`;
+}
+
+function moveCard(step, target, shuffle = false) {
+  const modal = target === 'modal';
+  const items = modal ? modalPool : pool;
+  if (!items.length) return;
+  let cursor = modal ? modalCursor : cardCursor;
+  cursor = shuffle ? differentIndex(items.length, cursor) : (cursor + step + items.length) % items.length;
+  const focused = document.activeElement;
+  const selector = focused?.dataset.step ? `[data-step="${focused.dataset.step}"][data-target="${target}"]` : focused?.dataset.shuffle ? `[data-shuffle="${target}"]` : null;
+  if (modal) { modalCursor = cursor; renderDialog(); }
+  else { cardCursor = cursor; $('#inline-card').innerHTML = renderFocusCard(pool, cardCursor, false); }
+  if (selector) document.querySelector(selector)?.focus({preventScroll:true});
+  else if (modal) $('#dialog-question')?.focus({preventScroll:true});
+  $('#announcement').textContent = items[cursor].texte;
+}
+
+async function copyQuestion(id) {
+  const question = byId.get(id);
+  if (!question) return;
+  try {
+    await copyText(question.texte);
+    toast('Question copiée');
+  } catch { toast('La copie n’est pas disponible. Vous pouvez sélectionner le texte.'); }
+}
+
+async function copyText(text) {
+  try {
+    if (navigator.clipboard?.writeText) { await navigator.clipboard.writeText(text); return; }
+  } catch { /* Try the browser's legacy clipboard path before exposing selectable text. */ }
+  const previousFocus = document.activeElement;
+  const area = document.createElement('textarea');
+  area.value = text;
+  area.setAttribute('aria-hidden', 'true');
+  area.style.cssText = 'position:fixed;left:-9999px;top:0';
+  (dialog.open ? dialog : document.body).append(area);
+  try {
+    area.select();
+    if (!document.execCommand('copy')) throw new Error('Copy unavailable');
+  } finally {
+    area.remove();
+    previousFocus?.focus({preventScroll:true});
+  }
+}
+
+function toast(message) {
+  clearTimeout(toastTimer);
+  if (dialog.open) {
+    $('#toast').hidden = true;
+    const feedback = $('#dialog-feedback');
+    feedback.textContent = message;
+    toastTimer = setTimeout(() => { if (feedback.isConnected) feedback.textContent = ''; }, 2500);
+    return;
+  }
+  $('#toast').textContent = message;
+  $('#toast').hidden = false;
+  toastTimer = setTimeout(() => { $('#toast').hidden = true; }, 2500);
+}
+
+function setMenu(open, restoreFocus = true) {
+  menuOpen = open && media.matches;
+  $('#sidebar').classList.toggle('is-open', menuOpen);
+  document.body.classList.toggle('nav-open', menuOpen);
+  $('#drawer-backdrop').hidden = !menuOpen;
+  $('#open-menu').setAttribute('aria-expanded', String(menuOpen));
+  $('#sidebar').inert = media.matches && !menuOpen;
+  $('.workspace').inert = menuOpen;
+  if (menuOpen) $('#close-menu').focus();
+  else if (restoreFocus && media.matches) $('#open-menu').focus();
+}
+function closeMenu(restoreFocus = true) { setMenu(false, restoreFocus); }
+
+function clearSearch() {
+  state.query = '';
+  search.value = '';
+  cardCursor = 0;
+  writeRoute(true);
+  render();
+  search.focus();
+}
+
+document.addEventListener('click', event => {
+  const target = event.target.closest('button, a');
+  if (!target || !data) return;
+  if (target.disabled) return;
+  if (target.dataset.discovery) {
+    if (target.dataset.discovery === 'keep' || target.dataset.discovery === 'pass') chooseDiscovery(target.dataset.discovery === 'keep');
+    else if (target.dataset.discovery === 'undo') undoDiscovery();
+    else if (target.dataset.discovery === 'copy') copySelection();
+    else if (target.dataset.discovery === 'restart' && !swipeBusy) {
+      discoverySession = createDiscoverySession(questions);
+      persistDiscovery();
+      render();
+      content.querySelector('h1')?.focus({preventScroll:true});
+      window.scrollTo({top:0, behavior:'instant'});
+    }
+  }
+  else if (target.dataset.action === 'discovery') navigateDiscovery();
+  else if (target.dataset.theme) { event.preventDefault(); navigateTheme(target.dataset.theme === 'all' ? null : target.dataset.theme); }
+  else if (target.dataset.axis) {
+    state.axisId = target.dataset.axis === 'all' ? null : target.dataset.axis;
+    cardCursor = 0; writeRoute(); render();
+    content.querySelector(`[data-axis="${state.axisId || 'all'}"]`)?.focus({preventScroll:true});
+  }
+  else if (target.dataset.mode) { state.mode = target.dataset.mode; writeRoute(); render(); content.querySelector(`[data-mode="${state.mode}"]`)?.focus({preventScroll:true}); }
+  else if (target.dataset.open) openQuestion(target.dataset.open);
+  else if (target.dataset.copy) copyQuestion(target.dataset.copy);
+  else if (target.dataset.step) moveCard(Number(target.dataset.step), target.dataset.target);
+  else if (target.dataset.shuffle) moveCard(0, target.dataset.shuffle, true);
+  else if (target.dataset.dialogTheme) { dialog.close(); navigateTheme(target.dataset.dialogTheme); }
+  else if (target.dataset.action === 'close-dialog') dialog.close();
+  else if (target.dataset.action === 'clear-search') clearSearch();
+  else if (target.dataset.action === 'search-all') {
+    state.screen = 'catalog'; state.themeId = null; state.axisId = null; cardCursor = 0; writeRoute(); render();
+    content.querySelector('h1')?.focus({preventScroll:true});
+  }
+});
+
+$('#brand').addEventListener('click', event => { event.preventDefault(); if (data) navigateDiscovery(); });
+$('.skip-link').addEventListener('click', event => { event.preventDefault(); content.focus(); content.scrollIntoView({block:'start'}); });
+search.addEventListener('input', () => { state.screen = 'catalog'; state.query = search.value; cardCursor = 0; writeRoute(true); render(); });
+$('#clear-search').addEventListener('click', clearSearch);
+$('#random-question').addEventListener('click', () => openQuestion(null, true));
+$('#open-menu').addEventListener('click', () => setMenu(true));
+$('#close-menu').addEventListener('click', () => closeMenu());
+$('#drawer-backdrop').addEventListener('click', () => closeMenu());
+media.addEventListener('change', () => closeMenu(false));
+dialog.addEventListener('click', event => {
+  if (event.target !== dialog) return;
+  const r = dialog.getBoundingClientRect();
+  if (event.clientX < r.left || event.clientX > r.right || event.clientY < r.top || event.clientY > r.bottom) dialog.close();
+});
+dialog.addEventListener('close', () => {
+  document.body.style.overflow = '';
+  if (modalOpener?.isConnected) modalOpener.focus({preventScroll:true});
+});
+window.addEventListener('popstate', () => { if (data) { if (dialog.open) dialog.close(); readRoute(); render(); } });
+
+document.addEventListener('keydown', event => {
+  if (menuOpen) {
+    if (event.key === 'Escape') { event.preventDefault(); closeMenu(); }
+    if (event.key === 'Tab') {
+      const focusable = [...$('#sidebar').querySelectorAll('button:not(:disabled), a[href]')];
+      const first = focusable[0], last = focusable.at(-1);
+      if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last.focus(); }
+      else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
+    }
+    return;
+  }
+  const typing = event.target.matches('input, textarea, select, [contenteditable="true"]');
+  if (typing || event.ctrlKey || event.metaKey || event.altKey || !data) return;
+  if (event.key === '/' && !dialog.open) {
+    event.preventDefault();
+    if (state.screen === 'discovery') navigateTheme(null);
+    search.focus();
+    return;
+  }
+  if (state.screen === 'discovery' && !dialog.open) {
+    if ((event.key === 'ArrowLeft' || event.key === 'ArrowRight') && discoverySession.decisions.length < discoverySession.deck.length) {
+      event.preventDefault();
+      if (!event.repeat) chooseDiscovery(event.key === 'ArrowRight');
+    } else if (event.key === 'Backspace' && !event.repeat) { event.preventDefault(); undoDiscovery(); }
+    return;
+  }
+  const isCardView = dialog.open || (state.mode === 'cards' && (state.themeId || state.query.trim()) && pool.length);
+  if (!isCardView) return;
+  const target = dialog.open ? 'modal' : 'inline';
+  if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') { event.preventDefault(); moveCard(event.key === 'ArrowLeft' ? -1 : 1, target); }
+  if (event.key.toLowerCase() === 'r') { event.preventDefault(); moveCard(0, target, true); }
+});
+
+async function init() {
+  try {
+    data = JSON.parse(document.getElementById('questions-data').textContent);
+    questions = createCatalog(data);
+    byId = new Map(questions.map(q => [q.id, q]));
+    let savedSession = null;
+    try { savedSession = JSON.parse(sessionStorage.getItem(sessionKey)); } catch { /* Storage is optional. */ }
+    discoverySession = restoreDiscoverySession(savedSession, byId) || createDiscoverySession(questions);
+    persistDiscovery();
+    readRoute();
+    search.disabled = false;
+    render();
+    closeMenu(false);
+  } catch {
+    content.innerHTML = `<section class="empty-state"><h1>Le répertoire n’a pas pu s’ouvrir.</h1><p>Vérifiez votre connexion, puis réessayez.</p><button type="button" class="button primary" id="retry">Réessayer</button></section>`;
+    $('#theme-nav').innerHTML = '';
+    $('#retry').addEventListener('click', init);
+  }
+}
+init();
+
+</script>
+</body>
+</html>
