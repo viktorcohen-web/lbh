@@ -105,6 +105,111 @@ dialog{width:min(800px,calc(100% - 40px));max-height:calc(100dvh - 40px);border:
 .selection-empty p{margin:0;line-height:1.8}
 .selection-plain-label{display:block;font-size:11px;color:var(--green);margin-top:24px;line-height:1.8}
 .selection-plain{display:block;width:100%;resize:vertical;margin-top:8px;border:1px solid var(--line);border-radius:5px;background:var(--surface);padding:15px;font-family:var(--sans);font-size:12px;line-height:1.8;color:var(--ink)}
+/* Ajouts : grain de papier, pile de cartes, sélection permanente */
+body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:40;opacity:.6;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .15 0 0 0 0 .2 0 0 0 0 .16 0 0 0 .07 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+.swipe-stage{position:relative;padding-bottom:22px}
+.swipe-card{z-index:1;animation:card-in .32s cubic-bezier(.2,.7,.3,1)}
+@keyframes card-in{from{opacity:0;transform:translateY(16px) scale(.985)}}
+.swipe-ghost{position:absolute;left:5px;right:5px;top:5px;bottom:22px;border:1px solid #d9e0cf;border-radius:9px;background:#f9faf4;pointer-events:none}
+.swipe-ghost.g1{transform:translateY(10px) scale(.972);z-index:0}
+.swipe-ghost.g2{transform:translateY(20px) scale(.944);background:#f1f3ea;z-index:-1}
+.swipe-card.is-keeping{background:color-mix(in srgb,#e3ecd8 calc(var(--drag-strength,0)*100%),#fffefb)}
+.swipe-card.is-passing{background:color-mix(in srgb,#f5e4da calc(var(--drag-strength,0)*100%),#fffefb)}
+.question-row.is-picked{border-color:#b3c4a2;background:#f7f9f0}
+.keep-button{display:flex;align-items:center;justify-content:center;width:37px;height:39px;background:transparent;border:0;border-radius:4px;color:#a3ab98;transition:color .15s,background .15s}
+.keep-button svg{width:16px;height:16px;transition:transform .2s}
+.keep-button:hover{background:#dfe6d6;color:var(--green)}
+.keep-button[aria-pressed=true]{color:var(--green)}
+.keep-button[aria-pressed=true] svg{transform:scale(1.1)}
+.keep-button[aria-pressed=true] svg,.keep-toggle[aria-pressed=true] svg{fill:currentColor}
+.keep-toggle[aria-pressed=true]{background:#e5ebdc;border-color:#b3c4a2;color:var(--green)}
+.selection-toolbar .is-armed{background:#f6e6dc;border-color:#d9a891;color:var(--orange)}
+.discovery-endnote .scope-link{margin:0;font-size:inherit}
+@media(prefers-reduced-motion:reduce){.swipe-card{animation:none}}
+@media(max-width:660px){.keep-button{width:30px}.keep-button svg{width:15px;height:15px}.swipe-stage{padding-bottom:19px}.swipe-ghost{bottom:19px}}
+/* Habillage : une couleur par thème, profondeur, mouvement */
+@property --tc{syntax:'<color>';inherits:true;initial-value:#284a3e}
+body{background:radial-gradient(900px 520px at 88% -8%,#e1e9d4 0,transparent 62%),radial-gradient(760px 520px at -12% 108%,#f0e2d3 0,transparent 60%),var(--paper);background-attachment:fixed}
+.topbar{position:sticky;top:0;background:color-mix(in srgb,var(--paper) 80%,transparent);-webkit-backdrop-filter:blur(12px) saturate(1.2);backdrop-filter:blur(12px) saturate(1.2)}
+.button,.swipe-choice,.axis-filter,.icon-button{transition:background .15s,border-color .15s,color .15s,transform .15s,box-shadow .2s}
+.button:active,.swipe-choice:active,.axis-filter:active,.icon-button:active{transform:scale(.97)}
+.primary,.choice-keep{box-shadow:0 10px 22px -14px #1e3c32}
+.choice-keep:hover{transform:translateY(-1px);box-shadow:0 14px 26px -14px #1e3c32}
+@keyframes rise{from{opacity:0;transform:translateY(12px)}}
+@keyframes float{50%{transform:translateY(-7px)}}
+@keyframes pulse{50%{opacity:.4}}
+@keyframes pop{40%{transform:scale(1.35)}}
+@keyframes toast-in{from{opacity:0;transform:translate(-50%,12px)}}
+.hero-copy h1,.theme-header h1,.discovery-header h1{animation:rise .6s cubic-bezier(.2,.7,.3,1) backwards}
+.hero-copy>p,.theme-header p,.discovery-header>p{animation:rise .6s .08s cubic-bezier(.2,.7,.3,1) backwards}
+.theme-card{animation:rise .55s cubic-bezier(.2,.7,.3,1) backwards;animation-delay:calc(var(--i,0)*45ms + 120ms)}
+.question-row{animation:rise .45s cubic-bezier(.2,.7,.3,1) backwards;animation-delay:calc(var(--i,0)*28ms)}
+.selection-questions li{animation:rise .45s cubic-bezier(.2,.7,.3,1) backwards}
+.focus-question{animation:rise .4s cubic-bezier(.2,.7,.3,1) backwards}
+.quiet .question-row,.quiet h1,.quiet .theme-header p,.quiet .focus-question{animation:none}
+.toast:not([hidden]){animation:toast-in .3s cubic-bezier(.2,.7,.3,1)}
+.toast{box-shadow:0 14px 30px -12px #1e3c32}
+/* accueil */
+.feature-wrap{animation:float 7s ease-in-out infinite;transition:--tc .8s}
+.feature-wrap:before{background:color-mix(in srgb,var(--tc) 10%,#eef0e6);border-color:color-mix(in srgb,var(--tc) 22%,#d5d9c9)}
+.feature-card{--ink:color-mix(in srgb,var(--tc) 72%,#17201b);background:color-mix(in srgb,var(--tc) 14%,#fbfaf3);border-color:color-mix(in srgb,var(--tc) 32%,#d5d9c9);color:var(--ink);box-shadow:0 26px 50px -30px color-mix(in srgb,var(--tc) 70%,#17201b)}
+.feature-card button{color:inherit;border-top-color:color-mix(in srgb,var(--tc) 30%,#c9d2bd)}
+.feature-quote,.feature-theme{transition:opacity .35s,transform .35s}
+.feature-theme{display:block;font-size:10px;letter-spacing:.3px;margin:-12px 0 18px;opacity:.8}
+.feature-card.is-swapping .feature-quote,.feature-card.is-swapping .feature-theme{opacity:0;transform:translateY(8px)}
+.theme-card{background:linear-gradient(180deg,color-mix(in srgb,var(--tc) 8%,var(--surface)),var(--surface) 58%);transition:border-color .2s,transform .25s cubic-bezier(.2,.7,.3,1),box-shadow .25s}
+.theme-card>*:not(.theme-watermark){position:relative;z-index:1}
+.theme-card:before{background:var(--tc)}
+.theme-card:hover{border-color:color-mix(in srgb,var(--tc) 45%,var(--line));transform:translateY(-4px);box-shadow:0 20px 36px -24px color-mix(in srgb,var(--tc) 65%,#17201b)}
+.theme-number{color:var(--tc)}
+.theme-card-bottom{color:color-mix(in srgb,var(--tc) 75%,#17201b)}
+.swipe-card:focus-visible{outline-color:color-mix(in srgb,var(--tc) 70%,#17201b)}
+.theme-watermark{position:absolute;right:-4px;bottom:-42px;font-family:var(--serif);font-size:132px;line-height:1;color:var(--tc);opacity:.09;pointer-events:none;transition:transform .45s cubic-bezier(.2,.7,.3,1),opacity .3s}
+.theme-card:hover .theme-watermark{transform:translate(-8px,-8px);opacity:.16}
+/* menu */
+.nav-number{color:color-mix(in srgb,var(--tc) 85%,#17201b);font-weight:600}
+.nav-item[data-theme]:not([data-theme=all])[aria-current=page]{background:color-mix(in srgb,var(--tc) 82%,#17201b)}
+.nav-item[aria-current=page] .nav-number{color:#ffffffb8}
+/* cartes à trier */
+.swipe-stage{background:radial-gradient(55% 62% at 50% 52%,color-mix(in srgb,var(--tc) 17%,transparent),transparent 72%)}
+.swipe-card{overflow:hidden;border-color:color-mix(in srgb,var(--tc) 28%,#d9e0cf);box-shadow:inset 0 5px 0 var(--tc),0 24px 46px -28px color-mix(in srgb,var(--tc) 60%,#17201b),0 2px 6px #2a403210}
+.swipe-card:before{content:"\201C";position:absolute;left:16px;top:-46px;font-family:var(--serif);font-size:240px;line-height:1;color:var(--tc);opacity:.12;pointer-events:none}
+.swipe-card h2,.swipe-card-header,.swipe-axis{position:relative;z-index:1}
+.swipe-card-header{color:color-mix(in srgb,var(--tc) 78%,#17201b);font-weight:500}
+.swipe-theme-number{background:var(--tc);border-color:var(--tc);color:#fffefb}
+.swipe-axis{color:color-mix(in srgb,var(--tc) 65%,#6f7768)}
+.swipe-ghost{background:color-mix(in srgb,var(--tc) 6%,#f9faf4);border-color:color-mix(in srgb,var(--tc) 18%,#d9e0cf)}
+.swipe-ghost.g2{background:color-mix(in srgb,var(--tc) 9%,#f1f3ea)}
+.discovery-progress-track{height:5px}
+.discovery-progress-track>span{transition:background .3s}
+.discovery-progress-track>.is-kept{background:var(--tc)}
+.discovery-progress-track>.is-current{animation:pulse 1.4s ease-in-out infinite}
+/* répertoire */
+.theme-heading-meta{color:color-mix(in srgb,var(--tc) 60%,#c9cfbf)}
+.axis-filter:hover{border-color:color-mix(in srgb,var(--tc) 45%,var(--line))}
+.axis-filter[aria-pressed=true]{background:color-mix(in srgb,var(--tc) 82%,#17201b);border-color:color-mix(in srgb,var(--tc) 82%,#17201b)}
+.group-heading h2,.group-heading-link{color:color-mix(in srgb,var(--tc) 80%,#17201b)}
+.question-number{color:color-mix(in srgb,var(--tc) 72%,#8c9584);font-weight:600}
+.question-row{position:relative;overflow:hidden}
+.question-row:before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--tc);transform:scaleY(0);transition:transform .22s cubic-bezier(.2,.7,.3,1)}
+.question-row:hover:before,.question-row.is-picked:before{transform:scaleY(1)}
+.question-text{transition:transform .25s cubic-bezier(.2,.7,.3,1)}
+.question-row:hover .question-text{transform:translateX(4px)}
+.question-row:hover{box-shadow:0 12px 26px -20px color-mix(in srgb,var(--tc) 70%,#17201b)}
+.question-row.is-picked{background:color-mix(in srgb,var(--tc) 7%,#fffefb);border-color:color-mix(in srgb,var(--tc) 35%,var(--line))}
+.keep-button[aria-pressed=true]{color:color-mix(in srgb,var(--tc) 85%,#17201b)}
+.keep-button[aria-pressed=true] svg,.keep-toggle[aria-pressed=true] svg{animation:pop .35s cubic-bezier(.2,.7,.3,1)}
+.focus-card:before{background:var(--tc)}
+.focus-card:after{content:"\201C";position:absolute;left:30px;top:-44px;font-family:var(--serif);font-size:250px;line-height:1;color:var(--tc);opacity:.09;pointer-events:none}
+.focus-top,.focus-question,.focus-bottom{position:relative;z-index:1}
+.focus-context .eyebrow{color:color-mix(in srgb,var(--tc) 80%,#17201b)}
+.card-progress>span{background:var(--tc)}
+.keep-toggle[aria-pressed=true]{background:color-mix(in srgb,var(--tc) 12%,#fbfaf3);border-color:color-mix(in srgb,var(--tc) 40%,var(--line));color:color-mix(in srgb,var(--tc) 80%,#17201b)}
+/* sélection */
+.selection-questions li{box-shadow:inset 3px 0 0 var(--tc)}
+.selection-index{color:color-mix(in srgb,var(--tc) 72%,#8b987d);font-weight:600}
+@media(max-width:660px){.swipe-card:before{font-size:180px;top:-34px;left:10px}.focus-card:after{font-size:180px;left:16px;top:-30px}.theme-watermark{font-size:120px;bottom:-28px}.feature-wrap{animation:none}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important}}
 @media(max-width:960px){
   .discovery-content{padding-top:29px}
   .discovery-header h1{font-size:52px}
@@ -389,8 +494,11 @@ const icons = {
   note:'<path d="M9 18h6M9 21h6M8 14a7 7 0 1 1 8 0c-1 1-1 2-1 2H9s0-1-1-2Z"/>',
   check:'<path d="m5 12 4 4L19 6"/>',
   cross:'<path d="m6 6 12 12M6 18 18 6"/>',
-  undo:'<path d="M9 5 4 10l5 5M4 10h10a6 6 0 0 1 0 12"/>'
+  undo:'<path d="M9 5 4 10l5 5M4 10h10a6 6 0 0 1 0 12"/>',
+  bookmark:'<path d="M7 3.5h10a1 1 0 0 1 1 1V21l-6-4.2L6 21V4.5a1 1 0 0 1 1-1Z"/>'
 };
+const themeColors = {T01:'#b8653f', T02:'#3f7686', T03:'#bf8f2c', T04:'#7a5a90', T05:'#a8443c', T06:'#557a45', T07:'#35668c', T08:'#8f6a38', T09:'#2c6159', T10:'#b05f78'};
+const tc = theme => `--tc:${themeColors[theme.id] || '#284a3e'}`;
 const icon = name => `<svg viewBox="0 0 24 24" aria-hidden="true">${icons[name]}</svg>`;
 const pad = value => String(value).padStart(2, '0');
 let data, questions = [], byId, pool = [], modalPool = [], modalCursor = 0, modalOpener = null;
@@ -398,12 +506,15 @@ let state = {screen:'discovery', themeId:null, axisId:null, query:'', mode:'list
 let cardCursor = 0, menuOpen = false, toastTimer;
 const sessionKey = 'bonnes-histoires.discovery.v1';
 let discoverySession, swipeBusy = false, drag = null;
+const picksKey = 'bonnes-histoires.selection.v1';
+let picks = [];
+let quiet = false;
 
 function readRoute() {
   const params = new URLSearchParams(location.hash.slice(1));
   const theme = data.themes.find(t => t.id === params.get('theme'));
   const axis = theme?.axes.find(a => a.id === params.get('angle'));
-  const screen = theme || params.has('q') || params.has('vue') || params.get('ecran') === 'repertoire' ? 'catalog' : 'discovery';
+  const screen = theme || params.has('q') || params.has('vue') || params.get('ecran') === 'repertoire' ? 'catalog' : params.get('ecran') === 'selection' ? 'selection' : 'discovery';
   state = {screen, themeId:theme?.id || null, axisId:axis?.id || null, query:params.get('q') || '', mode:params.get('vue') === 'cartes' ? 'cards' : 'list'};
   cardCursor = 0;
   search.value = state.query;
@@ -418,6 +529,7 @@ function writeRoute(replace = false) {
     if (state.mode === 'cards') params.set('vue', 'cartes');
     if (!params.size) params.set('ecran', 'repertoire');
   }
+  if (state.screen === 'selection') params.set('ecran', 'selection');
   const next = location.pathname + location.search + (params.size ? '#' + params.toString() : '');
   if (next !== location.pathname + location.search + location.hash) history[replace ? 'replaceState' : 'pushState'](null, '', next);
 }
@@ -437,12 +549,96 @@ function navigateTheme(themeId) {
 }
 
 function renderNav() {
-  const count = selectedQuestions(discoverySession, byId).length;
-  $('#theme-nav').innerHTML = `<button type="button" class="nav-item nav-discovery" data-action="discovery" ${state.screen === 'discovery' ? 'aria-current="page"' : ''}>${icon('cards')}<span>Choisir mes questions<small>20 cartes pour commencer</small></span>${count ? `<span class="selection-badge">${count}</span>` : ''}</button><button type="button" class="nav-item nav-home" data-theme="all" ${state.screen === 'catalog' && !state.themeId ? 'aria-current="page"' : ''}>${icon('grid')}<span>Tout le répertoire</span></button><span class="nav-section">EXPLORER LES THÈMES</span>` + data.themes.map((theme, i) => `<button type="button" class="nav-item" data-theme="${theme.id}" ${state.themeId === theme.id ? 'aria-current="page"' : ''}><span class="nav-number">${pad(i + 1)}</span><span>${esc(theme.nom)}</span></button>`).join('');
+  const count = picks.length;
+  $('#theme-nav').innerHTML = `<button type="button" class="nav-item nav-discovery" data-action="discovery" ${state.screen === 'discovery' ? 'aria-current="page"' : ''}>${icon('cards')}<span>Choisir mes questions<small>20 cartes pour commencer</small></span></button><button type="button" class="nav-item nav-discovery" data-action="selection" ${state.screen === 'selection' ? 'aria-current="page"' : ''}>${icon('bookmark')}<span>Ma sélection<small>${count ? `${count} question${count === 1 ? '' : 's'} à copier` : 'Vide pour l’instant'}</small></span>${count ? `<span class="selection-badge">${count}</span>` : ''}</button><button type="button" class="nav-item nav-home" data-theme="all" ${state.screen === 'catalog' && !state.themeId ? 'aria-current="page"' : ''}>${icon('grid')}<span>Tout le répertoire</span></button><span class="nav-section">EXPLORER LES THÈMES</span>` + data.themes.map((theme, i) => `<button type="button" class="nav-item" data-theme="${theme.id}" style="${tc(theme)}" ${state.themeId === theme.id ? 'aria-current="page"' : ''}><span class="nav-number">${pad(i + 1)}</span><span>${esc(theme.nom)}</span></button>`).join('');
 }
 
 function persistDiscovery() {
   try { sessionStorage.setItem(sessionKey, JSON.stringify(discoverySession)); } catch { /* Selection still works when tab storage is unavailable. */ }
+}
+
+function loadPicks() {
+  let saved = null;
+  try { saved = JSON.parse(localStorage.getItem(picksKey)); } catch { /* Storage is optional. */ }
+  return Array.isArray(saved) ? [...new Set(saved.filter(id => byId.has(id)))] : null;
+}
+
+function savePicks() {
+  try { localStorage.setItem(picksKey, JSON.stringify(picks)); } catch { /* The selection still works for this visit. */ }
+}
+
+function pickedQuestions() {
+  return picks.map(id => byId.get(id)).sort((a, b) => a.themeNumber - b.themeNumber || a.number - b.number);
+}
+
+function setPick(id, on) {
+  if (picks.includes(id) === on) return;
+  picks = on ? [...picks, id] : picks.filter(p => p !== id);
+  savePicks();
+}
+
+function syncPickButtons(id) {
+  const on = picks.includes(id);
+  document.querySelectorAll(`[data-pick="${id}"]`).forEach(button => {
+    button.setAttribute('aria-pressed', String(on));
+    const label = button.querySelector('.pick-label');
+    if (label) label.textContent = on ? 'Gardée' : 'Garder';
+    if (button.classList.contains('keep-button')) {
+      button.setAttribute('aria-label', on ? 'Retirer de ma sélection' : 'Garder dans ma sélection');
+      button.title = on ? 'Retirer de ma sélection' : 'Garder dans ma sélection';
+    }
+  });
+  document.querySelectorAll(`.question-row[data-row="${id}"]`).forEach(row => row.classList.toggle('is-picked', on));
+}
+
+function togglePick(id) {
+  const on = !picks.includes(id);
+  setPick(id, on);
+  syncPickButtons(id);
+  renderNav();
+  toast(on ? `Ajoutée à votre sélection (${picks.length})` : 'Retirée de votre sélection');
+}
+
+function pickButton(q) {
+  const on = picks.includes(q.id);
+  const label = on ? 'Retirer de ma sélection' : 'Garder dans ma sélection';
+  return `<button type="button" class="keep-button" data-pick="${q.id}" aria-pressed="${on}" aria-label="${label}" title="${label}">${icon('bookmark')}</button>`;
+}
+
+function pickToggle(q) {
+  const on = picks.includes(q.id);
+  return `<button type="button" class="button keep-toggle" data-pick="${q.id}" aria-pressed="${on}">${icon('bookmark')}<span class="pick-label">${on ? 'Gardée' : 'Garder'}</span></button>`;
+}
+
+function clearPicks(button) {
+  const label = button.querySelector('span');
+  if (button.dataset.armed) {
+    picks = [];
+    savePicks();
+    render();
+    toast('Sélection vidée');
+    content.querySelector('h1')?.focus({preventScroll:true});
+    return;
+  }
+  button.dataset.armed = '1';
+  button.classList.add('is-armed');
+  label.textContent = 'Confirmer : tout retirer';
+  setTimeout(() => {
+    if (!button.isConnected) return;
+    delete button.dataset.armed;
+    button.classList.remove('is-armed');
+    label.textContent = 'Vider';
+  }, 4000);
+}
+
+function navigateSelection() {
+  state = {...state, screen:'selection', themeId:null, axisId:null, query:''};
+  search.value = '';
+  writeRoute();
+  closeMenu(false);
+  render();
+  content.querySelector('h1')?.focus({preventScroll:true});
+  window.scrollTo({top:0, behavior:'instant'});
 }
 
 function navigateDiscovery() {
@@ -457,18 +653,21 @@ function navigateDiscovery() {
 
 function renderDiscovery() {
   const {deck, decisions} = discoverySession;
-  if (decisions.length === deck.length) return renderSelection();
+  if (decisions.length === deck.length) return renderSelection(true);
   const q = byId.get(deck[decisions.length]);
   const kept = decisions.filter(Boolean).length;
-  return `<section class="discovery" aria-labelledby="page-title"><header class="discovery-header"><span class="eyebrow">20 QUESTIONS POUR COMMENCER</span><h1 id="page-title" tabindex="-1">Qu’est-ce qui vous parle ?</h1><p>Deux questions par thème, tirées au hasard. Gardez celles qui vous donnent envie de raconter une histoire.</p></header><div class="discovery-progress"><div class="discovery-progress-label"><span>Question <b>${pad(decisions.length + 1)}</b> sur ${deck.length}</span><span>${icon('check')} <b>${kept}</b> gardée${kept === 1 ? '' : 's'}</span></div><div class="discovery-progress-track" role="progressbar" aria-label="Questions parcourues" aria-valuemin="0" aria-valuemax="${deck.length}" aria-valuenow="${decisions.length}">${deck.map((id, index) => `<span class="${index < decisions.length ? decisions[index] ? 'is-kept' : 'is-passed' : index === decisions.length ? 'is-current' : ''}" aria-hidden="true"></span>`).join('')}</div></div><div class="swipe-stage"><article class="swipe-card" id="swipe-card" tabindex="-1" aria-labelledby="swipe-question" data-question-id="${q.id}"><div class="swipe-card-header"><span class="swipe-theme-number">${pad(q.themeNumber)}</span><span>${esc(q.theme.nom)}</span></div><span class="swipe-stamp swipe-stamp-keep" aria-hidden="true">JE GARDE</span><span class="swipe-stamp swipe-stamp-pass" aria-hidden="true">JE PASSE</span><h2 id="swipe-question">${esc(q.texte)}</h2><p class="swipe-axis">${esc(q.axis.nom)}</p></article></div><div class="swipe-controls" role="group" aria-label="Votre choix pour cette question"><button type="button" class="swipe-choice choice-pass" data-discovery="pass">${icon('cross')}<span>Je passe</span><kbd aria-hidden="true">←</kbd></button><button type="button" class="swipe-choice choice-keep" data-discovery="keep">${icon('check')}<span>Je garde</span><kbd aria-hidden="true">→</kbd></button></div><div class="swipe-foot"><button type="button" class="undo-choice" data-discovery="undo" ${decisions.length ? '' : 'disabled'}>${icon('undo')}Revenir au choix précédent</button><span>Glissez à gauche ou à droite</span></div><p class="discovery-endnote">À la fin, toutes vos questions seront prêtes à copier.</p></section>`;
+  const remaining = deck.length - decisions.length;
+  return `<section class="discovery" aria-labelledby="page-title"><header class="discovery-header"><span class="eyebrow">20 QUESTIONS POUR COMMENCER</span><h1 id="page-title" tabindex="-1">Qu’est-ce qui vous parle ?</h1><p>Deux questions par thème, tirées au hasard. Gardez celles qui vous donnent envie de raconter une histoire.</p></header><div class="discovery-progress"><div class="discovery-progress-label"><span>Question <b>${pad(decisions.length + 1)}</b> sur ${deck.length}</span><span>${icon('check')} <b>${kept}</b> gardée${kept === 1 ? '' : 's'}</span></div><div class="discovery-progress-track" role="progressbar" aria-label="Questions parcourues" aria-valuemin="0" aria-valuemax="${deck.length}" aria-valuenow="${decisions.length}">${deck.map((id, index) => `<span class="${index < decisions.length ? decisions[index] ? 'is-kept' : 'is-passed' : index === decisions.length ? 'is-current' : ''}"${index < decisions.length && decisions[index] ? ` style="${tc(byId.get(id).theme)}"` : ''} aria-hidden="true"></span>`).join('')}</div></div><div class="swipe-stage" style="${tc(q.theme)}">${remaining > 1 ? '<span class="swipe-ghost g1" aria-hidden="true"></span>' : ''}${remaining > 2 ? '<span class="swipe-ghost g2" aria-hidden="true"></span>' : ''}<article class="swipe-card" id="swipe-card" tabindex="-1" aria-labelledby="swipe-question" data-question-id="${q.id}"><div class="swipe-card-header"><span class="swipe-theme-number">${pad(q.themeNumber)}</span><span>${esc(q.theme.nom)}</span></div><span class="swipe-stamp swipe-stamp-keep" aria-hidden="true">JE GARDE</span><span class="swipe-stamp swipe-stamp-pass" aria-hidden="true">JE PASSE</span><h2 id="swipe-question">${esc(q.texte)}</h2><p class="swipe-axis">${esc(q.axis.nom)}</p></article></div><div class="swipe-controls" role="group" aria-label="Votre choix pour cette question"><button type="button" class="swipe-choice choice-pass" data-discovery="pass">${icon('cross')}<span>Je passe</span><kbd aria-hidden="true">←</kbd></button><button type="button" class="swipe-choice choice-keep" data-discovery="keep">${icon('check')}<span>Je garde</span><kbd aria-hidden="true">→</kbd></button></div><div class="swipe-foot"><button type="button" class="undo-choice" data-discovery="undo" ${decisions.length ? '' : 'disabled'}>${icon('undo')}Revenir au choix précédent</button><span>Glissez à gauche ou à droite</span></div><p class="discovery-endnote">${picks.length ? `Déjà ${picks.length} question${picks.length === 1 ? '' : 's'} dans <button type="button" class="scope-link" data-action="selection">votre sélection</button>.` : 'À la fin, toutes vos questions seront prêtes à copier.'}</p></section>`;
 }
 
-function renderSelection() {
-  const selected = selectedQuestions(discoverySession, byId);
+function renderSelection(complete = false) {
+  const selected = pickedQuestions();
   const count = selected.length;
   let ordinal = 0;
   const groups = data.themes.map(theme => ({theme, questions:selected.filter(q => q.theme.id === theme.id)})).filter(group => group.questions.length);
-  return `<section class="discovery selection" aria-labelledby="page-title"><header class="discovery-header"><span class="eyebrow">LES 20 QUESTIONS SONT PARCOURUES</span><h1 id="page-title" tabindex="-1">${count ? 'Voilà de quoi ouvrir la conversation.' : 'Le bon souvenir se fait attendre.'}</h1><p>${count ? `Vous avez gardé <b>${count} question${count === 1 ? '' : 's'}</b>. Votre sélection est regroupée par thème, prête pour votre entretien.` : 'Aucune question gardée cette fois. Essayez une nouvelle série pour trouver celles qui vous parlent.'}</p></header><div class="selection-toolbar">${count ? `<button type="button" class="button primary" data-discovery="copy">${icon('copy')}Copier ${count === 1 ? 'la question' : 'les ' + count + ' questions'}</button>` : ''}<button type="button" class="button ${count ? '' : 'primary'}" data-discovery="restart">${icon('shuffle')}Nouvelle série de 20</button></div>${count ? `<div class="selection-list">${groups.map(({theme, questions:items}) => `<section class="selection-group" aria-labelledby="selection-${theme.id}"><header class="group-heading"><h2 id="selection-${theme.id}">${esc(theme.nom)}</h2><span>${items.length} question${items.length === 1 ? '' : 's'}</span></header><ol class="selection-questions" start="${ordinal + 1}">${items.map(q => `<li><span class="selection-index" aria-hidden="true">${pad(++ordinal)}</span><p>${esc(q.texte)}</p><button type="button" class="copy-button" data-copy="${q.id}" aria-label="Copier cette question" title="Copier cette question">${icon('copy')}</button></li>`).join('')}</ol></section>`).join('')}</div><label class="selection-plain-label" id="selection-plain-label" hidden>Votre sélection en texte<textarea id="selection-plain" class="selection-plain" readonly rows="10" aria-label="Sélection prête à copier"></textarea></label>` : `<div class="selection-empty">${icon('spark')}<p>Une autre série, vingt nouvelles portes d’entrée.</p></div>`}<div class="selection-bottom"><button type="button" class="undo-choice" data-discovery="undo">${icon('undo')}Revenir au dernier choix</button><button type="button" class="scope-link" data-theme="all">Explorer les 500 questions</button></div></section>`;
+  const title = count ? (complete ? 'Voilà de quoi ouvrir la conversation.' : 'Vos questions pour le prochain entretien.') : (complete ? 'Le bon souvenir se fait attendre.' : 'Votre sélection est vide.');
+  const intro = count ? `Vous avez gardé <b>${count} question${count === 1 ? '' : 's'}</b>. Elles sont regroupées par thème, prêtes pour votre entretien.` : complete ? 'Aucune question gardée cette fois. Essayez une nouvelle série pour trouver celles qui vous parlent.' : 'Gardez des questions en parcourant les cartes ou le répertoire : elles s’ajoutent ici, prêtes à copier.';
+  return `<section class="discovery selection" aria-labelledby="page-title"><header class="discovery-header"><span class="eyebrow">${complete ? 'LES 20 QUESTIONS SONT PARCOURUES' : 'MA SÉLECTION'}</span><h1 id="page-title" tabindex="-1">${title}</h1><p>${intro}</p></header><div class="selection-toolbar">${count ? `<button type="button" class="button primary" data-discovery="copy">${icon('copy')}Copier ${count === 1 ? 'la question' : 'les ' + count + ' questions'}</button>` : ''}<button type="button" class="button ${count ? '' : 'primary'}" data-discovery="restart">${icon('shuffle')}${complete ? 'Nouvelle série de 20' : 'Tirer 20 cartes'}</button>${count ? `<button type="button" class="button" data-discovery="clear">${icon('cross')}<span>Vider</span></button>` : ''}</div>${count ? `<div class="selection-list">${groups.map(({theme, questions:items}) => `<section class="selection-group" style="${tc(theme)}" aria-labelledby="selection-${theme.id}"><header class="group-heading"><h2 id="selection-${theme.id}">${esc(theme.nom)}</h2><span>${items.length} question${items.length === 1 ? '' : 's'}</span></header><ol class="selection-questions" start="${ordinal + 1}">${items.map(q => `<li><span class="selection-index" aria-hidden="true">${pad(++ordinal)}</span><p>${esc(q.texte)}</p><button type="button" class="copy-button" data-copy="${q.id}" aria-label="Copier cette question" title="Copier cette question">${icon('copy')}</button><button type="button" class="copy-button" data-unpick="${q.id}" aria-label="Retirer de ma sélection" title="Retirer de ma sélection">${icon('cross')}</button></li>`).join('')}</ol></section>`).join('')}</div><label class="selection-plain-label" id="selection-plain-label" hidden>Votre sélection en texte<textarea id="selection-plain" class="selection-plain" readonly rows="10" aria-label="Sélection prête à copier"></textarea></label>` : `<div class="selection-empty">${icon('spark')}<p>${complete ? 'Une autre série, vingt nouvelles portes d’entrée.' : 'Rien pour l’instant. Le répertoire compte 500 questions.'}</p></div>`}<div class="selection-bottom">${complete ? `<button type="button" class="undo-choice" data-discovery="undo">${icon('undo')}Revenir au dernier choix</button>` : '<span></span>'}<button type="button" class="scope-link" data-theme="all">Explorer les 500 questions</button></div></section>`;
 }
 
 function chooseDiscovery(keep) {
@@ -481,7 +680,9 @@ function chooseDiscovery(keep) {
   card?.classList.add(keep ? 'leaving-right' : 'leaving-left');
   content.querySelectorAll('[data-discovery]').forEach(button => { button.disabled = true; });
   setTimeout(() => {
+    const pickedId = discoverySession.deck[discoverySession.decisions.length];
     discoverySession.decisions.push(keep);
+    if (keep) setPick(pickedId, true);
     persistDiscovery();
     swipeBusy = false;
     if (state.screen === 'discovery') {
@@ -495,14 +696,14 @@ function chooseDiscovery(keep) {
 
 function undoDiscovery() {
   if (swipeBusy || !discoverySession.decisions.length) return;
-  discoverySession.decisions.pop();
+  if (discoverySession.decisions.pop()) setPick(discoverySession.deck[discoverySession.decisions.length], false);
   persistDiscovery();
   render();
   $('#swipe-card')?.focus({preventScroll:true});
 }
 
 async function copySelection() {
-  const text = formatSelection(selectedQuestions(discoverySession, byId));
+  const text = formatSelection(pickedQuestions());
   if (!text) return;
   try {
     await copyText(text);
@@ -559,14 +760,14 @@ function renderHome() {
   return `<div class="breadcrumb"><span>LE RÉPERTOIRE</span></div>
     <section class="home-hero" aria-labelledby="page-title">
       <div class="hero-copy"><h1 id="page-title" tabindex="-1">Les histoires commencent par une <em>bonne question.</em></h1><p>Un parcours est fait de choix, de rencontres et de moments qu’on n’a jamais racontés. Voici 500 portes d’entrée pour les retrouver.</p></div>
-      <div class="feature-wrap"><div class="feature-card"><div class="feature-label"><span>POUR OUVRIR LA CONVERSATION</span>${icon('spark')}</div><p class="feature-quote">${esc(featured.texte)}</p><button type="button" data-open="${featured.id}"><span>Commencer par cette question</span>${icon('arrow')}</button></div></div>
+      <div class="feature-wrap" style="${tc(featured.theme)}"><div class="feature-card"><div class="feature-label"><span>POUR OUVRIR LA CONVERSATION</span>${icon('spark')}</div><p class="feature-quote">${esc(featured.texte)}</p><span class="feature-theme">${esc(featured.theme.nom)}</span><button type="button" data-open="${featured.id}"><span>Commencer par cette question</span>${icon('arrow')}</button></div></div>
     </section>
-    <section aria-labelledby="themes-title"><div class="section-heading"><h2 id="themes-title">Les dix thèmes</h2><span>50 angles · 500 questions</span></div><div class="theme-grid">${data.themes.map((theme, i) => `<button type="button" class="theme-card" data-theme="${theme.id}"><div class="theme-card-top"><span class="theme-number">${pad(i + 1)}</span><span class="micro">${theme.questions.length} QUESTIONS</span></div><h3>${esc(theme.nom)}</h3><p>${esc(theme.intention)}</p><div class="theme-card-bottom"><span>${theme.axes.length} angles à explorer</span>${icon('arrow')}</div></button>`).join('')}</div></section>
+    <section aria-labelledby="themes-title"><div class="section-heading"><h2 id="themes-title">Les dix thèmes</h2><span>50 angles · 500 questions</span></div><div class="theme-grid">${data.themes.map((theme, i) => `<button type="button" class="theme-card" data-theme="${theme.id}" style="${tc(theme)};--i:${i}"><span class="theme-watermark" aria-hidden="true">${pad(i + 1)}</span><div class="theme-card-top"><span class="theme-number">${pad(i + 1)}</span><span class="micro">${theme.questions.length} QUESTIONS</span></div><h3>${esc(theme.nom)}</h3><p>${esc(theme.intention)}</p><div class="theme-card-bottom"><span>${theme.axes.length} angles à explorer</span>${icon('arrow')}</div></button>`).join('')}</div></section>
     <div class="home-note">${icon('note')}<p><b>Un point de départ, pas un questionnaire.</b> Piochez, passez, reformulez. Dès qu’un souvenir apparaît, suivez le fil de la conversation.</p></div>`;
 }
 
 function renderAxes(theme) {
-  return `<div class="axis-filters" role="group" aria-label="Filtrer par angle"><button type="button" class="axis-filter" data-axis="all" aria-pressed="${!state.axisId}">Tous les angles</button>${theme.axes.map(axis => `<button type="button" class="axis-filter" data-axis="${axis.id}" aria-pressed="${state.axisId === axis.id}">${esc(axis.nom)}</button>`).join('')}</div>`;
+  return `<div class="axis-filters" role="group" aria-label="Filtrer par angle" style="${tc(theme)}"><button type="button" class="axis-filter" data-axis="all" aria-pressed="${!state.axisId}">Tous les angles</button>${theme.axes.map(axis => `<button type="button" class="axis-filter" data-axis="${axis.id}" aria-pressed="${state.axisId === axis.id}">${esc(axis.nom)}</button>`).join('')}</div>`;
 }
 
 function renderResults() {
@@ -575,7 +776,7 @@ function renderResults() {
   const breadcrumb = `<div class="breadcrumb"><button type="button" data-theme="all">LE RÉPERTOIRE</button>${icon('chevron')}<span>${theme ? 'THÈME ' + pad(themeNumber) : 'RECHERCHE'}</span></div>`;
   const title = theme ? theme.nom : 'Trouver la bonne question.';
   const description = state.query.trim() ? `${pool.length} question${pool.length === 1 ? '' : 's'} pour « ${esc(state.query.trim())} »${theme ? ' dans ce thème' : ' dans tout le répertoire'}.` : esc(theme.intention);
-  const titleHtml = `${breadcrumb}<header class="theme-header"><div>${!theme ? '<p class="search-label">LES MOTS QUI FONT REVENIR LES SOUVENIRS</p>' : ''}<h1 id="page-title" tabindex="-1">${esc(title)}</h1><p>${description}</p>${state.query.trim() && theme ? '<button type="button" class="scope-link" data-action="search-all">Chercher dans les 10 thèmes</button>' : ''}</div>${theme ? `<div class="theme-heading-meta" aria-hidden="true"><span class="large-number">${pad(themeNumber)}</span><span class="micro">SUR 10 THÈMES</span></div>` : ''}</header>`;
+  const titleHtml = `${breadcrumb}<header class="theme-header"${theme ? ` style="${tc(theme)}"` : ''}><div>${!theme ? '<p class="search-label">LES MOTS QUI FONT REVENIR LES SOUVENIRS</p>' : ''}<h1 id="page-title" tabindex="-1">${esc(title)}</h1><p>${description}</p>${state.query.trim() && theme ? '<button type="button" class="scope-link" data-action="search-all">Chercher dans les 10 thèmes</button>' : ''}</div>${theme ? `<div class="theme-heading-meta" aria-hidden="true"><span class="large-number">${pad(themeNumber)}</span><span class="micro">SUR 10 THÈMES</span></div>` : ''}</header>`;
   const toolbar = `<div class="result-toolbar"><span class="result-count"><b>${pool.length}</b> question${pool.length === 1 ? '' : 's'}${state.axisId ? ' dans cet angle' : theme ? ' à explorer' : ' dans le répertoire'}</span><div class="view-switch" role="group" aria-label="Mode d’affichage"><button type="button" data-mode="list" aria-pressed="${state.mode === 'list'}">${icon('list')}Liste</button><button type="button" data-mode="cards" aria-pressed="${state.mode === 'cards'}">${icon('cards')}Cartes</button></div></div>`;
   return titleHtml + (theme ? renderAxes(theme) : '') + toolbar + (!pool.length ? renderEmpty() : state.mode === 'cards' ? `<div id="inline-card">${renderFocusCard(pool, cardCursor, false)}</div><p class="keyboard-note"><kbd>←</kbd> <kbd>→</kbd> pour changer de question &nbsp; · &nbsp; <kbd>R</kbd> pour laisser faire le hasard</p>` : renderList());
 }
@@ -591,7 +792,7 @@ function renderList() {
     const first = group[0];
     const groupName = state.themeId ? first.axis.nom : first.theme.nom;
     const number = state.themeId ? first.theme.axes.findIndex(a => a.id === first.axis.id) + 1 : first.themeNumber;
-    return `<section class="question-group" aria-labelledby="group-${state.themeId ? first.axis.id : first.theme.id}"><header class="group-heading"><h2 id="group-${state.themeId ? first.axis.id : first.theme.id}"><span>${pad(number)}</span>${state.themeId ? esc(groupName) : `<button type="button" class="group-heading-link" data-theme="${first.theme.id}">${esc(groupName)}</button>`}</h2><span>${group.length} question${group.length === 1 ? '' : 's'}</span></header><ol class="question-list">${group.map(q => `<li class="question-row"><button type="button" class="question-open" data-open="${q.id}" aria-label="Ouvrir la question ${q.number} : ${esc(q.texte)}"><span class="question-number" aria-hidden="true">${pad(q.number)}</span><span class="question-text">${highlight(q.texte, state.query)}</span></button><div class="row-actions"><button type="button" class="copy-button" data-copy="${q.id}" aria-label="Copier la question ${q.number}" title="Copier la question">${icon('copy')}</button><span class="row-arrow" aria-hidden="true">${icon('arrow')}</span></div></li>`).join('')}</ol></section>`;
+    return `<section class="question-group" style="${tc(first.theme)}" aria-labelledby="group-${state.themeId ? first.axis.id : first.theme.id}"><header class="group-heading"><h2 id="group-${state.themeId ? first.axis.id : first.theme.id}"><span>${pad(number)}</span>${state.themeId ? esc(groupName) : `<button type="button" class="group-heading-link" data-theme="${first.theme.id}">${esc(groupName)}</button>`}</h2><span>${group.length} question${group.length === 1 ? '' : 's'}</span></header><ol class="question-list">${group.map((q, i) => `<li class="question-row${picks.includes(q.id) ? ' is-picked' : ''}" data-row="${q.id}" style="--i:${Math.min(i, 14)}"><button type="button" class="question-open" data-open="${q.id}" aria-label="Ouvrir la question ${q.number} : ${esc(q.texte)}"><span class="question-number" aria-hidden="true">${pad(q.number)}</span><span class="question-text">${highlight(q.texte, state.query)}</span></button><div class="row-actions">${pickButton(q)}<button type="button" class="copy-button" data-copy="${q.id}" aria-label="Copier la question ${q.number}" title="Copier la question">${icon('copy')}</button><span class="row-arrow" aria-hidden="true">${icon('arrow')}</span></div></li>`).join('')}</ol></section>`;
   }).join('');
 }
 
@@ -603,7 +804,7 @@ function renderFocusCard(items, cursor, modal) {
   const q = items[cursor];
   if (!q) return '';
   const prefix = modal ? 'modal' : 'inline';
-  return `<article class="focus-card"><header class="focus-top"><div class="focus-context"><span class="eyebrow">${pad(q.themeNumber)} — ${esc(q.theme.nom)}</span><span>${esc(q.axis.nom)}</span></div><span class="micro">QUESTION ${pad(q.number)} / 50</span></header><h2 class="focus-question" ${modal ? 'id="dialog-question" tabindex="-1"' : ''}>${highlight(q.texte, state.query)}</h2><div class="focus-bottom"><div class="focus-navigation"><button type="button" class="icon-button" data-step="-1" data-target="${prefix}" aria-label="Question précédente" ${items.length < 2 ? 'disabled' : ''}>${icon('back')}</button><span aria-live="polite" aria-atomic="true">${cursor + 1} / ${items.length}</span><button type="button" class="icon-button" data-step="1" data-target="${prefix}" aria-label="Question suivante" ${items.length < 2 ? 'disabled' : ''}>${icon('arrow')}</button></div><div class="focus-actions"><button type="button" class="button shuffle-button" data-shuffle="${prefix}" aria-label="Une autre question au hasard" ${items.length < 2 ? 'disabled' : ''}>${icon('shuffle')}<span class="shuffle-label">Au hasard</span></button><button type="button" class="button" data-copy="${q.id}">${icon('copy')}Copier</button></div></div><div class="card-progress" aria-hidden="true"><span style="width:${((cursor + 1) / items.length) * 100}%"></span></div></article>`;
+  return `<article class="focus-card" style="${tc(q.theme)}"><header class="focus-top"><div class="focus-context"><span class="eyebrow">${pad(q.themeNumber)} — ${esc(q.theme.nom)}</span><span>${esc(q.axis.nom)}</span></div><span class="micro">QUESTION ${pad(q.number)} / 50</span></header><h2 class="focus-question" ${modal ? 'id="dialog-question" tabindex="-1"' : ''}>${highlight(q.texte, state.query)}</h2><div class="focus-bottom"><div class="focus-navigation"><button type="button" class="icon-button" data-step="-1" data-target="${prefix}" aria-label="Question précédente" ${items.length < 2 ? 'disabled' : ''}>${icon('back')}</button><span aria-live="polite" aria-atomic="true">${cursor + 1} / ${items.length}</span><button type="button" class="icon-button" data-step="1" data-target="${prefix}" aria-label="Question suivante" ${items.length < 2 ? 'disabled' : ''}>${icon('arrow')}</button></div><div class="focus-actions"><button type="button" class="button shuffle-button" data-shuffle="${prefix}" aria-label="Une autre question au hasard" ${items.length < 2 ? 'disabled' : ''}>${icon('shuffle')}<span class="shuffle-label">Au hasard</span></button>${pickToggle(q)}<button type="button" class="button" data-copy="${q.id}">${icon('copy')}Copier</button></div></div><div class="card-progress" aria-hidden="true"><span style="width:${((cursor + 1) / items.length) * 100}%"></span></div></article>`;
 }
 
 function render() {
@@ -612,13 +813,16 @@ function render() {
   cardCursor = Math.min(cardCursor, Math.max(pool.length - 1, 0));
   renderNav();
   const isDiscovery = state.screen === 'discovery';
+  const isSelection = state.screen === 'selection';
+  const focusMode = isDiscovery || isSelection;
   const isHome = !state.themeId && !state.query.trim();
-  content.classList.toggle('discovery-content', isDiscovery);
-  content.innerHTML = isDiscovery ? renderDiscovery() : isHome ? renderHome() : renderResults();
-  $('.search-box').hidden = isDiscovery;
-  $('#random-question').hidden = isDiscovery;
-  $('#discovery-topline').hidden = !isDiscovery;
-  $('#top-directory').hidden = !isDiscovery;
+  content.classList.toggle('discovery-content', focusMode);
+  content.classList.toggle('quiet', quiet);
+  content.innerHTML = isDiscovery ? renderDiscovery() : isSelection ? renderSelection(false) : isHome ? renderHome() : renderResults();
+  $('.search-box').hidden = focusMode;
+  $('#random-question').hidden = focusMode;
+  $('#discovery-topline').hidden = !focusMode;
+  $('#top-directory').hidden = !focusMode;
   search.placeholder = state.themeId ? 'Chercher une question dans ce thème…' : 'Chercher un mot, une idée, un souvenir…';
   search.setAttribute('aria-label', state.themeId ? 'Chercher dans le thème sélectionné' : 'Chercher parmi les 500 questions');
   $('#clear-search').hidden = !state.query;
@@ -630,9 +834,10 @@ function render() {
     $('#announcement').textContent = decisions.length === deck.length
       ? `${decisions.filter(Boolean).length} questions gardées. Votre sélection est prête à copier.`
       : `Question ${decisions.length + 1} sur ${deck.length}. ${byId.get(deck[decisions.length]).texte}`;
-  } else $('#announcement').textContent = isHome ? '10 thèmes et 500 questions à explorer.' : `${pool.length} question${pool.length === 1 ? '' : 's'}${state.axisId ? ' dans cet angle' : state.themeId ? ' dans ce thème' : ' dans le répertoire'}.`;
+  } else if (isSelection) $('#announcement').textContent = `${picks.length} question${picks.length === 1 ? '' : 's'} dans votre sélection.`;
+  else $('#announcement').textContent = isHome ? '10 thèmes et 500 questions à explorer.' : `${pool.length} question${pool.length === 1 ? '' : 's'}${state.axisId ? ' dans cet angle' : state.themeId ? ' dans ce thème' : ' dans le répertoire'}.`;
   const theme = data.themes.find(t => t.id === state.themeId);
-  document.title = (isDiscovery ? 'Choisir mes questions — ' : theme ? theme.nom + ' — ' : state.query.trim() ? 'Recherche — ' : '') + 'Les bonnes histoires';
+  document.title = (isDiscovery ? 'Choisir mes questions — ' : isSelection ? 'Ma sélection — ' : theme ? theme.nom + ' — ' : state.query.trim() ? 'Recherche — ' : '') + 'Les bonnes histoires';
 }
 
 function openQuestion(id, random = false) {
@@ -746,12 +951,14 @@ document.addEventListener('click', event => {
     else if (target.dataset.discovery === 'restart' && !swipeBusy) {
       discoverySession = createDiscoverySession(questions);
       persistDiscovery();
-      render();
-      content.querySelector('h1')?.focus({preventScroll:true});
-      window.scrollTo({top:0, behavior:'instant'});
+      navigateDiscovery();
     }
+    else if (target.dataset.discovery === 'clear') clearPicks(target);
   }
   else if (target.dataset.action === 'discovery') navigateDiscovery();
+  else if (target.dataset.action === 'selection') navigateSelection();
+  else if (target.dataset.pick) togglePick(target.dataset.pick);
+  else if (target.dataset.unpick) { setPick(target.dataset.unpick, false); render(); toast('Retirée de votre sélection'); }
   else if (target.dataset.theme) { event.preventDefault(); navigateTheme(target.dataset.theme === 'all' ? null : target.dataset.theme); }
   else if (target.dataset.axis) {
     state.axisId = target.dataset.axis === 'all' ? null : target.dataset.axis;
@@ -774,7 +981,7 @@ document.addEventListener('click', event => {
 
 $('#brand').addEventListener('click', event => { event.preventDefault(); if (data) navigateDiscovery(); });
 $('.skip-link').addEventListener('click', event => { event.preventDefault(); content.focus(); content.scrollIntoView({block:'start'}); });
-search.addEventListener('input', () => { state.screen = 'catalog'; state.query = search.value; cardCursor = 0; writeRoute(true); render(); });
+search.addEventListener('input', () => { state.screen = 'catalog'; state.query = search.value; cardCursor = 0; writeRoute(true); quiet = true; render(); quiet = false; });
 $('#clear-search').addEventListener('click', clearSearch);
 $('#random-question').addEventListener('click', () => openQuestion(null, true));
 $('#open-menu').addEventListener('click', () => setMenu(true));
@@ -807,7 +1014,7 @@ document.addEventListener('keydown', event => {
   if (typing || event.ctrlKey || event.metaKey || event.altKey || !data) return;
   if (event.key === '/' && !dialog.open) {
     event.preventDefault();
-    if (state.screen === 'discovery') navigateTheme(null);
+    if (state.screen !== 'catalog') navigateTheme(null);
     search.focus();
     return;
   }
@@ -825,6 +1032,23 @@ document.addEventListener('keydown', event => {
   if (event.key.toLowerCase() === 'r') { event.preventDefault(); moveCard(0, target, true); }
 });
 
+const calmMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+setInterval(() => {
+  const wrap = document.querySelector('.feature-wrap');
+  if (!wrap || !questions.length || calmMotion.matches || document.hidden || wrap.matches(':hover, :focus-within')) return;
+  const q = questions[Math.floor(Math.random() * questions.length)];
+  const card = wrap.querySelector('.feature-card');
+  card.classList.add('is-swapping');
+  setTimeout(() => {
+    if (!card.isConnected) return;
+    wrap.style.setProperty('--tc', themeColors[q.theme.id]);
+    card.querySelector('.feature-quote').textContent = q.texte;
+    card.querySelector('.feature-theme').textContent = q.theme.nom;
+    card.querySelector('[data-open]').dataset.open = q.id;
+    card.classList.remove('is-swapping');
+  }, 360);
+}, 6500);
+
 async function init() {
   try {
     data = JSON.parse(document.getElementById('questions-data').textContent);
@@ -834,6 +1058,8 @@ async function init() {
     try { savedSession = JSON.parse(sessionStorage.getItem(sessionKey)); } catch { /* Storage is optional. */ }
     discoverySession = restoreDiscoverySession(savedSession, byId) || createDiscoverySession(questions);
     persistDiscovery();
+    picks = loadPicks() ?? selectedQuestions(discoverySession, byId).map(q => q.id);
+    savePicks();
     readRoute();
     search.disabled = false;
     render();
